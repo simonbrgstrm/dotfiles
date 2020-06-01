@@ -1,26 +1,28 @@
 syntax enable
 
-set number	
-set linebreak	
-set showbreak=+++ 	
-set textwidth=100	
-set showmatch	
- 
-set hlsearch	
-set smartcase	
-set ignorecase	
-set incsearch	
- 
-set autoindent	
+set number
+set relativenumber
+set linebreak
+set showbreak=+++
+set textwidth=100
+set showmatch
+
+set hlsearch
+set smartcase
+set ignorecase
+set incsearch
+
+set autoindent
 set shiftwidth=4
-set smartindent	
-set smarttab	
+set smartindent
+set smarttab
 set softtabstop=4
- 
-set ruler	
- 
+
+set ruler
+
 set undolevels=1000
 set backspace=indent,eol,start
 
-
 set cmdheight=1
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+au BufNewFile,BufRead Jenkinsfile setf groovy
