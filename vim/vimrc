@@ -26,3 +26,31 @@ set backspace=indent,eol,start
 set cmdheight=1
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 au BufNewFile,BufRead Jenkinsfile setf groovy
+
+call plug#begin('~/.vim/plugged')
+
+" Ansible yaml
+Plug 'pearofducks/ansible-vim'
+
+" Completion
+Plug 'valloric/youcompleteme'
+
+" Git Plugin
+Plug 'tpope/vim-fugitive'
+
+" Explorer tree
+Plug 'scrooloose/nerdtree'
+
+call plug#end()
+
+" Explorer tree settings
+filetype plugin indent on
+autocmd vimenter * NERDTree
+
+
+" Tab nav
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+
+" Shortcut nerdtree ctrl+n
+map <C-n> :NERDTreeToggle<CR>
