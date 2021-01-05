@@ -31,10 +31,12 @@ Mod=Mod4   # Use the super key as the main modifier
 hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-c close
-hc keybind $Mod-Return spawn ${TERMINAL:-gnome-terminal} # use your $TERMINAL with xterm as fallback
+#hc keybind $Mod-Return spawn ${TERMINAL:-gnome-terminal} # use your $TERMINAL with xterm as fallback
+hc keybind $Mod-Return spawn ${TERMINAL:-kitty} # use your $TERMINAL with xterm as fallback
 
 #hc keybind $Mod-l spawn betterlockscreen -l dim
-hc keybind $Mod-l spawn i3lock-fancy
+#hc keybind $Mod-e spawn i3lock-fancy
+hc keybind $Mod-e spawn betterlockscreen -l dim
 #hc keybind $Mod-Shift-p spawn dmenu_run_hlwm
 hc keybind $Mod-Shift-p spawn rofi -show run
 hc keybind $Mod-Shift-o spawn rofi -show window
@@ -59,20 +61,20 @@ hc keybind $Mod-Left  focus left
 hc keybind $Mod-Down  focus down
 hc keybind $Mod-Up    focus up
 hc keybind $Mod-Right focus right
-#hc keybind $Mod-h     focus left
-#hc keybind $Mod-j     focus down
-#hc keybind $Mod-k     focus up
-#hc keybind $Mod-l     focus right
+hc keybind $Mod-h     focus left
+hc keybind $Mod-j     focus down
+hc keybind $Mod-k     focus up
+hc keybind $Mod-l     focus right
 
 # moving clients
 hc keybind $Mod-Shift-Left  shift left
 hc keybind $Mod-Shift-Down  shift down
 hc keybind $Mod-Shift-Up    shift up
 hc keybind $Mod-Shift-Right shift right
-#hc keybind $Mod-Shift-h     shift left
-#hc keybind $Mod-Shift-j     shift down
-#hc keybind $Mod-Shift-k     shift up
-#hc keybind $Mod-Shift-l     shift right
+hc keybind $Mod-Shift-h     shift left
+hc keybind $Mod-Shift-j     shift down
+hc keybind $Mod-Shift-k     shift up
+hc keybind $Mod-Shift-l     shift right
 
 # splitting frames
 # create an empty frame at the specified direction
@@ -197,8 +199,8 @@ hc attr theme.active.outer_color '#996b00' #darkorange
 hc attr theme.background_color '#996b00' #darkorange
 
 
-hc set window_gap 10
-hc set frame_padding 1
+hc set window_gap 8
+hc set frame_padding 2
 hc set smart_window_surroundings 0
 hc set smart_frame_surroundings 1
 hc set mouse_recenter_gap 0
