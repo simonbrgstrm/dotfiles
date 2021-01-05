@@ -71,9 +71,11 @@ ZSH_THEME="agnoster"
 plugins=(
     git
     docker
+    vagrant
 )
 
 source $ZSH/oh-my-zsh.sh
+eval "$(starship init zsh)"
 
 # User configuration
 
@@ -99,15 +101,31 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
+alias zshconfig="vi ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias mv="mv -i"
 alias rm="rm -i"
 alias 3screens="~/.screenlayout/3screens.sh"
 alias mirrorscreen="~/.screenlayout/mirrorscreen.sh"
+alias 2screens="~/.screenlayout/2screens1hor1ver.sh"
 alias sshserver="~/bjornlunden/tools/sshservermenu/sshserver.sh"
 alias mkube="microk8s kubectl"
 alias update="sudo apt update && sudo apt upgrade -y"
 alias matrix="cmatrix -C yellow"
-alias bosse="~/random/bluetooth/connectbosse.sh"
-alias ipinfo="~/random/scripts/ipinfo.sh"
+alias bosse="~/scripts/bluetooth/connectbosse.sh"
+alias ipinfo="~/scripts/ipinfo.sh"
+alias psg="ps aux | grep " 
+alias theme="~/scripts/theme.sh -i"
+alias theme1="~/scripts/theme.sh ic-orange-ppl"
+alias theme2="~/scripts/theme.sh desert"
+alias theme3="~/scripts/theme.sh molokai"
+
+# Preset theme
+~/scripts/theme.sh desert
+
+# Creates dir and cd into it
+cdm() {mkdir $1 && cd $1}
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/sbm/.sdkman"
+[[ -s "/home/sbm/.sdkman/bin/sdkman-init.sh" ]] && source "/home/sbm/.sdkman/bin/sdkman-init.sh"
