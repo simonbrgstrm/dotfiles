@@ -91,6 +91,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+export PATH="${PATH}:${HOME}/.local/bin/"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -100,4 +101,13 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias test="ranger ~/Downloads/jelastic.png"
+alias mv="mv -i"
+alias rm="rm -i"
+alias 3screens="~/.screenlayout/3screens.sh"
+alias mirrorscreen="~/.screenlayout/mirrorscreen.sh"
+alias sshserver="~/bjornlunden/tools/sshservermenu/sshserver.sh"
+alias mkube="microk8s kubectl"
+alias update="sudo apt update && sudo apt upgrade -y"
+alias matrix="cmatrix -C yellow"
+alias bosse="~/random/bluetooth/connectbosse.sh"
+alias ipinfo="~/random/scripts/ipinfo.sh"
