@@ -1,5 +1,15 @@
 syntax enable
 
+set expandtab
+set smartindent
+set hidden
+set noerrorbells
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set nowrap
+set incsearch
+set scrolloff=8
+
 set number
 set relativenumber
 set linebreak
@@ -10,13 +20,9 @@ set showmatch
 set hlsearch
 set smartcase
 set ignorecase
-set incsearch
 
 set autoindent
-set shiftwidth=4
-set smartindent
 set smarttab
-set softtabstop=4
 
 set ruler
 
@@ -24,10 +30,16 @@ set undolevels=1000
 set backspace=indent,eol,start
 
 set cmdheight=1
-highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+"highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 au BufNewFile,BufRead Jenkinsfile setf groovy
 
 call plug#begin('~/.vim/plugged')
+
+" Telescope
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
 " Ansible yaml
 Plug 'pearofducks/ansible-vim'
@@ -41,12 +53,18 @@ Plug 'tpope/vim-fugitive'
 " Explorer tree
 Plug 'scrooloose/nerdtree'
 
+Plug 'gruvbox-community/gruvbox'
+
 call plug#end()
+
+colorscheme gruvbox
+highlight Normal guibg=none
+
+let mapleader = " "
+nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<C>
 
 " Explorer tree settings
 filetype plugin indent on
-autocmd vimenter * NERDTree
-
 
 " Tab nav
 nnoremap <C-Left> :tabprevious<CR>
