@@ -122,13 +122,13 @@ alias psg="ps aux | grep "
 alias cheat="cht.sh"
 alias theme="~/scripts/theme.sh -i"
 alias theme1="~/scripts/theme.sh ic-orange-ppl"
-alias theme2="~/scripts/theme.sh desert"
-alias theme3="~/scripts/theme.sh twilight"
+alias theme2="~/scripts/theme.sh gruvbox-dark"
+alias theme3="~/scripts/theme.sh desert"
 
 alias blaapiprod="~/bjornlunden/scripts/testarblaapi.sh"
 
 # Preset theme
-~/scripts/theme.sh desert
+~/scripts/theme.sh gruvbox-dark 
 
 # Creates dir and cd into it
 cdm() {mkdir $1 && cd $1}
