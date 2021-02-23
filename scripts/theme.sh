@@ -667,9 +667,9 @@ desert
 7: #f5deb3
 8: #555555
 9: #ff5555
-10: #55ff55
+10: #6de36d
 11: #ffff55
-12: #87ceff
+12: #cd853f
 13: #ff55ff
 14: #ffd700
 15: #ffffff
@@ -1173,7 +1173,7 @@ gruvbox-dark
 9: #fb4934
 10: #b8bb26
 11: #fabd2f
-12: #83a598
+12: #cd853f
 13: #d3869b
 14: #8ec07c
 15: #ebdbb2
