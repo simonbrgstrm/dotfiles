@@ -30,8 +30,7 @@ set undolevels=1000
 set backspace=indent,eol,start
 
 set cmdheight=1
-"highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-au BufNewFile,BufRead Jenkinsfile setf groovy
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
 call plug#begin('~/.vim/plugged')
 
@@ -58,10 +57,8 @@ Plug 'gruvbox-community/gruvbox'
 call plug#end()
 
 colorscheme gruvbox
-highlight Normal guibg=none
 
 let mapleader = " "
-nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<C>
 
 " Explorer tree settings
 filetype plugin indent on
