@@ -23,7 +23,7 @@
     statusline_iseparator = "arrow"
     buffer_index_type = 4
     enable_tabline_filetype_icon = true
-    enable_statusline_mode = false
+    enable_statusline_mode = true
     filemanager = "nerdtree"
 
 # Enable autocomplete layer
@@ -43,20 +43,40 @@ merged = 0
 name = "metakirby5/codi.vim"
 merged = 0
 
-[[layers]]
-name = 'shell'
-default_position = 'top'
-default_height = 30
+[[custom_plugins]]
+name = 'pechorin/any-jump.vim'
 
 [[layers]]
-name = "lang#go"
+name = 'shell'
+default_position = 'bottom'
+default_height = 30
 
 [[layers]]
 name = "git"
 
 [[layers]]
+name = "fzf"
+
+[[layers]]
+  name = 'debug'
+
+[[layers]]
+  name = 'lsp'
+
+[[layers]]
+name = "lang#go"
+
+[[layers]]
 name = "lang#javascript"
 
 [[layers]]
-name = "fzf"
+  name = 'lang#json'
 
+[[layers]]
+  name = 'lang#typescript'
+
+[[layers]]
+  name = 'lang#markdown'
+
+[[layers]]
+  name = 'lang#dockerfile'
