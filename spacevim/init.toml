@@ -56,3 +56,6 @@ name = "git"
 [[layers]]
 name = "lang#javascript"
 
+[[layers]]
+name = "fzf"
+
