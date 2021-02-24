@@ -142,10 +142,6 @@ hc keybind $Mod-i jumpto urgent
 # theme
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
-#hc set frame_border_active_color '#1e97bc' 	#lightblue
-#hc set frame_border_normal_color '#222222' 	#black
-#hc set frame_bg_normal_color '#565656'		#grey
-#hc set frame_bg_active_color '#1e97bc' 		#lightblue
 hc set frame_border_active_color '#ffb200'      #orange
 hc set frame_border_normal_color '#222222'      #black
 hc set frame_bg_normal_color '#916500'          #grey
@@ -153,15 +149,7 @@ hc set frame_bg_active_color '#ffb200'          #orange
 
 hc set frame_borhc keybind $Mod-Shift-l     shift right
 
-# theme
-hc attr theme.tiling.reset 1
-hc keybind $Mod-Shift-l     shift right
 
-# theme
-hc attr theme.tiling.reset 1
-# theme
-hc attr theme.tiling.reset 1
-der_width 1
 hc set always_show_frame 1
 hc set frame_bg_transparent 1
 hc set frame_transparent_width 0
@@ -170,20 +158,6 @@ hc set frame_active_opacity 50
 hc set frame_normal_opacity 50
 hc set frame_border_width 0
 hc set frame_border_inner_width 0
-
-
-#hc attr theme.active.color '#0fd3ff' #lightblue
-#hc attr theme.normal.color '#1e3f75' #darkblue
-#hc attr theme.urgent.color '#ff0000' #red
-#hc attr theme.inner_width 1
-#hc attr theme.inner_color '#000000' #black
-#hc attr theme.border_width 3
-#hc attr theme.floating.border_width 4
-#hc attr theme.floating.outer_width 1
-#hc attr theme.floating.outer_color '#000000' #black
-#hc attr theme.active.inner_color '#1e3f75' #darkblue
-#hc attr theme.active.outer_color '#1e3f75' #darkblue
-#hc attr theme.background_color '#1e3f75' #darkblue
 
 hc attr theme.active.color '#ffb200' #orange
 hc attr theme.normal.color '#996b00' #darkorange
@@ -204,6 +178,10 @@ hc set frame_padding 2
 hc set smart_window_surroundings 0
 hc set smart_frame_surroundings 1
 hc set mouse_recenter_gap 0
+
+hc set swap_monitors_to_get_tag 1
+hc set raise_on_focus 1
+hc set focus_follows_mouse 0
 
 # rules
 hc unrule -F
