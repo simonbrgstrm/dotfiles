@@ -106,29 +106,32 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+
+dot=~/dotfiles
+
 alias zshconfig="vi ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias mv="mv -i"
 alias rm="rm -i"
-alias 3screens="~/.screenlayout/3screens.sh"
-alias mirrorscreen="~/.screenlayout/mirrorscreen.sh"
-alias 2screens="~/.screenlayout/2screens1hor1ver.sh"
-alias sshserver="~/bjornlunden/tools/sshservermenu/sshserver.sh"
 alias update="sudo apt update && sudo apt upgrade -y"
 alias matrix="cmatrix -C yellow"
-alias bosse="~/scripts/bluetooth/connectbosse.sh"
-alias ipinfo="~/scripts/ipinfo.sh"
-alias psg="ps aux | grep " 
 alias cheat="cht.sh"
-alias theme="~/scripts/theme.sh -i"
-alias theme1="~/scripts/theme.sh ic-orange-ppl"
-alias theme2="~/scripts/theme.sh gruvbox-dark"
-alias theme3="~/scripts/theme.sh desert"
+alias psg="ps aux | grep " 
+alias 3screens="$dot/screenlayout/3screens.sh"
+alias mirrorscreen="$dot/screenlayout/mirrorscreen.sh"
+alias 2screens="$dot/screenlayout/2screens1hor1ver.sh"
+alias bosse="$dot/scripts/bluetooth/connectbosse.sh"
+alias ipinfo="$dot/scripts/ipinfo.sh"
+alias theme="$dot/scripts/theme.sh -i"
+alias theme1="$dot/scripts/theme.sh ic-orange-ppl"
+alias theme2="$dot/scripts/theme.sh gruvbox-dark"
+alias theme3="$dot/scripts/theme.sh desert"
 
+alias sshserver="~/bjornlunden/tools/sshservermenu/sshserver.sh"
 alias blaapiprod="~/bjornlunden/scripts/testarblaapi.sh"
 
 # Preset theme
-~/scripts/theme.sh desert 
+$dot/scripts/theme.sh desert 
 
 # Creates dir and cd into it
 cdm() {mkdir $1 && cd $1}
