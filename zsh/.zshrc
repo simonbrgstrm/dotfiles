@@ -128,7 +128,7 @@ alias theme3="~/scripts/theme.sh desert"
 alias blaapiprod="~/bjornlunden/scripts/testarblaapi.sh"
 
 # Preset theme
-~/scripts/theme.sh gruvbox-dark 
+~/scripts/theme.sh desert 
 
 # Creates dir and cd into it
 cdm() {mkdir $1 && cd $1}
