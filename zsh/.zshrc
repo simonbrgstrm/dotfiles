@@ -71,7 +71,9 @@ plugins=(
     git
     docker
     vagrant
+    vi-mode
     sudo
+    z
 )
 
 source $ZSH/oh-my-zsh.sh
