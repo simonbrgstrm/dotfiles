@@ -18,7 +18,7 @@ hc emit_hook reload
 #xsetroot -solid '#081d3f'
 
 
-#compton --config ~/.config/compton.conf
+compton --config ~/.config/compton.conf
 
 # remove all existing keybindings
 hc keyunbind --all
@@ -147,9 +147,6 @@ hc set frame_border_normal_color '#222222'      #black
 hc set frame_bg_normal_color '#916500'          #grey
 hc set frame_bg_active_color '#ffb200'          #orange
 
-hc set frame_borhc keybind $Mod-Shift-l     shift right
-
-
 hc set always_show_frame 1
 hc set frame_bg_transparent 1
 hc set frame_transparent_width 0
@@ -165,8 +162,8 @@ hc attr theme.urgent.color '#ff0000' #red
 hc attr theme.inner_width 3
 hc attr theme.inner_color '#000000' #black
 hc attr theme.border_width 4
-hc attr theme.floating.border_width 1
-hc attr theme.floating.outer_width 1
+hc attr theme.floating.border_width 4
+hc attr theme.floating.outer_width 0
 hc attr theme.floating.outer_color '#000000' #black
 hc attr theme.active.inner_color '#996b00' #darkorange
 hc attr theme.active.outer_color '#996b00' #darkorange
