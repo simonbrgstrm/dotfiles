@@ -71,7 +71,6 @@ plugins=(
     git
     docker
     vagrant
-    vi-mode
     sudo
     z
 )
