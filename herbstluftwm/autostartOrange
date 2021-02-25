@@ -18,7 +18,7 @@ hc emit_hook reload
 #xsetroot -solid '#081d3f'
 
 
-compton --config ~/.config/compton.conf
+#compton --config ~/.config/compton.conf
 
 # remove all existing keybindings
 hc keyunbind --all
