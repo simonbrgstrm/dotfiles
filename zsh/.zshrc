@@ -7,7 +7,7 @@ export ZSH=$HOME/.oh-my-zsh
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME=""
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -133,6 +133,10 @@ alias blaapiprod="~/bjornlunden/scripts/testarblaapi.sh"
 
 # Preset theme
 $dot/scripts/theme.sh desert 
+
+# Theme changer
+alias blue="$dot/scripts/blue.sh"
+alias orange="$dot/scripts/orange.sh"
 
 # Creates dir and cd into it
 cdm() {mkdir $1 && cd $1}
