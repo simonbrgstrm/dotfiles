@@ -3,5 +3,7 @@ Personal config files
 
 
 ### Install
-1. `./install.sh` - Installs all the packages
-2. `./symlink.sh` - Symlinks all the configs
+1. Install all the packages
+`./install.sh`
+2. Symlinks all the configs
+`./symlink.sh`
