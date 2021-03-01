@@ -1,0 +1,48 @@
+# ___  ___  ___  ___  ___  ___  ___
+#| -_||_ -|| . || .'||   ||_ -|| . |
+#|___||___||  _||__,||_|_||___||___|
+#          |_|
+#___________________________________
+backend: Inject
+matches:
+  # Simple text replacement
+  - trigger: ":espanso"
+    replace: "Hi there!"
+  # Dates
+  - trigger: ":date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%Y-%m-%d"
+  # Shell commands
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo Hello from your shell"
+  - trigger: ":ipw"
+    replace: "{{wireless}}"
+    vars:
+      - name: wireless
+        type: shell
+        params:
+          cmd: "ifconfig | grep -1 wlp | grep inet | awk {'print $2'} | cut -d'/' -f1"
+          
+  - trigger: ":ipc"
+    replace: "{{wired}}"
+    vars:
+      - name: wired
+        type: shell
+        params:
+          cmd: "ifconfig | grep -1 enx | grep inet | awk {'print $2'} | cut -d'/' -f1"
+  - trigger: ":path"
+    replace: "{{path}}"
+    vars:
+      - name: path
+        type: shell
+        params:
+          cmd: "echo $PATH"

@@ -121,13 +121,11 @@ alias psg="ps aux | grep "
 alias 3screens="$dot/screenlayout/3screens.sh"
 alias mirrorscreen="$dot/screenlayout/mirrorscreen.sh"
 alias 2screens="$dot/screenlayout/2screens1hor1ver.sh"
-alias bosse="$dot/scripts/bluetooth/connectbosse.sh"
 alias theme="$dot/scripts/theme.sh -i"
 alias theme1="$dot/scripts/theme.sh ic-orange-ppl"
 alias theme2="$dot/scripts/theme.sh gruvbox-dark"
 alias theme3="$dot/scripts/theme.sh desert"
 
-alias sshserver="~/bjornlunden/tools/sshservermenu/sshserver.sh"
 alias blaapiprod="~/bjornlunden/scripts/testarblaapi.sh"
 
 # Preset theme
