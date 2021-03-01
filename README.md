@@ -6,5 +6,5 @@ Personal config files
 1. Clone the repo
 2. Install all the packages
 `./install.sh`
-3. Symlinks all the configs
+3. Symlink all the configs
 `./symlink.sh`
