@@ -22,7 +22,6 @@ sudo rm -rf ~/.config/ranger/rc.conf > /dev/null 2>&1
 ln -sf $dot/vim/autoload ~/.vim/autoload
 ln -sf $dot/.vimrc ~/.vimrc
 ln -sf $dot/.zshrc ~/.zshrc
-ln -sf $dot/.SpaceVim.d/init.toml ~/.SpaceVim.d/init.toml
 ln -sf $dot/.config/dunst/dunstrc ~/.config/dunst/dunstc
 ln -sf $dot/.config/herbstluftwm/autostartOrange ~/.config/herbstluftwm/autostart
 ln -sf $dot/.config/polybar ~/.config/polybar
@@ -34,5 +33,9 @@ ln -sf $dot/.local/bin/ipinfo.sh ~/.local/bin/ipinfo
 ln -sf $dot/.local/bin/sshserver.sh ~/.local/bin/sshserver
 ln -sf $dot/.local/bin/bosse.sh ~/.local/bin/bosse
 
+## SpaceVim
+ln -sf $dot/.SpaceVim.d/init.toml ~/.SpaceVim.d/init.toml
+ln -sf $dot/.SpaceVim.d/theme/molokai.vim ~/.SpaceVim/autoload/SpaceVim/mapping/guide/theme/molokai.vim
+ln -sf $dot/.SpaceVim.d/theme/onedark.vim ~/.SpaceVim/autoload/SpaceVim/mapping/guide/theme/onedark.vim
 
 
