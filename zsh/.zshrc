@@ -132,7 +132,10 @@ alias sshserver="~/bjornlunden/tools/sshservermenu/sshserver.sh"
 alias blaapiprod="~/bjornlunden/scripts/testarblaapi.sh"
 
 # Preset theme
-$dot/scripts/theme.sh desert 
+#$dot/scripts/theme.sh desert 
+
+source ~/dotfiles/scripts/.env
+$dot/scripts/theme.sh $ZSHCOL
 
 # Theme changer
 alias blue="$dot/scripts/blue.sh"

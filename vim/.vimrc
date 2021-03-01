@@ -49,6 +49,9 @@ Plug 'valloric/youcompleteme'
 " Git Plugin
 Plug 'tpope/vim-fugitive'
 
+" Airline
+Plug 'vim-airline/vim-airline'
+
 " Explorer tree
 Plug 'scrooloose/nerdtree'
 
