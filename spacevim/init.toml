@@ -24,59 +24,62 @@
     buffer_index_type = 4
     enable_tabline_filetype_icon = true
     enable_statusline_mode = true
+    vimcompatible = true
     filemanager = "nerdtree"
+    git = "fugitive"
 
-# Enable autocomplete layer
-[[layers]]
-name = 'autocomplete'
-auto_completion_return_key_behavior = "complete"
-auto_completion_tab_key_behavior = "smart"
-name = "colorscheme"
 
 [[custom_plugins]]
-name = "dracula/vim"
+name = 'dracula/vim'
 merged = 0
+
 [[custom_plugins]]
-name = "vim-scripts/dbext.vim"
+name = 'vim-scripts/dbext.vim'
 merged = 0
+
 [[custom_plugins]]
-name = "metakirby5/codi.vim"
+name = 'metakirby5/codi.vim'
 merged = 0
 
 [[custom_plugins]]
 name = 'pechorin/any-jump.vim'
 
+# Enable autocomplete layer
 [[layers]]
-name = 'shell'
-default_position = 'bottom'
-default_height = 30
+  name = 'autocomplete'
+  auto_completion_return_key_behavior = "complete"
+  auto_completion_tab_key_behavior = "smart"
+  name = 'colorscheme'
 
 [[layers]]
-name = "git"
-
+  name = 'shell'
+  default_position = 'bottom'
+  default_height = 30
 [[layers]]
-name = "fzf"
-
+  name = 'VersionControl'
+[[layers]]
+  name = 'git'
+[[layers]]
+  name = 'fzf'
 [[layers]]
   name = 'debug'
-
 [[layers]]
   name = 'lsp'
 
 [[layers]]
-name = "lang#go"
-
+  name = 'lang#go'
 [[layers]]
-name = "lang#javascript"
-
+  name = 'lang#javascript'
 [[layers]]
   name = 'lang#json'
-
 [[layers]]
   name = 'lang#typescript'
-
 [[layers]]
   name = 'lang#markdown'
-
 [[layers]]
   name = 'lang#dockerfile'
+[[layers]]
+  name = 'lang#html'
+[[layers]]
+  name = 'lang#python'
+
