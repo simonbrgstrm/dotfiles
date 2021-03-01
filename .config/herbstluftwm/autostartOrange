@@ -231,4 +231,4 @@ done
 #exec $HOME/.config/polybar/launch.sh
 
 
-feh --bg-fill ~/Pictures/wallor.png
+feh --bg-fill ~/dotfiles/wall/wall2.png
