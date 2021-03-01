@@ -154,7 +154,7 @@ hc set frame_border_width 0
 hc set frame_border_inner_width 0
 
 hc attr theme.active.color '#ffb200' #orange
-hc attr theme.normal.color '#996b00' #darkorange
+hc attr theme.normal.color '#704b0b' #darkdarkorange
 hc attr theme.urgent.color '#ff0000' #red
 hc attr theme.inner_width 3
 hc attr theme.inner_color '#000000' #black
