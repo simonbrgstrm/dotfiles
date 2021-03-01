@@ -3,7 +3,8 @@ Personal config files
 
 
 ### Install
-1. Install all the packages
+1. Clone the repo
+2. Install all the packages
 `./install.sh`
-2. Symlinks all the configs
+3. Symlinks all the configs
 `./symlink.sh`
