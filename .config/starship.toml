@@ -1,0 +1,79 @@
+format = """
+ [](bold fg:214) $python $golang $nodejs $java $openstack $git_branch $git_status
+ [└───>](bold fg:214) $character$directory """
+
+add_newline = false
+
+[username]
+style_user = "dimmed yellow"
+format = "[$user]($style)"
+show_always = true
+disabled = true
+
+[hostname]
+ssh_only = false
+format =  "[$hostname](dimmed yellow) "
+trim_at = ".companyname.com"
+disabled = true
+
+[directory]
+style = "bold fg:202"
+truncate_to_repo = true
+format = "[$path]($style)"
+disabled = false
+
+[character]
+error_symbol = "[✗](fg:1) "
+success_symbol = ""
+disabled = false
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+symbol = " "
+style = "bold fg:81"
+truncation_length = 10
+truncation_symbol = ".."
+disabled = false
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+untracked = ' ? '
+style = "bold fg:11"
+disabled = false
+
+[python]
+format =  	' [${symbol}${pyenv_prefix}${version}( \($virtualenv\))]($style) '
+symbol = "🐍 "
+pyenv_version_name = true
+style = "bold dimmed fg:3"
+python_binary = "python3"
+disabled = false
+
+[nodejs]
+format = "[${symbol} ${version}]($style) "
+symbol = "🤖 "
+style = "bold dimmed fg:3"
+text = "fg:236"
+not_capable_style = "bold fg:1"
+disabled = false
+
+[java]
+format = " [${symbol}${version}]($style) "
+symbol = "☕ "
+style = "bold dimmed fg:3"
+disabled = false
+
+[golang]
+format = " [$symbol$version]($style) "
+symbol = "🐹 "
+style = "bold dimmed fg:3"
+disabled = false 
+
+[openstack]
+format = " [$symbol$cloud(\\($project\\))]($style) "
+style = "bold dimmed fg:3"
+symbol = "☁️  "
+disabled = false
+
+
+
