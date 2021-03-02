@@ -46,3 +46,5 @@ matches:
         type: shell
         params:
           cmd: "echo $PATH"
+  - trigger: ":meh"
+    replace: "¯\\_(ツ)_/¯"
