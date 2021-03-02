@@ -67,9 +67,10 @@ curl -fsSL https://raw.githubusercontent.com/khanhas/spicetify-cli/master/instal
 sudo usermod -aG docker $USER 
 
 ## Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
-
+## Install Starship
+curl -fsSL https://starship.rs/install.sh | bash
 
 ## Print logfile
 echo -e "\n------ *** ------\n"
