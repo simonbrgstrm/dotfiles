@@ -27,6 +27,9 @@ ln -sf $dot/.config/herbstluftwm/autostartOrange ~/.config/herbstluftwm/autostar
 ln -sf $dot/.config/polybar ~/.config/polybar
 ln -sf $dot/.config/ranger/rc.confr ~/.config/ranger/rc.conf
 ln -sf $dot/.config/espanso/default.yml ~/.config/espanso/default.yml
+ln -sf $dot/.config/spicetify/config.ini ~/.config/spicetify/config.ini
+ln -sf $dot/.config/spicetify/Themes/SpicetifyDefault/color.ini ~/.config/spicetify/Themes/SpicetifyDefault/color.ini
+ln -sf $dot/.config/spicetify/Themes/SpicetifyDefault/user.css ~/.config/spicetify/Themes/SpicetifyDefault/user.css
 
 ## Symlink ./local/bin
 ln -sf $dot/.local/bin/ipinfo.sh ~/.local/bin/ipinfo

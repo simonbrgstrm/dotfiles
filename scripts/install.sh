@@ -6,9 +6,13 @@
 # ____________________________
 
 
-log_file=~/install_progress_log.txt
+log_file=~/installResults.txt
 
 apt=(
+  curl
+  docker-cie
+  docker-ce-cli
+  containerd.io
   vim
   zsh
   herbstluftwm
@@ -17,14 +21,24 @@ apt=(
   python
   python3
   python-pip
-  curl
-
+  spotify-client
 
 ) 
 
 ## Add apt repos
 sudo add-apt-repository universe
 sudo add-apt-repository multiverse
+
+## Docker key/repo
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+
+## Spotify key/repo
+curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+
+## Update
 sudo apt update
 
 ## Installs from apt array
@@ -46,10 +60,10 @@ done
 ## Install SpaceVim
 curl -sLf https://spacevim.org/install.sh | bash
 
-## Install docker the right way
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io
+## Spicetify-cli
+curl -fsSL https://raw.githubusercontent.com/khanhas/spicetify-cli/master/install.sh | sh
+
+## Docker permission 
 sudo usermod -aG docker $USER 
 
 ## Install oh-my-zsh
