@@ -13,7 +13,12 @@ apt=(
   docker.io
   dunst
   herbstluftwm
+  gnome-tweaks
+  rofi
+  dmenu
   nodejs
+  gnome-shell-extension-pixelsaver
+  fzf
   npm
   mlocate
   python
