@@ -20,7 +20,7 @@
     enable_guicolors = true
     # Bootstrap autoload/myspacevim
     bootstrap_before = 'myspacevim#before'
-    bootstrap_after = 'myspacevim#after'
+    #bootstrap_after = 'myspacevim#after'
     # Disable statusline separator, if you want to use other value, please
     # install nerd fonts
     statusline_separator = "arrow"
