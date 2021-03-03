@@ -21,8 +21,15 @@ mkdir -p ~/.local/bin
 mkdir -p ~/.config/herbstluftwm
 mkdir -p ~/.config/dunst
 mkdir -p ~/.config/ranger
+mv -r ~/spicetify-cli ~/.config/spicetify
 PATH="$HOME/.local/bin/:$PATH"
 
+## Make zsh default shell
+chsh -s $(which zsh)
+
+## Remove headerbar from terminal
+gnome-extensions enable pixel-saver@deadalnix.me
+gsettings set org.gnome.Terminal.Legacy.Settings headerbar false
 
 ## Symlink .config
 ln -sf $dot/.zshrc ~/.zshrc
