@@ -20,7 +20,6 @@ apt=(
   feh
   font-manager
   fzf
-  i3-wm
   gnome-tweaks
   herbstluftwm
   libasound2-dev
