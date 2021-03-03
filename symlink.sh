@@ -52,6 +52,9 @@ ln -sf $dot/.local/bin/ipinfo.sh ~/.local/bin/ipinfo
 ln -sf $dot/.local/bin/sshserver.sh ~/.local/bin/sshserver
 ln -sf $dot/.local/bin/bosse.sh ~/.local/bin/bosse
 
+## Symlink ./local/share
+ln -sf $dot/.local/share/fonts ~/.local/share/fonts
+
 ## SpaceVim
 ln -sf $dot/.SpaceVim.d ~/.SpaceVim.d
 ln -sf $dot/.SpaceVim.d/autoload ~/.SpaceVim.d/autoload
