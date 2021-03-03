@@ -80,9 +80,9 @@ do
   sudo apt install -y $install
   if [[ $? > 0 ]];
   then
-    echo "$check FAILED" >> $log_file
+    echo "$install FAILED" >> $log_file
   else
-    echo "$check installed" >> $log_file
+    echo "$install installed" >> $log_file
   fi
 done
 
