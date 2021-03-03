@@ -113,7 +113,7 @@ tar -C ~/ -zxvf polybar-3.5.5.tar.gz
 ## Print logfile
 echo -e "\n------ *** ------\n"
 echo
-grep -E 'failed|$' $log_file
+grep -E 'FAILED|$' $log_file
 #cat $log_file
 echo
 echo -e "\n------ *** ------\n"
