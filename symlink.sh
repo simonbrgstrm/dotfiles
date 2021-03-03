@@ -15,13 +15,14 @@ sudo rm -rf ~/.config/dunst/dunstrc > /dev/null 2>&1
 sudo rm -rf ~/.config/herbstluftwm/autostart > /dev/null 2>&1
 sudo rm -rf ~/.config/polybar > /dev/null 2>&1
 sudo rm -rf ~/.config/ranger/rc.conf > /dev/null 2>&1
+sudo rm -rf ~/.local/share/fonts > /dev/null 2>&1
 
 ## Create dirs and paths
 mkdir -p ~/.local/bin
 mkdir -p ~/.config/herbstluftwm
 mkdir -p ~/.config/dunst
 mkdir -p ~/.config/ranger
-mv ~/spicetify-cli ~/.config/spicetify
+mv ~/spicetify-cli ~/.config/spicetify > /dev/null 2>&1
 PATH="$HOME/.local/bin/:$PATH"
 
 ## Make zsh default shell
@@ -53,8 +54,9 @@ ln -sf $dot/.local/bin/ipinfo.sh ~/.local/bin/ipinfo
 ln -sf $dot/.local/bin/sshserver.sh ~/.local/bin/sshserver
 ln -sf $dot/.local/bin/bosse.sh ~/.local/bin/bosse
 
-## Symlink ./local/share
+## Fonts
 ln -sf $dot/.local/share/fonts ~/.local/share/fonts
+sudo rm /etc/fonts/conf.d/70-no-bitmaps.conf
 
 ## SpaceVim
 ln -sf $dot/.SpaceVim.d ~/.SpaceVim.d
