@@ -35,6 +35,7 @@ chsh -s $(which zsh)
 ln -sf $dot/.zshrc ~/.zshrc
 ln -sf $dot/.config/dunst/dunstrc ~/.config/dunst/dunstc
 ln -sf $dot/.config/herbstluftwm/autostartOrange ~/.config/herbstluftwm/autostart
+ln -sf $dot/.config/herbstluftwm/panel.sh ~/.config/herbstluftwm/panel.sh
 ln -sf $dot/.config/polybar ~/.config/polybar
 ln -sf $dot/.config/ranger/rc.confr ~/.config/ranger/rc.conf
 ln -sf $dot/.config/espanso/default.yml ~/.config/espanso/default.yml
