@@ -17,6 +17,7 @@ apt=(
   docker-compose
   docker.io
   dunst
+  feh
   fzf
   gnome-tweaks
   herbstluftwm
