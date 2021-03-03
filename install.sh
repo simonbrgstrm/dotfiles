@@ -78,17 +78,22 @@ sudo apt update
 for install in ${apt[@]};
 do
   sudo apt install -y $install
+  if [[ $? > 0 ]]
+    echo "$check installed"
+  else
+    echo "$check FAILED"
+  fi
 done
 
 ## Check installation and sends result to logfile
-for check in ${apt[@]}; do
-  if type -p $check > /dev/null;
-  then
-    echo "$check installed" >> $log_file
-  else
-    echo "$check failed" >> $log_file
-  fi
-done
+#for check in ${apt[@]}; do
+#  if type -p $check > /dev/null;
+#  then
+#    echo "$check installed" >> $log_file
+#  else
+#    echo "$check failed" >> $log_file
+#  fi
+#done
 
 ## Create herbstluftwm dir
 mkdir -p ~/.config/herbstluftwm
