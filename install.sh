@@ -77,12 +77,15 @@ sudo usermod -aG docker $USER
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 ## Install Starship
-sh -c "$(curl -fsSL https://starship.rs/install.sh)" "" -f
+wget -O starshipinstall.sh https://starship.rs/install.sh
+chmod +x starshipinstall.sh && ./starshipinstall.sh -f 
+rm starshipinstall.sh
 
 ## Print logfile
 echo -e "\n------ *** ------\n"
 echo
-cat $log_file
+grep -E 'failed|$' $log_file
+#cat $log_file
 echo
 echo -e "\n------ *** ------\n"
 rm $log_file

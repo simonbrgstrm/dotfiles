@@ -34,6 +34,7 @@ ln -sf $dot/.config/espanso/default.yml ~/.config/espanso/default.yml
 ln -sf $dot/.config/spicetify/config.ini ~/.config/spicetify/config.ini
 ln -sf $dot/.config/spicetify/Themes/SpicetifyDefault/color.ini ~/.config/spicetify/Themes/SpicetifyDefault/color.ini
 ln -sf $dot/.config/spicetify/Themes/SpicetifyDefault/user.css ~/.config/spicetify/Themes/SpicetifyDefault/user.css
+ln -sf $dot/.config/starship.toml ~/.config/starship.toml
 
 ## Symlink ./local/bin
 ln -sf $dot/.local/bin/ipinfo.sh ~/.local/bin/ipinfo
