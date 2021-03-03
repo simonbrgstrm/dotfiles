@@ -78,7 +78,8 @@ sudo apt update
 for install in ${apt[@]};
 do
   sudo apt install -y $install
-  if [[ $? > 0 ]]
+  if [[ $? > 0 ]];
+  then
     echo "$check FAILED"
   else
     echo "$check installed"
