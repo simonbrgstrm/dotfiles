@@ -29,7 +29,7 @@ apt=(
   libiw-dev
   libmpdclient-dev
   libpulse-dev
-  libxcb -util0-dev
+  libxcb-util0-dev
   libxcb-composite0-dev
   libxcb-cursor-dev
   libxcb-ewmh-dev
