@@ -18,6 +18,7 @@ apt=(
   docker.io
   dunst
   feh
+  font-manager
   fzf
   gnome-tweaks
   herbstluftwm
