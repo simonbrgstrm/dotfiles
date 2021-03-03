@@ -11,12 +11,15 @@ log_file=${PWD}/installResults.txt
 apt=(
   docker-compose
   docker.io
+  dunst
   herbstluftwm
   nodejs
   npm
+  mlocate
   python
   python-pip
   python3
+  ranger
   spotify-client
   vim
   zsh
@@ -58,6 +61,9 @@ for check in ${apt[@]}; do
   fi
 done
 
+## Create herbstluftwm dir
+mkdir -p ~/.config/herbstluftwm
+
 ## Install SpaceVim
 curl -sLf https://spacevim.org/install.sh | bash
 
@@ -71,7 +77,7 @@ sudo usermod -aG docker $USER
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 ## Install Starship
-curl -fsSL https://starship.rs/install.sh | bash
+sh -c "$(curl -fsSL https://starship.rs/install.sh)" "" -f
 
 ## Print logfile
 echo -e "\n------ *** ------\n"

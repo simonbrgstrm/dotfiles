@@ -10,12 +10,18 @@ dot=${PWD}
 
 ## Remove existing
 sudo rm -rf ~/.vim/autoload > /dev/null 2>&1
-sudo rm -rf ~/.SpaceVim.d/init.toml > /dev/null 2>&1
 sudo rm -rf ~/.zshrc > /dev/null 2>&1
+sudo rm -rf ~/.SpaceVim.d > /dev/null 2>&1
 sudo rm -rf ~/.config/dunst/dunstrc > /dev/null 2>&1
 sudo rm -rf ~/.config/herbstluftwm/autostart > /dev/null 2>&1
 sudo rm -rf ~/.config/polybar > /dev/null 2>&1
 sudo rm -rf ~/.config/ranger/rc.conf > /dev/null 2>&1
+
+## Create dirs and paths
+mkdir -p ~/.local/bin
+mkdir -p ~/.config/herbstluftwm
+PATH="$HOME/.local/bin/:$PATH"
+
 
 ## Symlink .config
 ln -sf $dot/vim/autoload ~/.vim/autoload
@@ -35,7 +41,7 @@ ln -sf $dot/.local/bin/sshserver.sh ~/.local/bin/sshserver
 ln -sf $dot/.local/bin/bosse.sh ~/.local/bin/bosse
 
 ## SpaceVim
-ln -sf $dot/.SpaceVim.d/init.toml ~/.SpaceVim.d/init.toml
+ln -sf $dot/.SpaceVim.d ~/.SpaceVim.d
 ln -sf $dot/.SpaceVim.d/theme/molokai.vim ~/.SpaceVim/autoload/SpaceVim/mapping/guide/theme/molokai.vim
 ln -sf $dot/.SpaceVim.d/theme/onedark.vim ~/.SpaceVim/autoload/SpaceVim/mapping/guide/theme/onedark.vim
 
