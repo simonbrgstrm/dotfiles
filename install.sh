@@ -79,9 +79,9 @@ for install in ${apt[@]};
 do
   sudo apt install -y $install
   if [[ $? > 0 ]]
-    echo "$check installed"
-  else
     echo "$check FAILED"
+  else
+    echo "$check installed"
   fi
 done
 
