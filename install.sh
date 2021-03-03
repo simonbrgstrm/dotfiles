@@ -86,16 +86,6 @@ do
   fi
 done
 
-## Check installation and sends result to logfile
-#for check in ${apt[@]}; do
-#  if type -p $check > /dev/null;
-#  then
-#    echo "$check installed" >> $log_file
-#  else
-#    echo "$check failed" >> $log_file
-#  fi
-#done
-
 ## Create herbstluftwm dir
 mkdir -p ~/.config/herbstluftwm
 
