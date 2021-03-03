@@ -9,7 +9,6 @@
 dot=${PWD}
 
 ## Remove existing
-sudo rm -rf ~/.vim/autoload > /dev/null 2>&1
 sudo rm -rf ~/.zshrc > /dev/null 2>&1
 sudo rm -rf ~/.SpaceVim.d > /dev/null 2>&1
 sudo rm -rf ~/.config/dunst/dunstrc > /dev/null 2>&1
@@ -20,11 +19,12 @@ sudo rm -rf ~/.config/ranger/rc.conf > /dev/null 2>&1
 ## Create dirs and paths
 mkdir -p ~/.local/bin
 mkdir -p ~/.config/herbstluftwm
+mkdir -p ~/.config/dunst
+mkdir -p ~/.config/ranger
 PATH="$HOME/.local/bin/:$PATH"
 
 
 ## Symlink .config
-ln -sf $dot/vim/autoload ~/.vim/autoload
 ln -sf $dot/.zshrc ~/.zshrc
 ln -sf $dot/.config/dunst/dunstrc ~/.config/dunst/dunstc
 ln -sf $dot/.config/herbstluftwm/autostartOrange ~/.config/herbstluftwm/autostart
