@@ -43,6 +43,9 @@ ln -sf $dot/.config/spicetify/Themes/SpicetifyDefault/color.ini ~/.config/spicet
 ln -sf $dot/.config/spicetify/Themes/SpicetifyDefault/user.css ~/.config/spicetify/Themes/SpicetifyDefault/user.css
 ln -sf $dot/.config/starship.toml ~/.config/starship.toml
 ln -sf $dot/.config/polybar ~/.config/polybar
+sudo ln -sf $dot/.config/rofi/rofi.conf /etc/rofi.conf
+sudo ln -sf $dot/.config/rofi/onedark.rasi /usr/share/rofi/themes/onedark.rasi
+
 
 ## Symlink ./local/bin
 ln -sf $dot/.local/bin/ipinfo.sh ~/.local/bin/ipinfo
