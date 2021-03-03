@@ -80,11 +80,16 @@ name = 'pechorin/any-jump.vim'
 [[layers]]
   name = 'lang#typescript'
 [[layers]]
-  name = 'lang#markdown'
-[[layers]]
   name = 'lang#dockerfile'
 [[layers]]
   name = 'lang#html'
 [[layers]]
   name = 'lang#python'
-
+[[layers]]
+  name = "lang#groovy"
+[[layers]]
+  name = "lang#java"
+[[layers]]
+  name = "lang#toml"
+[[layers]]
+  name = "lang#sh"
