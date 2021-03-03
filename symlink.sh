@@ -21,15 +21,15 @@ mkdir -p ~/.local/bin
 mkdir -p ~/.config/herbstluftwm
 mkdir -p ~/.config/dunst
 mkdir -p ~/.config/ranger
-mv -r ~/spicetify-cli ~/.config/spicetify
+mv ~/spicetify-cli ~/.config/spicetify
 PATH="$HOME/.local/bin/:$PATH"
 
 ## Make zsh default shell
 chsh -s $(which zsh)
 
 ## Remove headerbar from terminal
-gnome-extensions enable pixel-saver@deadalnix.me
-gsettings set org.gnome.Terminal.Legacy.Settings headerbar false
+#gnome-extensions enable pixel-saver@deadalnix.me
+#gsettings set org.gnome.Terminal.Legacy.Settings headerbar false
 
 ## Symlink .config
 ln -sf $dot/.zshrc ~/.zshrc
@@ -42,6 +42,7 @@ ln -sf $dot/.config/spicetify/config.ini ~/.config/spicetify/config.ini
 ln -sf $dot/.config/spicetify/Themes/SpicetifyDefault/color.ini ~/.config/spicetify/Themes/SpicetifyDefault/color.ini
 ln -sf $dot/.config/spicetify/Themes/SpicetifyDefault/user.css ~/.config/spicetify/Themes/SpicetifyDefault/user.css
 ln -sf $dot/.config/starship.toml ~/.config/starship.toml
+ln -sf $dot/.config/polybar ~/.config/polybar
 
 ## Symlink ./local/bin
 ln -sf $dot/.local/bin/ipinfo.sh ~/.local/bin/ipinfo
