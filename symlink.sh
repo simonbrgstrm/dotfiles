@@ -57,6 +57,7 @@ ln -sf $dot/.local/bin/bosse.sh ~/.local/bin/bosse
 ## Fonts
 ln -sf $dot/.local/share/fonts ~/.local/share/fonts
 sudo rm /etc/fonts/conf.d/70-no-bitmaps.conf
+fc-cache -f -v
 
 ## SpaceVim
 ln -sf $dot/.SpaceVim.d ~/.SpaceVim.d
