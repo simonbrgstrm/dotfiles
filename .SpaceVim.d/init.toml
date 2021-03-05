@@ -30,9 +30,6 @@
     enable_statusline_mode = true
     vimcompatible = true
     filemanager = "nerdtree"
-    git = "fugitive"
-
-
 
 [[custom_plugins]]
 repo = "sjl/badwolf"
