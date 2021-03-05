@@ -41,6 +41,7 @@ ln -sf $dot/.config/herbstluftwm/panel.sh ~/.config/herbstluftwm/panel.sh
 ln -sf $dot/.config/polybar ~/.config/polybar
 ln -sf $dot/.config/polybar ~/.config/polybar
 ln -sf $dot/.config/ranger/rc.confr ~/.config/ranger/rc.conf
+ln -sf $dot/.screenlayout ~/.screenlayout
 ln -sf $dot/.config/spicetify/Themes/SpicetifyDefault/color.ini ~/.config/spicetify/Themes/SpicetifyDefault/color.ini
 ln -sf $dot/.config/spicetify/Themes/SpicetifyDefault/user.css ~/.config/spicetify/Themes/SpicetifyDefault/user.css
 ln -sf $dot/.config/spicetify/config.ini ~/.config/spicetify/config.ini
