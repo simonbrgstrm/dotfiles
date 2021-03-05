@@ -9,19 +9,19 @@
 dot=${PWD}
 
 ## Remove existing
-sudo rm -rf ~/.zshrc > /dev/null 2>&1
 sudo rm -rf ~/.SpaceVim.d > /dev/null 2>&1
 sudo rm -rf ~/.config/dunst/dunstrc > /dev/null 2>&1
 sudo rm -rf ~/.config/herbstluftwm/autostart > /dev/null 2>&1
 sudo rm -rf ~/.config/polybar > /dev/null 2>&1
 sudo rm -rf ~/.config/ranger/rc.conf > /dev/null 2>&1
 sudo rm -rf ~/.local/share/fonts > /dev/null 2>&1
+sudo rm -rf ~/.zshrc > /dev/null 2>&1
 
 ## Create dirs and paths
-mkdir -p ~/.local/bin
-mkdir -p ~/.config/herbstluftwm
 mkdir -p ~/.config/dunst
+mkdir -p ~/.config/herbstluftwm
 mkdir -p ~/.config/ranger
+mkdir -p ~/.local/bin
 mv ~/spicetify-cli ~/.config/spicetify > /dev/null 2>&1
 PATH="$HOME/.local/bin/:$PATH"
 
@@ -33,26 +33,27 @@ chsh -s $(which zsh)
 #gsettings set org.gnome.Terminal.Legacy.Settings headerbar false
 
 ## Symlink .config
-ln -sf $dot/.zshrc ~/.zshrc
+ln -sf $dot/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 ln -sf $dot/.config/dunst/dunstrc ~/.config/dunst/dunstc
+ln -sf $dot/.config/espanso/default.yml ~/.config/espanso/default.yml
 ln -sf $dot/.config/herbstluftwm/autostartOrange ~/.config/herbstluftwm/autostart
 ln -sf $dot/.config/herbstluftwm/panel.sh ~/.config/herbstluftwm/panel.sh
 ln -sf $dot/.config/polybar ~/.config/polybar
+ln -sf $dot/.config/polybar ~/.config/polybar
 ln -sf $dot/.config/ranger/rc.confr ~/.config/ranger/rc.conf
-ln -sf $dot/.config/espanso/default.yml ~/.config/espanso/default.yml
-ln -sf $dot/.config/spicetify/config.ini ~/.config/spicetify/config.ini
 ln -sf $dot/.config/spicetify/Themes/SpicetifyDefault/color.ini ~/.config/spicetify/Themes/SpicetifyDefault/color.ini
 ln -sf $dot/.config/spicetify/Themes/SpicetifyDefault/user.css ~/.config/spicetify/Themes/SpicetifyDefault/user.css
+ln -sf $dot/.config/spicetify/config.ini ~/.config/spicetify/config.ini
 ln -sf $dot/.config/starship.toml ~/.config/starship.toml
-ln -sf $dot/.config/polybar ~/.config/polybar
-sudo ln -sf $dot/.config/rofi/rofi.conf /etc/rofi.conf
+ln -sf $dot/.zshrc ~/.zshrc
 sudo ln -sf $dot/.config/rofi/onedark.rasi /usr/share/rofi/themes/onedark.rasi
+sudo ln -sf $dot/.config/rofi/rofi.conf /etc/rofi.conf
 
 
 ## Symlink ./local/bin
+ln -sf $dot/.local/bin/bosse.sh ~/.local/bin/bosse
 ln -sf $dot/.local/bin/ipinfo.sh ~/.local/bin/ipinfo
 ln -sf $dot/.local/bin/sshserver.sh ~/.local/bin/sshserver
-ln -sf $dot/.local/bin/bosse.sh ~/.local/bin/bosse
 
 ## Fonts
 ln -sf $dot/.local/share/fonts ~/.local/share/fonts
