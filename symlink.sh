@@ -34,6 +34,7 @@ chsh -s $(which zsh)
 
 ## Symlink .config
 ln -sf $dot/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -sf $dot/.config/compton.conf ~/.config/compton.conf
 ln -sf $dot/.config/dunst/dunstrc ~/.config/dunst/dunstc
 ln -sf $dot/.config/espanso/default.yml ~/.config/espanso/default.yml
 ln -sf $dot/.config/herbstluftwm/autostartOrange ~/.config/herbstluftwm/autostart

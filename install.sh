@@ -48,6 +48,7 @@ apt=(
   mlocate
   nodejs
   npm
+  pavucontrol
   python
   python3
   python3-pip
