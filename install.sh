@@ -10,31 +10,39 @@ log_file=${PWD}/installResults.txt
 
 apt=(
   #gnome-shell-extension-pixelsaver
+  alacritty
   arandr
+  blueman
+  bluez
+  brightnessctl
   cmake
   compton
+  deepin-screenshot
   dmenu
   docker-compose
   docker.io
   dunst
   feh
+  filezilla
   font-manager
   fzf
   gnome-tweaks
   herbstluftwm
+  httpie
+  jq
   libasound2-dev
   libcairo2-dev
   libcurl4-openssl-dev
   libiw-dev
   libmpdclient-dev
   libpulse-dev
-  libxcb-util0-dev
   libxcb-composite0-dev
   libxcb-cursor-dev
   libxcb-ewmh-dev
   libxcb-icccm4-dev
   libxcb-image0-dev
   libxcb-randr0-dev
+  libxcb-util0-dev
   libxcb-xkb-dev
   libxcb-xrm-dev
   mlocate
@@ -46,8 +54,12 @@ apt=(
   python3-xcbgen
   ranger
   rofi
+  speedtest-cli
   spotify-client
+  vagrant
   vim
+  virt-manager
+  virtualbox
   xcb
   xcb-proto
   zsh
