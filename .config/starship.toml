@@ -30,7 +30,7 @@ disabled = false
 [git_branch]
 format = "[$symbol$branch]($style) "
 symbol = " "
-style = "bold fg:81"
+style = "bold fg:81 #cd853f"
 truncation_length = 10
 truncation_symbol = ".."
 disabled = false
