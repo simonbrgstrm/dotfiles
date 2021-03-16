@@ -74,6 +74,7 @@ alias theme="$dot/scripts/theme.sh -i"
 alias theme1="$dot/scripts/theme.sh desert"
 alias theme2="$dot/scripts/theme.sh gruvbox-dark"
 alias theme3="$dot/scripts/theme.sh sbm"
+alias a2dp="pactl set-card-profile bluez_card.28_11_A5_DE_81_A4 a2dp_sink"
 
 alias blaapiprod="~/bjornlunden/scripts/testarblaapi.sh"
 
