@@ -15,7 +15,7 @@ hc emit_hook reload
 #xsetroot -solid '#081d3f'
 
 
-#compton --config ~/.config/compton.conf
+compton --config ~/.config/compton.conf
 
 # remove all existing keybindings
 hc keyunbind --all
@@ -28,8 +28,8 @@ Mod=Mod4   # Use the super key as the main modifier
 hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-c close
-hc keybind $Mod-Return spawn ${TERMINAL:-gnome-terminal} # use your $TERMINAL with xterm as fallback
-#hc keybind $Mod-Return spawn ${TERMINAL:-alacritty} # use your $TERMINAL with xterm as fallback
+#hc keybind $Mod-Return spawn ${TERMINAL:-gnome-terminal} # use your $TERMINAL with xterm as fallback
+hc keybind $Mod-Return spawn ${TERMINAL:-alacritty} # use your $TERMINAL with xterm as fallback
 
 #hc keybind $Mod-l spawn betterlockscreen -l dim
 #hc keybind $Mod-e spawn i3lock-fancy
