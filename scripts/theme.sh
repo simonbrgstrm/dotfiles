@@ -2926,6 +2926,27 @@ background: #222222
 foreground: #35b1d2
 cursorColor: #35b1d2
 
+sbm
+0: #4d4d4d
+1: #ff2b2b
+2: #98fb98
+3: #f0e68c
+4: #cd853f
+5: #ffdead
+6: #ffa0a0
+7: #f5deb3
+8: #555555
+9: #a84118
+10: #fff700
+11: #ffff55
+12: #ad5f05
+13: #c42f12
+14: #f39ed6
+15: #ffffff
+background: #151515
+foreground: #ffffff
+cursorColor: #ffb200
+
 smyck
 0: #000000
 1: #C75646
