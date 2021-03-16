@@ -66,21 +66,22 @@ alias update="sudo apt update && sudo apt upgrade -y"
 alias matrix="cmatrix -C yellow"
 alias cheat="cht.sh"
 alias psg="ps aux | grep " 
-alias 3screens="$dot/screenlayout/3screens.sh"
-alias mirrorscreen="$dot/screenlayout/mirrorscreen.sh"
-alias 2screens="$dot/screenlayout/2screens1hor1ver.sh"
+alias 3screens="$dot/.screenlayout/3screens.sh"
+alias mirrorscreen="$dot/.screenlayout/mirrorscreen.sh"
+alias 2screens="$dot/.screenlayout/2screens1hor1ver.sh"
+alias 4screens="$dot/.screenlayout/4screens.sh"
 alias theme="$dot/scripts/theme.sh -i"
-alias theme1="$dot/scripts/theme.sh ic-orange-ppl"
+alias theme1="$dot/scripts/theme.sh desert"
 alias theme2="$dot/scripts/theme.sh gruvbox-dark"
-alias theme3="$dot/scripts/theme.sh desert"
+alias theme3="$dot/scripts/theme.sh sbm"
 
 alias blaapiprod="~/bjornlunden/scripts/testarblaapi.sh"
 
 # Preset theme
-#$dot/scripts/theme.sh desert 
+$dot/scripts/theme.sh sbm 
 
-source ~/dotfiles/scripts/.env
-$dot/scripts/theme.sh $ZSHCOL
+#source ~/dotfiles/scripts/.env
+#$dot/scripts/theme.sh $ZSHCOL
 
 # Theme changer
 alias blue="$dot/scripts/blue.sh"
