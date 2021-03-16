@@ -46,5 +46,11 @@ matches:
         type: shell
         params:
           cmd: "echo $PATH"
-  - trigger: ":meh"
-    replace: "¯\\_(ツ)_/¯"
+  - trigger: ":uptime"
+    replace: "{{uptime}}"
+    vars:
+      - name: uptime
+        type: shell
+        params:
+          cmd: "uptime -p"
+
