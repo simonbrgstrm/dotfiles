@@ -32,6 +32,7 @@
     filemanager = "nerdtree"
 
 [[custom_plugins]]
+# Colorscheme
 repo = "sjl/badwolf"
 merged = 0
 
