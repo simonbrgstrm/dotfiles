@@ -20,6 +20,7 @@ plugins=(
     vagrant
     sudo
     z
+    zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -47,6 +48,8 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -90,6 +93,22 @@ alias orange="$dot/scripts/orange.sh"
 
 # Creates dir and cd into it
 cdm() {mkdir $1 && cd $1}
+
+# ugrep
+alias uq='ug -Q'
+alias ux='ug -UX'
+alias uz='ug -z'
+alias grep='ugrep -G'
+alias egrep='ugrep -E'
+alias fgrep='ugrep -F'
+alias pgrep='ugrep -P'
+alias xgrep='ugrep -UX'
+alias zgrep='ugrep -zG'
+alias zegrep='ugrep -zE'
+alias zfgrep='ugrep -zF'
+alias zpgrep='ugrep -zP'
+alias zxgrep='ugrep -zUX'
+alias xdump='ugrep -X ""'
 
 #Java version
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
