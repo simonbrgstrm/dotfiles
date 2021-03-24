@@ -33,19 +33,19 @@
 
 [[custom_plugins]]
 # Colorscheme
-repo = "sjl/badwolf"
-merged = 0
+  repo = "sjl/badwolf"
+  merged = 0
 
 [[custom_plugins]]
-name = 'vim-scripts/dbext.vim'
-merged = 0
+  name = 'vim-scripts/dbext.vim'
+  merged = 0
 
 [[custom_plugins]]
-name = 'metakirby5/codi.vim'
-merged = 0
+  name = 'metakirby5/codi.vim'
+  merged = 0
 
 [[custom_plugins]]
-name = 'pechorin/any-jump.vim'
+  name = 'pechorin/any-jump.vim'
 
 # Enable autocomplete layer
 [[layers]]
