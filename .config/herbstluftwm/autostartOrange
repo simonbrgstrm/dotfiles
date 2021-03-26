@@ -29,7 +29,7 @@ hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-c close
 #hc keybind $Mod-Return spawn ${TERMINAL:-gnome-terminal} # use your $TERMINAL with xterm as fallback
-hc keybind $Mod-Return spawn ${TERMINAL:-alacritty} # use your $TERMINAL with xterm as fallback
+hc keybind $Mod-Return spawn "${TERMINAL:-alacritty}" # use your $TERMINAL with xterm as fallback
 
 #hc keybind $Mod-l spawn betterlockscreen -l dim
 #hc keybind $Mod-e spawn i3lock-fancy
@@ -176,6 +176,8 @@ hc set mouse_recenter_gap 0
 hc set swap_monitors_to_get_tag 1
 hc set raise_on_focus 1
 hc set focus_follows_mouse 0
+
+update_dragged_clients 1
 
 # rules
 hc unrule -F
