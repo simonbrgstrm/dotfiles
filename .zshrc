@@ -26,6 +26,8 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
 
+eval "$(navi widget zsh)"
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -114,3 +116,5 @@ alias xdump='ugrep -X ""'
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/sbm/.sdkman"
 [[ -s "/home/sbm/.sdkman/bin/sdkman-init.sh" ]] && source "/home/sbm/.sdkman/bin/sdkman-init.sh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
