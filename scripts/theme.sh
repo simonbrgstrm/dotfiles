@@ -2940,8 +2940,8 @@ sbm
 10: #fff700
 11: #ffff55
 12: #ad5f05
-13: #c42f12
-14: #f39ed6
+13: #ba604e
+14: #4d807c
 15: #ffffff
 background: #151515
 foreground: #ffffff
