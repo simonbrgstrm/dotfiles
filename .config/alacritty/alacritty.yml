@@ -112,12 +112,13 @@ font:
     # family: SauceCodePro Nerd Font
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
-    # family: Hack
+    family: Hack
     # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
     # family: Monofur Nerd Font
     # family: TerminessTTF Nerd Font
     # family: SauceCodePro Nerd Font
+    # family: "Fira Code"
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -131,12 +132,13 @@ font:
     # family: SauceCodePro Nerd Font
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
-    # family: Hack
+    family: Hack
     # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
     # family: Monofur Nerd Font
     # family: TerminessTTF Nerd Font
     # family: SauceCodePro Nerd Font
+    # family: "Fira Code"
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -150,12 +152,13 @@ font:
     # family: SauceCodePro Nerd Font Mono
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
-    # family: Hack
+    family: Hack
     # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
     # family: Monofuritalic Nerd Font Mono
     # family: TerminessTTF Nerd Font
     # family: SauceCodePro Nerd Font
+    # family: "Fira Code"
 
     # The `style` can be specified to pick a specific face.
     style: Italic
