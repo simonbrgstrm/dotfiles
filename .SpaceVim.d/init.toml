@@ -48,7 +48,14 @@
   name = 'pechorin/any-jump.vim'
 
 [[custom_plugins]]
-  name = 'vimwiki/vimwiki' 
+  name = 'fiatjaf/neuron.vim'
+
+[[custom_plugins]]
+  name = 'junegunn/fzf.vim'
+
+
+#[[custom_plugins]]
+#  name = 'vimwiki/vimwiki' 
 
 # Enable autocomplete layer
 [[layers]]
