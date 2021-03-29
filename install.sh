@@ -8,64 +8,7 @@
 
 log_file=${PWD}/installResults.txt
 
-apt=(
-  #gnome-shell-extension-pixelsaver
-  alacritty
-  arandr
-  blueman
-  bluez
-  brightnessctl
-  cmake
-  compton
-  deepin-screenshot
-  dmenu
-  docker-compose
-  docker.io
-  dunst
-  feh
-  filezilla
-  font-manager
-  fzf
-  gnome-tweaks
-  herbstluftwm
-  httpie
-  jq
-  libasound2-dev
-  libcairo2-dev
-  libcurl4-openssl-dev
-  libiw-dev
-  libmpdclient-dev
-  libpulse-dev
-  libxcb-composite0-dev
-  libxcb-cursor-dev
-  libxcb-ewmh-dev
-  libxcb-icccm4-dev
-  libxcb-image0-dev
-  libxcb-randr0-dev
-  libxcb-util0-dev
-  libxcb-xkb-dev
-  libxcb-xrm-dev
-  mlocate
-  nodejs
-  npm
-  pavucontrol
-  python
-  python3
-  python3-pip
-  python3-xcbgen
-  ranger
-  rofi
-  speedtest-cli
-  spotify-client
-  vagrant
-  vim
-  virt-manager
-  virtualbox
-  xcb
-  xcb-proto
-  zsh
-
-) 
+mapfile -t apt < apt.txt 
 
 ## Add apt repos
 sudo add-apt-repository universe
@@ -87,14 +30,14 @@ echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sou
 sudo apt update
 
 ## Installs from apt array
-for install in ${apt[@]};
+for install in "${apt[@]};"
 do
-  sudo apt install -y $install
-  if [[ $? > 0 ]];
+  sudo apt install -y "$install"
+  if [[ $? -ne 0 ]];
   then
-    echo "$install FAILED" >> $log_file
+    echo "$install FAILED" >> "$log_file"
   else
-    echo "$install installed" >> $log_file
+    echo "$install installed" >> "$log_file"
   fi
 done
 
@@ -108,7 +51,7 @@ curl -sLf https://spacevim.org/install.sh | bash
 curl -fsSL https://raw.githubusercontent.com/khanhas/spicetify-cli/master/install.sh | sh
 
 ## Docker permission 
-sudo usermod -aG docker $USER 
+sudo usermod -aG docker "$USER"
 
 ## Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
@@ -125,8 +68,8 @@ tar -C ~/ -zxvf polybar-3.5.5.tar.gz
 ## Print logfile
 echo -e "\n------ *** ------\n"
 echo
-grep -E 'FAILED|$' $log_file
+grep -E 'FAILED|$' "$log_file"
 #cat $log_file
 echo
 echo -e "\n------ *** ------\n"
-rm $log_file
+rm "$log_file"
