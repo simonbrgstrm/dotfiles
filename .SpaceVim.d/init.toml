@@ -53,24 +53,24 @@
 [[custom_plugins]]
   name = 'junegunn/fzf.vim'
 
-
-#[[custom_plugins]]
-#  name = 'vimwiki/vimwiki' 
+[[custom_plugins]]
+  name = 'vimwiki/vimwiki' 
 
 # Enable autocomplete layer
 [[layers]]
   name = 'autocomplete'
   auto_completion_return_key_behavior = "complete"
   auto_completion_tab_key_behavior = "smart"
-  name = 'colorscheme'
 
 [[layers]]
-  name = "checkers"
+  name = 'checkers'
+  show_cursor_error = false
 
 [[layers]]
   name = 'shell'
   default_position = 'bottom'
   default_height = 30
+
 [[layers]]
   name = 'VersionControl'
 [[layers]]
@@ -81,6 +81,13 @@
   name = 'debug'
 [[layers]]
   name = 'lsp'
+    filetypes = [
+    "sh",
+    "go",
+    "javascript",
+    "python",
+    "typescript"
+  ]
 
 [[layers]]
   name = 'lang#go'
