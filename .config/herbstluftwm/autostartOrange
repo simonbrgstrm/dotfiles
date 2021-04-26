@@ -15,7 +15,7 @@ hc emit_hook reload
 #xsetroot -solid '#081d3f'
 
 
-compton --config ~/.config/compton.conf
+#compton --config ~/.config/compton.conf
 
 # remove all existing keybindings
 hc keyunbind --all
@@ -36,7 +36,7 @@ hc keybind $Mod-Return spawn "${TERMINAL:-alacritty}" # use your $TERMINAL with 
 hc keybind $Mod-e spawn betterlockscreen -l dim
 #hc keybind $Mod-Shift-p spawn dmenu_run_hlwm
 hc keybind $Mod-Shift-p spawn rofi -show run
-hc keybind $Mod-Shift-o spawn rofi -show window
+hc keybind $Mod-Shift-o spawn "$HOME"/dotfiles/scripts/rofi/pass.sh
 hc keybind $Mod-Shift-u spawn rofi -show ssh
 hc keybind $Mod-Shift-i spawn deepin-screenshot
 hc keybind $Mod-Shift-f spawn firefox
@@ -205,12 +205,12 @@ hc detect_monitors
 #herbstclient set auto_detect_monitors 1
 
 # find the panel
-#panel=~/.config/herbstluftwm/panel.sh
-#[ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
-#for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
-#    # start it on each monitor
-#    "$panel" $monitor &
-#done
+panel=~/.config/herbstluftwm/panel.sh
+[ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
+for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
+    # start it on each monitor
+    "$panel" $monitor &
+done
 
 #Autostart
 
