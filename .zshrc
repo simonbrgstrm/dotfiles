@@ -112,10 +112,11 @@ alias zpgrep='ugrep -zP'
 alias zxgrep='ugrep -zUX'
 alias xdump='ugrep -X ""'
 
-#Java version
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/sbm/.sdkman"
-[[ -s "/home/sbm/.sdkman/bin/sdkman-init.sh" ]] && source "/home/sbm/.sdkman/bin/sdkman-init.sh"
+## Java
+alias java8="source $dot/scripts/java/java8.sh"
+alias java11="source $dot/scripts/java/java11.sh"
+alias java13="source $dot/scripts/java/java13.sh"
+alias java14="source $dot/scripts/java/java14.sh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 if [ -e /home/sbm/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sbm/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
