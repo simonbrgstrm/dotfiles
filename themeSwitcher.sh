@@ -40,7 +40,6 @@ themeSwitch() {
         sed -i 's/^\s\{4,\}foreground.*/    foreground = "#b1b4ba"/' "${dot}"/.config/dunst/dunstrc
         sed -i 's/^\s\{4,\}frame_color.*/    frame_color = "#6e9cf0"/' "${dot}"/.config/dunst/dunstrc
 
-
         sed -i 's/^ZSHCOL\=.*/ZSHCOL="nord"/' "${dot}"/.zshrc
         ln -sf "${dot}"/.config/rofi/nord.rasi /usr/share/rofi/themes/default.rasi
         herbstclient reload
