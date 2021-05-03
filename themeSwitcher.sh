@@ -75,4 +75,4 @@ themeSwitch() {
 themeSwitch "$(echo '
 gruvbox
 nord
-sbm' | rofi -dmenu show)"
+sbm' | rofi -dmenu show -p Theme)"
