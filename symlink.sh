@@ -38,7 +38,7 @@ ln -sf "$dot"/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 ln -sf "$dot"/.config/compton.conf ~/.config/compton.conf
 ln -sf "$dot"/.config/dunst/dunstrc ~/.config/dunst/dunstc
 ln -sf "$dot"/.config/espanso/default.yml ~/.config/espanso/default.yml
-ln -sf "$dot"/.config/herbstluftwm/autostartOrange ~/.config/herbstluftwm/autostart
+ln -sf "$dot"/.config/herbstluftwm/autostart ~/.config/herbstluftwm/autostart
 ln -sf "$dot"/.config/herbstluftwm/panel.sh ~/.config/herbstluftwm/panel.sh
 ln -sf "$dot"/.config/polybar ~/.config/polybar
 ln -sf "$dot"/.config/polybar ~/.config/polybar
