@@ -15,6 +15,10 @@ readarray -t apt < apt.txt
 sudo add-apt-repository universe
 sudo add-apt-repository multiverse
 
+## Update
+sudo apt update
+sudo apt upgrade -y
+
 ## Install curl
 sudo apt install -y curl
 
