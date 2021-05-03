@@ -9,7 +9,7 @@
 log_file=${PWD}/installResults.txt
 
 # Pop apt array with apt.txt file
-mapfile -t apt < apt.txt 
+readarray -t apt < apt.txt 
 
 ## Add apt repos
 sudo add-apt-repository universe
