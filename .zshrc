@@ -84,7 +84,7 @@ alias a2dp="pactl set-card-profile bluez_card.28_11_A5_DE_81_A4 a2dp_sink"
 alias blaapiprod="~/bjornlunden/scripts/testarblaapi.sh"
 
 # Preset theme
-ZSHCOL="nord"
+ZSHCOL="sbm"
 $dot/scripts/theme.sh "$ZSHCOL" 
 
 #source ~/dotfiles/scripts/.env
