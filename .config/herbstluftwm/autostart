@@ -37,6 +37,7 @@ hc keybind $Mod-e spawn betterlockscreen -l dim
 #hc keybind $Mod-Shift-p spawn dmenu_run_hlwm
 hc keybind $Mod-Shift-p spawn rofi -show run
 hc keybind $Mod-Shift-o spawn "$HOME"/dotfiles/scripts/rofi/pass.sh
+hc keybind $Mod-Shift-y spawn "$HOME"/dotfiles/themeSwitcher.sh
 hc keybind $Mod-Shift-u spawn rofi -show ssh
 hc keybind $Mod-Shift-i spawn deepin-screenshot
 hc keybind $Mod-Shift-f spawn firefox

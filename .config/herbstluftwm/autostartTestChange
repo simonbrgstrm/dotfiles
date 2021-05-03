@@ -167,18 +167,18 @@ hc set focus_follows_mouse 0
 update_dragged_clients 1
 
 # Colors
-frameActive="#222222"
-frameActiveBg="#222222"
-frameNormal="#101010"
+frameActive="#ffb200"
+frameActiveBg="#ffb200"
+frameNormal="#222222"
 frameNormalBg="#916500"
-activeColor="#d8dee9"
-normalColor="#5e81ac"
-urgentColor="#ff000"
-innerColor="#4c566a"
+activeColor="#ffb200"
+normalColor="#704b0b"
+urgentColor="#ff0000"
+innerColor="#000000"
 floatingOuterColor="#000000"
-activeInnerColor="#6e9cf0"
-activeOuterColor="#2e3440"
-backgroundColor="#2e3440"
+activeInnerColor="#996b00"
+activeOuterColor="#996b00"
+backgroundColor="#996b00"
 
 
 hc set frame_border_active_color "$frameActive"
