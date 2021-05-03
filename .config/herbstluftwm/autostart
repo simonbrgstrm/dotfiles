@@ -248,5 +248,5 @@ done
 #polybar main -c ~/.config/polybar/config.ini &
 #exec $HOME/.config/polybar/launch.sh
 
-
-feh --bg-fill ~/dotfiles/wall/wall2.png
+wall="$HOME/dotfiles/wall/sbm.png"
+feh --bg-fill "${wall}"
