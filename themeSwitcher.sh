@@ -20,6 +20,8 @@ themeSwitch() {
         sed -i 's/^activeOuterColor\=.*/activeOuterColor="#98971a"/' "${dot}"/.config/herbstluftwm/autostart
         sed -i 's/^backgroundColor\=.*/backgroundColor="#282828"/' "${dot}"/.config/herbstluftwm/autostart
         sed -i 's/^wall\=.*/wall="$HOME\/dotfiles\/wall\/gruvbox.png"/' "${dot}"/.config/herbstluftwm/autostart
+        
+        sed -i 's/^\s\{4,\}colorscheme.*/    colorscheme = "gruvbox"/' "${dot}"/.SpaceVim.d/init.toml
 
         sed -i 's/^ZSHCOL\=.*/ZSHCOL="gruvbox-dark"/' "${dot}"/.zshrc
         ln -sf "${dot}"/.config/rofi/gruvbox.rasi /usr/share/rofi/themes/default.rasi
@@ -44,6 +46,8 @@ themeSwitch() {
         sed -i 's/^\s\{4,\}background.*/    background = "#2e3440"/' "${dot}"/.config/dunst/dunstrc
         sed -i 's/^\s\{4,\}foreground.*/    foreground = "#b1b4ba"/' "${dot}"/.config/dunst/dunstrc
         sed -i 's/^\s\{4,\}frame_color.*/    frame_color = "#6e9cf0"/' "${dot}"/.config/dunst/dunstrc
+        
+        sed -i 's/^\s\{4,\}colorscheme.*/    colorscheme = "nord"/' "${dot}"/.SpaceVim.d/init.toml
 
         sed -i 's/^ZSHCOL\=.*/ZSHCOL="nord"/' "${dot}"/.zshrc
         ln -sf "${dot}"/.config/rofi/nord.rasi /usr/share/rofi/themes/default.rasi
@@ -68,6 +72,8 @@ themeSwitch() {
         sed -i 's/^\s\{4,\}background.*/    background = "#282928"/' "${dot}"/.config/dunst/dunstrc
         sed -i 's/^\s\{4,\}foreground.*/    foreground = "#b56d1b"/' "${dot}"/.config/dunst/dunstrc
         sed -i 's/^\s\{4,\}frame_color.*/    frame_color = "#ffb200"/' "${dot}"/.config/dunst/dunstrc
+
+        sed -i 's/^\s\{4,\}colorscheme .*/    colorscheme = "badwolf"/' "${dot}"/.SpaceVim.d/init.toml
 
         sed -i 's/^ZSHCOL\=.*/ZSHCOL="sbm"/' "${dot}"/.zshrc
         ln -sf "${dot}"/.config/rofi/sbm.rasi /usr/share/rofi/themes/default.rasi
