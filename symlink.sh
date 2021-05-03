@@ -68,5 +68,5 @@ ln -sf "$dot"/.SpaceVim.d ~/.SpaceVim.d
 ln -sf "$dot"/.SpaceVim.d/autoload ~/.SpaceVim.d/autoload
 ln -sf "$dot"/.SpaceVim.d/theme/molokai.vim ~/.SpaceVim/autoload/SpaceVim/mapping/guide/theme/molokai.vim
 ln -sf "$dot"/.SpaceVim.d/theme/onedark.vim ~/.SpaceVim/autoload/SpaceVim/mapping/guide/theme/onedark.vim
-
+ln -sf "$dot"/.SpaceVim/bundle/vim-airline-themes/autoload/airline/themes/badwolf.vim ~/.SpaceVim/bundle/vim-airline-themes/autoload/airline/themes/badwolf.vim
 
