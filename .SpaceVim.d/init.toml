@@ -58,7 +58,10 @@
 
 [[custom_plugins]]
   name = 'sheerun/vim-polyglot'
-  
+
+[[custom_plugins]]
+  name = 'wakatime/vim-wakatime'
+
 
 # Enable autocomplete layer
 [[layers]]
