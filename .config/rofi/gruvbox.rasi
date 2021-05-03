@@ -25,6 +25,16 @@
   text-alt:   #b2b2b2;
   fg:         #abb2bf;
   bg:         #282c34;
+  gruvbox-dark-bg0:          #282828;
+  gruvbox-dark-bg0-soft:     #32302f;
+  gruvbox-dark-bg3:          #665c54;
+  gruvbox-dark-fg0:          #fbf1c7;
+  gruvbox-dark-fg1:          #ebdbb2;
+  gruvbox-dark-red-dark:     #cc241d;
+  gruvbox-dark-red-light:    #fb4934;
+  gruvbox-dark-yellow-dark:  #d79921;
+  gruvbox-dark-yellow-light: #fabd2f;
+  gruvbox-dark-gray:         #a89984;
 
   spacing: 0;
   background-color: transparent;
@@ -36,7 +46,7 @@
 window {
   transparency: "real";
   fullscreen: true;
-  background-color: #282c34dd;
+  background-color: @gruvbox-dark-bg0;
 }
 
 mainbox {
@@ -49,7 +59,7 @@ inputbar {
 }
 
 prompt {
-  text-color: @dorange;
+  text-color: @gruvbox-dark-red-light;
 }
 
 textbox-prompt-colon {
@@ -71,12 +81,12 @@ listview {
 element {
   padding: 5px;
   text-color: @text-alt;
-  highlight: bold #fca002; /* lorange */
+  highlight: bold #b8bb26; 
   border-radius: 3px;
 }
 
 element selected {
-  background-color: @ddorange;
+  background-color: @gruvbox-dark-bg3;
   text-color: @text;
 }
 
