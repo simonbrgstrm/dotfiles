@@ -19,9 +19,13 @@ themeSwitch() {
         sed -i 's/^activeInnerColor\=.*/activeInnerColor="#b8bb26"/' "${dot}"/.config/herbstluftwm/autostart
         sed -i 's/^activeOuterColor\=.*/activeOuterColor="#98971a"/' "${dot}"/.config/herbstluftwm/autostart
         sed -i 's/^backgroundColor\=.*/backgroundColor="#282828"/' "${dot}"/.config/herbstluftwm/autostart
+        sed -i 's/^wall\=.*/wall="$HOME\/dotfiles\/wall\/gruvbox.png"/' "${dot}"/.config/herbstluftwm/autostart
+
         sed -i 's/^ZSHCOL\=.*/ZSHCOL="gruvbox-dark"/' "${dot}"/.zshrc
         ln -sf "${dot}"/.config/rofi/gruvbox.rasi /usr/share/rofi/themes/default.rasi
-        notify-send "Theme" "gruvbox"
+        herbstclient reload
+        killall dunst;notify-send "Theme" "gruvbox"
+
     elif [ "${1}" == "nord" ]; then
         sed -i 's/^frameActive\=.*/frameActive="#222222"/' "${dot}"/.config/herbstluftwm/autostart
         sed -i 's/^frameActiveBg\=.*/frameActiveBg="#222222"/' "${dot}"/.config/herbstluftwm/autostart
@@ -35,6 +39,7 @@ themeSwitch() {
         sed -i 's/^activeInnerColor\=.*/activeInnerColor="#6e9cf0"/' "${dot}"/.config/herbstluftwm/autostart
         sed -i 's/^activeOuterColor\=.*/activeOuterColor="#2e3440"/' "${dot}"/.config/herbstluftwm/autostart
         sed -i 's/^backgroundColor\=.*/backgroundColor="#2e3440"/' "${dot}"/.config/herbstluftwm/autostart
+        sed -i 's/^wall\=.*/wall="$HOME\/dotfiles\/wall\/nord.png"/' "${dot}"/.config/herbstluftwm/autostart
 
         sed -i 's/^\s\{4,\}background.*/    background = "#2e3440"/' "${dot}"/.config/dunst/dunstrc
         sed -i 's/^\s\{4,\}foreground.*/    foreground = "#b1b4ba"/' "${dot}"/.config/dunst/dunstrc
@@ -44,6 +49,7 @@ themeSwitch() {
         ln -sf "${dot}"/.config/rofi/nord.rasi /usr/share/rofi/themes/default.rasi
         herbstclient reload
         killall dunst;notify-send "Theme" "nord"
+
     elif [ "${1}" == "sbm" ]; then
         sed -i 's/^frameActive\=.*/frameActive="#ffb200"/' "${dot}"/.config/herbstluftwm/autostart
         sed -i 's/^frameActiveBg\=.*/frameActiveBg="#ffb200"/' "${dot}"/.config/herbstluftwm/autostart
@@ -57,6 +63,7 @@ themeSwitch() {
         sed -i 's/^activeInnerColor\=.*/activeInnerColor="#996b00"/' "${dot}"/.config/herbstluftwm/autostart
         sed -i 's/^activeOuterColor\=.*/activeOuterColor="#996b00"/' "${dot}"/.config/herbstluftwm/autostart
         sed -i 's/^backgroundColor\=.*/backgroundColor="#996b00"/' "${dot}"/.config/herbstluftwm/autostart
+        sed -i 's/^wall\=.*/wall="$HOME\/dotfiles\/wall\/sbm.png"/' "${dot}"/.config/herbstluftwm/autostart
 
         sed -i 's/^\s\{4,\}background.*/    background = "#282928"/' "${dot}"/.config/dunst/dunstrc
         sed -i 's/^\s\{4,\}foreground.*/    foreground = "#b56d1b"/' "${dot}"/.config/dunst/dunstrc
@@ -66,6 +73,7 @@ themeSwitch() {
         ln -sf "${dot}"/.config/rofi/sbm.rasi /usr/share/rofi/themes/default.rasi
         herbstclient reload
         killall dunst;notify-send "Theme" "sbm"
+
     else
         echo "Invalid theme"
         echo "Themes: gruvbox, nord, sbm"
