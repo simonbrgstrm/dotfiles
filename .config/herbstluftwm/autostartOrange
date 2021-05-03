@@ -139,10 +139,6 @@ hc keybind $Mod-i jumpto urgent
 # theme
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
-hc set frame_border_active_color '#ffb200'      #orange
-hc set frame_border_normal_color '#222222'      #black
-hc set frame_bg_normal_color '#916500'          #grey
-hc set frame_bg_active_color '#ffb200'          #orange
 
 hc set always_show_frame 1
 hc set frame_bg_transparent 1
@@ -153,19 +149,10 @@ hc set frame_normal_opacity 50
 hc set frame_border_width 0
 hc set frame_border_inner_width 0
 
-hc attr theme.active.color '#ffb200' #orange
-hc attr theme.normal.color '#704b0b' #darkdarkorange
-hc attr theme.urgent.color '#ff0000' #red
 hc attr theme.inner_width 3
-hc attr theme.inner_color '#000000' #black
 hc attr theme.border_width 4
 hc attr theme.floating.border_width 4
 hc attr theme.floating.outer_width 0
-hc attr theme.floating.outer_color '#000000' #black
-hc attr theme.active.inner_color '#996b00' #darkorange
-hc attr theme.active.outer_color '#996b00' #darkorange
-hc attr theme.background_color '#996b00' #darkorange
-
 
 hc set window_gap 8
 hc set frame_padding 2
@@ -178,6 +165,34 @@ hc set raise_on_focus 1
 hc set focus_follows_mouse 0
 
 update_dragged_clients 1
+
+# Colors
+frameActive="#ffb200"
+frameActiveBg="#ffb200"
+frameNormal="#222222"
+frameNormalBg="#916500"
+activeColor="#ffb200"
+normalColor="#704b0b"
+urgentColor="#ff0000"
+innerColor="#000000"
+floatingOuterColor="#000000"
+activeInnerColor="#996b00"
+activeOuterColor="#996b00"
+backgroundColor="#996b00"
+
+
+hc set frame_border_active_color "$frameActive"
+hc set frame_bg_active_color "$frameActiveBg"
+hc set frame_border_normal_color "$frameNormal"
+hc set frame_bg_normal_color "$frameNormalBg"
+hc attr theme.active.color "$activeColor"
+hc attr theme.normal.color "$normalColor"
+hc attr theme.urgent.color "$urgentColor" 
+hc attr theme.inner_color "$innerColor"
+hc attr theme.floating.outer_color "$floatingOuterColor" 
+hc attr theme.active.inner_color "$activeInnerColor"
+hc attr theme.active.outer_color "$activeOuterColor"
+hc attr theme.background_color "$backgroundColor"
 
 # rules
 hc unrule -F
