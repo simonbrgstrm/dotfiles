@@ -91,6 +91,7 @@ themeSwitch() {
         ln -sf "${dot}"/.config/rofi/nord.rasi /usr/share/rofi/themes/default.rasi
         herbstclient reload
         killall dunst;notify-send "Theme" "nord"
+        killall -USR1 zsh
 
     elif [ "${1}" == "sbm" ]; then
         sed -i 's/^frameActive\=.*/frameActive="#ffb200"/' "${dot}"/.config/herbstluftwm/autostart
@@ -139,7 +140,7 @@ themeSwitch() {
         sed -i '/directory/{n;s/style.*/style = "bold fg:202"/}' "${dot}"/.config/starship.toml
         sed -i '/git_branch/{n;s/style.*/style = "bold fg:81 #cd853f"/}' "${dot}"/.config/starship.toml
         sed -i '/git_status/{n;s/style.*/style = "bold fg:11"/}' "${dot}"/.config/starship.toml
-        sed -i '/nordejs/{n;s/style.*/style = "bold fg:3"/}' "${dot}"/.config/starship.toml
+        sed -i '/nodejs/{n;s/style.*/style = "bold fg:3"/}' "${dot}"/.config/starship.toml
         sed -i '/java/{n;s/style.*/style = "bold fg:3"/}' "${dot}"/.config/starship.toml
         sed -i '/python/{n;s/style.*/style = "bold fg:3"/}' "${dot}"/.config/starship.toml
         sed -i '/golang/{n;s/style.*/style = "bold fg:3"/}' "${dot}"/.config/starship.toml
@@ -155,6 +156,7 @@ themeSwitch() {
         ln -sf "${dot}"/.config/rofi/sbm.rasi /usr/share/rofi/themes/default.rasi
         herbstclient reload
         killall dunst;notify-send "Theme" "sbm"
+        killall -USR1 zsh
 
     else
         echo "Invalid theme"
