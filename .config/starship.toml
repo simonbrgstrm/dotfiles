@@ -50,7 +50,7 @@ python_binary = "python3"
 disabled = false
 
 [nodejs]
-style = "bold dimmed fg:31"
+style = "bold dimmed fg:3"
 format = "[${symbol} ${version}]($style) "
 symbol = "🤖 "
 text = "fg:236"
