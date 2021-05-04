@@ -42,36 +42,36 @@ untracked = ' ? '
 disabled = false
 
 [python]
-format =  	' [${symbol}${pyenv_prefix}${version}( \($virtualenv\))]($style) '
+style = "bold fg:3"
+format =       ' [${symbol}${pyenv_prefix}${version}( \($virtualenv\))]($style) '
 symbol = "🐍 "
 pyenv_version_name = true
-style = "bold dimmed fg:3"
 python_binary = "python3"
 disabled = false
 
 [nodejs]
+style = "bold dimmed fg:31"
 format = "[${symbol} ${version}]($style) "
 symbol = "🤖 "
-style = "bold dimmed fg:3"
 text = "fg:236"
 not_capable_style = "bold fg:1"
 disabled = false
 
 [java]
+style = "bold fg:3"
 format = " [${symbol}${version}]($style) "
 symbol = "☕ "
-style = "bold dimmed fg:3"
 disabled = false
 
 [golang]
+style = "bold fg:3"
 format = " [$symbol$version]($style) "
 symbol = "🐹 "
-style = "bold dimmed fg:3"
 disabled = false 
 
 [openstack]
+style = "bold fg:3"
 format = " [$symbol$cloud(\\($project\\))]($style) "
-style = "bold dimmed fg:3"
 symbol = "☁️  "
 disabled = false
 
