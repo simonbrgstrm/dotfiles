@@ -72,6 +72,15 @@ themeSwitch() {
         sed -i 's/^volume.*/volume = #8FBCBB/' "${dot}"/.config/polybar/colors.ini
         sed -i 's/^muted.*/muted = #C4C7C5/' "${dot}"/.config/polybar/colors.ini
 
+        sed -i '/directory/{n;s/style.*/style = "bold fg:6"/}' "${dot}"/.config/starship.toml
+        sed -i '/git_branch/{n;s/style.*/style = "bold fg:79"/}' "${dot}"/.config/starship.toml
+        sed -i '/git_status/{n;s/style.*/style = "bold fg:1"/}' "${dot}"/.config/starship.toml
+        sed -i '/nordejs/{n;s/style.*/style = "bold fg:31"/}' "${dot}"/.config/starship.toml
+        sed -i '/java/{n;s/style.*/style = "bold fg:31"/}' "${dot}"/.config/starship.toml
+        sed -i '/python/{n;s/style.*/style = "bold fg:31"/}' "${dot}"/.config/starship.toml
+        sed -i '/golang/{n;s/style.*/style = "bold fg:31"/}' "${dot}"/.config/starship.toml
+        sed -i '/openstack/{n;s/style.*/style = "bold fg:31"/}' "${dot}"/.config/starship.toml
+
         sed -i 's/^\s\{4,\}background.*/    background = "#2e3440"/' "${dot}"/.config/dunst/dunstrc
         sed -i 's/^\s\{4,\}foreground.*/    foreground = "#b1b4ba"/' "${dot}"/.config/dunst/dunstrc
         sed -i 's/^\s\{4,\}frame_color.*/    frame_color = "#6e9cf0"/' "${dot}"/.config/dunst/dunstrc
@@ -126,6 +135,15 @@ themeSwitch() {
         sed -i 's/^batcharg.*/batcharg = #61C766/' "${dot}"/.config/polybar/colors.ini
         sed -i 's/^volume.*/volume = #FDD835/' "${dot}"/.config/polybar/colors.ini
         sed -i 's/^muted.*/muted = #C4C7C5/' "${dot}"/.config/polybar/colors.ini
+
+        sed -i '/directory/{n;s/style.*/style = "bold fg:202"/}' "${dot}"/.config/starship.toml
+        sed -i '/git_branch/{n;s/style.*/style = "bold fg:81 #cd853f"/}' "${dot}"/.config/starship.toml
+        sed -i '/git_status/{n;s/style.*/style = "bold fg:11"/}' "${dot}"/.config/starship.toml
+        sed -i '/nordejs/{n;s/style.*/style = "bold fg:3"/}' "${dot}"/.config/starship.toml
+        sed -i '/java/{n;s/style.*/style = "bold fg:3"/}' "${dot}"/.config/starship.toml
+        sed -i '/python/{n;s/style.*/style = "bold fg:3"/}' "${dot}"/.config/starship.toml
+        sed -i '/golang/{n;s/style.*/style = "bold fg:3"/}' "${dot}"/.config/starship.toml
+        sed -i '/openstack/{n;s/style.*/style = "bold fg:3"/}' "${dot}"/.config/starship.toml
 
         sed -i 's/^\s\{4,\}background.*/    background = "#282928"/' "${dot}"/.config/dunst/dunstrc
         sed -i 's/^\s\{4,\}foreground.*/    foreground = "#b56d1b"/' "${dot}"/.config/dunst/dunstrc
