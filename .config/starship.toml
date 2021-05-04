@@ -1,6 +1,6 @@
 format = """
  [](bold fg:214) $python $golang $nodejs $java $openstack $git_branch $git_status
- [└───>](bold fg:214) $character$directory """
+ [└───>](bold green) $character$directory """
 
 add_newline = false
 
@@ -28,17 +28,17 @@ success_symbol = ""
 disabled = false
 
 [git_branch]
+style = "bold fg:81 #cd853f"
 format = "[$symbol$branch]($style) "
 symbol = " "
-style = "bold fg:81 #cd853f"
 truncation_length = 10
 truncation_symbol = ".."
 disabled = false
 
 [git_status]
+style = "bold fg:11"
 format = '([\[$all_status$ahead_behind\]]($style) )'
 untracked = ' ? '
-style = "bold fg:11"
 disabled = false
 
 [python]
