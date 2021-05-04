@@ -43,6 +43,35 @@ themeSwitch() {
         sed -i 's/^backgroundColor\=.*/backgroundColor="#2e3440"/' "${dot}"/.config/herbstluftwm/autostart
         sed -i 's/^wall\=.*/wall="$HOME\/dotfiles\/wall\/nord.png"/' "${dot}"/.config/herbstluftwm/autostart
 
+        sed -i 's/^background.*/background = #3B4252/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^foreground.*/foreground = #C4C7C5/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^cpu.*/cpu = #81A1C1/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^signal.*/signal = #64AAAF/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^temp.*/temp = #81A1C1/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^titel.*/titel = #81A1C1/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^workspacefg.*/workspacefg = #88C0D0/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^workspacebg.*/workspacebg = #3B4252/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^urgentfg.*/urgentfg = #E65100/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^urgentbg.*/urgentbg = #212B30/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^emptyfg.*/emptyfg = #C4C7C5/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^emptybg.*/emptybg = #3B4252/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^launcher.*/launcher = #FFA726/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^sepa.*/sepa = #5C6F7B/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^sep2.*/sep2 = #5C6F7B/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^sysmenu.*/sysmenu = #BF616A/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^menuopen.*/menuopen = #8FBCBB/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^menuclosed.*/menuclosed = #8FBCBB/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^menuseperator.*/menuseperator = #8FBCBB/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^memorylow.*/memorylow = #61C766/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^memorymed.*/memorymed = #8FBCBB/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^memoryhigh.*/memoryhigh = #EC7875/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^memoryfg.*/memoryfg = #5C6F7B/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^batfull.*/batfull = #81A1C1/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^batdis.*/batdis = #FBC02D/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^batcharg.*/batcharg = #61C766/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^volume.*/volume = #8FBCBB/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^muted.*/muted = #C4C7C5/' "${dot}"/.config/polybar/colors.ini
+
         sed -i 's/^\s\{4,\}background.*/    background = "#2e3440"/' "${dot}"/.config/dunst/dunstrc
         sed -i 's/^\s\{4,\}foreground.*/    foreground = "#b1b4ba"/' "${dot}"/.config/dunst/dunstrc
         sed -i 's/^\s\{4,\}frame_color.*/    frame_color = "#6e9cf0"/' "${dot}"/.config/dunst/dunstrc
