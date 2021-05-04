@@ -27,6 +27,7 @@ themeSwitch() {
         ln -sf "${dot}"/.config/rofi/gruvbox.rasi /usr/share/rofi/themes/default.rasi
         herbstclient reload
         killall dunst;notify-send "Theme" "gruvbox"
+        killall -USR1 zsh
 
     elif [ "${1}" == "nord" ]; then
         sed -i 's/^frameActive\=.*/frameActive="#222222"/' "${dot}"/.config/herbstluftwm/autostart
