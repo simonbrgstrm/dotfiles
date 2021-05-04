@@ -73,7 +73,7 @@ themeSwitch() {
         sed -i 's/^muted.*/muted = #C4C7C5/' "${dot}"/.config/polybar/colors.ini
 
         sed -i '/directory/{n;s/style.*/style = "bold fg:6"/}' "${dot}"/.config/starship.toml
-        sed -i '/git_branch/{n;s/style.*/style = "bold fg:79"/}' "${dot}"/.config/starship.toml
+        sed -i '/git_branch/{n;s/style.*/style = "bold fg:80"/}' "${dot}"/.config/starship.toml
         sed -i '/git_status/{n;s/style.*/style = "bold fg:1"/}' "${dot}"/.config/starship.toml
         sed -i '/nordejs/{n;s/style.*/style = "bold fg:31"/}' "${dot}"/.config/starship.toml
         sed -i '/java/{n;s/style.*/style = "bold fg:31"/}' "${dot}"/.config/starship.toml
