@@ -29,8 +29,8 @@
     vimcompatible =  false
     filemanager = "nerdtree"
 
+# Custom Colorscheme
 [[custom_plugins]]
-# Colorscheme
   repo = "sjl/badwolf"
   merged = 0
 
@@ -60,6 +60,8 @@
 [[custom_plugins]]
   name = 'wakatime/vim-wakatime'
 
+[[layers]]
+  name = 'colorscheme'
 
 # Enable autocomplete layer
 [[layers]]
