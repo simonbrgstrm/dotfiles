@@ -46,7 +46,7 @@
 window {
   transparency: "real";
   fullscreen: true;
-  background-color: @gruvbox-dark-bg0;
+  background-color: #282c34dd;
 }
 
 mainbox {
