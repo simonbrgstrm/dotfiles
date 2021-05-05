@@ -21,18 +21,18 @@ themeSwitch() {
         sed -i 's/^backgroundColor\=.*/backgroundColor="#282828"/' "${dot}"/.config/herbstluftwm/autostart
         sed -i 's/^wall\=.*/wall="$HOME\/dotfiles\/wall\/gruvbox.png"/' "${dot}"/.config/herbstluftwm/autostart
         
-        sed -i 's/^background.*/background = #282828/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^background.*/background = #383838/' "${dot}"/.config/polybar/colors.ini
         sed -i 's/^foreground.*/foreground = #C4C7C5/' "${dot}"/.config/polybar/colors.ini
         sed -i 's/^cpu.*/cpu = #689D6A/' "${dot}"/.config/polybar/colors.ini
         sed -i 's/^signal.*/signal = #8EC07C/' "${dot}"/.config/polybar/colors.ini
         sed -i 's/^temp.*/temp = #8EC07C/' "${dot}"/.config/polybar/colors.ini
         sed -i 's/^titel.*/titel = #8EC07C/' "${dot}"/.config/polybar/colors.ini
         sed -i 's/^workspacefg.*/workspacefg = #689D6A/' "${dot}"/.config/polybar/colors.ini
-        sed -i 's/^workspacebg.*/workspacebg = #282828/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^workspacebg.*/workspacebg = #383838/' "${dot}"/.config/polybar/colors.ini
         sed -i 's/^urgentfg.*/urgentfg = #E65100/' "${dot}"/.config/polybar/colors.ini
         sed -i 's/^urgentbg.*/urgentbg = #212B30/' "${dot}"/.config/polybar/colors.ini
         sed -i 's/^emptyfg.*/emptyfg = #C4C7C5/' "${dot}"/.config/polybar/colors.ini
-        sed -i 's/^emptybg.*/emptybg = #282828/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^emptybg.*/emptybg = #383838/' "${dot}"/.config/polybar/colors.ini
         sed -i 's/^launcher.*/launcher = #FFA726/' "${dot}"/.config/polybar/colors.ini
         sed -i 's/^sepa.*/sepa = #5C6F7B/' "${dot}"/.config/polybar/colors.ini
         sed -i 's/^sep2.*/sep2 = #5C6F7B/' "${dot}"/.config/polybar/colors.ini
