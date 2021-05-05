@@ -11,19 +11,62 @@ themeSwitch() {
         sed -i 's/^frameActiveBg\=.*/frameActiveBg="#7c6f64"/' "${dot}"/.config/herbstluftwm/autostart
         sed -i 's/^frameNormal\=.*/frameNormal="#282828"/' "${dot}"/.config/herbstluftwm/autostart
         sed -i 's/^frameNormalBg\=.*/frameNormalBg="#928374"/' "${dot}"/.config/herbstluftwm/autostart
-        sed -i 's/^activeColor\=.*/activeColor="#b8bb26"/' "${dot}"/.config/herbstluftwm/autostart
-        sed -i 's/^normalColor\=.*/normalColor="#98971a"/' "${dot}"/.config/herbstluftwm/autostart
+        sed -i 's/^activeColor\=.*/activeColor="#366337"/' "${dot}"/.config/herbstluftwm/autostart
+        sed -i 's/^normalColor\=.*/normalColor="#8ec07c"/' "${dot}"/.config/herbstluftwm/autostart
         sed -i 's/^urgentColor\=.*/urgentColor="#ff000"/' "${dot}"/.config/herbstluftwm/autostart
         sed -i 's/^innerColor\=.*/innerColor="#282828"/' "${dot}"/.config/herbstluftwm/autostart
         sed -i 's/^floatingOuterColor\=.*/floatingOuterColor="#000000"/' "${dot}"/.config/herbstluftwm/autostart
-        sed -i 's/^activeInnerColor\=.*/activeInnerColor="#b8bb26"/' "${dot}"/.config/herbstluftwm/autostart
-        sed -i 's/^activeOuterColor\=.*/activeOuterColor="#98971a"/' "${dot}"/.config/herbstluftwm/autostart
+        sed -i 's/^activeInnerColor\=.*/activeInnerColor="#689d6a"/' "${dot}"/.config/herbstluftwm/autostart
+        sed -i 's/^activeOuterColor\=.*/activeOuterColor="#689d6a"/' "${dot}"/.config/herbstluftwm/autostart
         sed -i 's/^backgroundColor\=.*/backgroundColor="#282828"/' "${dot}"/.config/herbstluftwm/autostart
         sed -i 's/^wall\=.*/wall="$HOME\/dotfiles\/wall\/gruvbox.png"/' "${dot}"/.config/herbstluftwm/autostart
         
+        sed -i 's/^background.*/background = #282828/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^foreground.*/foreground = #C4C7C5/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^cpu.*/cpu = #689D6A/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^signal.*/signal = #8EC07C/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^temp.*/temp = #8EC07C/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^titel.*/titel = #8EC07C/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^workspacefg.*/workspacefg = #689D6A/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^workspacebg.*/workspacebg = #282828/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^urgentfg.*/urgentfg = #E65100/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^urgentbg.*/urgentbg = #212B30/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^emptyfg.*/emptyfg = #C4C7C5/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^emptybg.*/emptybg = #282828/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^launcher.*/launcher = #FFA726/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^sepa.*/sepa = #5C6F7B/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^sep2.*/sep2 = #5C6F7B/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^sysmenu.*/sysmenu = #CC241D/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^menuopen.*/menuopen = #8EC07C/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^menuclosed.*/menuclosed = #8EC07C/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^menuseperator.*/menuseperator = #8EC07C/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^memorylow.*/memorylow = #61C766/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^memorymed.*/memorymed = #8EC07C/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^memoryhigh.*/memoryhigh = #EC7875/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^memoryfg.*/memoryfg = #5C6F7B/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^batfull.*/batfull = #98971A/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^batdis.*/batdis = #FBC02D/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^batcharg.*/batcharg = #61C766/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^volume.*/volume = #8EC07C/' "${dot}"/.config/polybar/colors.ini
+        sed -i 's/^muted.*/muted = #C4C7C5/' "${dot}"/.config/polybar/colors.ini
+
+        sed -i '/directory/{n;s/style.*/style = "bold fg:14"/}' "${dot}"/.config/starship.toml
+        sed -i '/git_branch/{n;s/style.*/style = "bold fg:9"/}' "${dot}"/.config/starship.toml
+        sed -i '/git_status/{n;s/style.*/style = "bold fg:13"/}' "${dot}"/.config/starship.toml
+        sed -i '/nordejs/{n;s/style.*/style = "bold fg:8"/}' "${dot}"/.config/starship.toml
+        sed -i '/java/{n;s/style.*/style = "bold fg:8"/}' "${dot}"/.config/starship.toml
+        sed -i '/python/{n;s/style.*/style = "bold fg:8"/}' "${dot}"/.config/starship.toml
+        sed -i '/golang/{n;s/style.*/style = "bold fg:8"/}' "${dot}"/.config/starship.toml
+        sed -i '/openstack/{n;s/style.*/style = "bold fg:8"/}' "${dot}"/.config/starship.toml
+
+        sed -i 's/^\s\{4,\}background.*/    background = "#282828"/' "${dot}"/.config/dunst/dunstrc
+        sed -i 's/^\s\{4,\}foreground.*/    foreground = "#b1b4ba"/' "${dot}"/.config/dunst/dunstrc
+        sed -i 's/^\s\{4,\}frame_color.*/    frame_color = "#689d6a"/' "${dot}"/.config/dunst/dunstrc
+
         sed -i 's/^\s\{4,\}colorscheme.*/    colorscheme = "gruvbox"/' "${dot}"/.SpaceVim.d/init.toml
 
         sed -i 's/^ZSHCOL\=.*/ZSHCOL="gruvbox-dark"/' "${dot}"/.zshrc
+
         ln -sf "${dot}"/.config/rofi/gruvbox.rasi /usr/share/rofi/themes/default.rasi
         herbstclient reload
         killall dunst;notify-send "Theme" "gruvbox"
