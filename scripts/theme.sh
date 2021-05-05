@@ -1173,7 +1173,7 @@ gruvbox-dark
 9: #fb4934
 10: #b8bb26
 11: #fabd2f
-12: #cd853f
+12: #5f8f4d
 13: #d3869b
 14: #8ec07c
 15: #ebdbb2
