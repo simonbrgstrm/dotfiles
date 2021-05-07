@@ -121,3 +121,7 @@ alias java14="source $dot/scripts/java/java14.sh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 if [ -e /home/sbm/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sbm/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
