@@ -1,5 +1,5 @@
 # dotfiles
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/simonbrgstrm/dotfiles?style=for-the-badge)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/simonbrgstrm/dotfiles?style=for-the-badge)
 ![GitHub last commit](https://img.shields.io/github/last-commit/simonbrgstrm/dotfiles?style=for-the-badge)
 ![GitHub top language](https://img.shields.io/github/languages/top/simonbrgstrm/dotfiles?style=for-the-badge)
 
