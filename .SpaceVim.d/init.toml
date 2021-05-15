@@ -106,6 +106,9 @@
     "-data",
     "/home/sbm/.cache/javalsp"
     ]
+    python = [
+      "pyls"
+    ]
 
 [[layers]]
   name = 'lang#go'
@@ -119,8 +122,12 @@
   name = 'lang#dockerfile'
 [[layers]]
   name = 'lang#html'
+
 [[layers]]
   name = 'lang#python'
+  enable_typeinfo = true
+  enabled_linters = ['python', 'pylint']
+
 [[layers]]
   name = "lang#groovy"
 [[layers]]
