@@ -91,23 +91,20 @@
   ]
   [layers.override_cmd]
     java = [
-
     "java",
-        "-Declipse.application=org.eclipse.jdt.ls.core.id1",
-        "-Dosgi.bundles.defaultStartLevel=4",
-        "-Declipse.product=org.eclipse.jdt.ls.core.product",
-        "-Dlog.protocol=true",
-        "-Dlog.level=NONE",
-        "-noverify",
-        "-Xmx1G",
-
+    "-Declipse.application=org.eclipse.jdt.ls.core.id1",
+    "-Dosgi.bundles.defaultStartLevel=4",
+    "-Declipse.product=org.eclipse.jdt.ls.core.product",
+    "-Dlog.protocol=true",
+    "-Dlog.level=NONE",
+    "-noverify",
+    "-Xmx1G",
     "-jar",
-        "~/lsp/eclipse.jdt.ls/plugins/org.eclipse.equinox.launcher_1.5.600.v20191014-2022.jar"
-            "-configuration",
-            "~/lsp/newlsp/repository/config_linux"
-            "-data",
-            "~/.cache/javalsp"
-
+    "/home/sbm/lsp/eclipse.jdt.ls/plugins/org.eclipse.equinox.launcher_1.5.600.v20191014-2022.jar"
+    "-configuration",
+    "/home/sbm/lsp/newlsp/repository/config_linux"
+    "-data",
+    "/home/sbm/.cache/javalsp"
     ]
 
 [[layers]]
