@@ -1,7 +1,6 @@
 #!/bin/bash
 
 rofi_command="rofi -show run"
-#-theme $HOME/.config/polybar/scripts/themes/powermenu.rasi"
 
 uptime=$(uptime -p | sed -e 's/up //g')
 
