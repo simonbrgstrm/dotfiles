@@ -21,6 +21,7 @@
     enable_statusline_mode = true
     vimcompatible =  false
     filemanager = "nerdtree"
+    autocomplete_method = "coc"
 
 # Custom Colorscheme
 [[custom_plugins]]
