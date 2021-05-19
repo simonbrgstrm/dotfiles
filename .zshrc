@@ -60,8 +60,9 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 #
 dot=~/dotfiles
 
+alias vi="nvim"
+alias vim="nvim"
 alias zshconfig="vi ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias mv="mv -i"
 alias rm="rm -i"
 alias cp="cp -i"
