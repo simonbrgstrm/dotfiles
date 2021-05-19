@@ -13,7 +13,7 @@
     enable_guicolors = true
     # Bootstrap autoload/myspacevim
     bootstrap_before = 'myspacevim#before'
-    #bootstrap_after = 'myspacevim#after'
+    bootstrap_after = 'myspacevim#after'
     statusline_separator = "arrow"
     statusline_iseparator = "arrow"
     buffer_index_type = 4
@@ -38,24 +38,37 @@
 
 [[custom_plugins]]
   name = 'pechorin/any-jump.vim'
+  merged = 0
 
 [[custom_plugins]]
   name = 'fiatjaf/neuron.vim'
+  merged = 0
 
 [[custom_plugins]]
   name = 'junegunn/fzf.vim'
+  merged = 0
+
+[[custom_plugins]]
+  name = 'junegunn/fzf'
+  merged = 0
 
 [[custom_plugins]]
   name = 'vimwiki/vimwiki' 
+  merged = 0
 
 [[custom_plugins]]
   name = 'sheerun/vim-polyglot'
+  merged = 0
 
 [[custom_plugins]]
   name = 'wakatime/vim-wakatime'
+  merged = 0
 
 [[layers]]
   name = 'colorscheme'
+
+[[layers]]
+  name = 'tools'
 
 # Enable autocomplete layer
 [[layers]]
@@ -74,12 +87,16 @@
 
 [[layers]]
   name = 'VersionControl'
+
 [[layers]]
   name = 'git'
+
 [[layers]]
   name = 'fzf'
+
 [[layers]]
   name = 'debug'
+
 [[layers]]
   name = 'lsp'
     filetypes = [
