@@ -1,6 +1,4 @@
-#!/bin/bash
-
-rofi_command="rofi -show run"
+#!/usr/bin/env bash
 
 uptime=$(uptime -p | sed -e 's/up //g')
 
@@ -14,7 +12,7 @@ logout="Logout"
 # Variable passed to rofi
 options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
 
-chosen="$(echo -e "$options" | $rofi_command -p "UP - $uptime" -dmenu -selected-row 0)"
+chosen="$(printf "$options" | rofi -dmenu "$@" -p "UP - $uptime")"
 case $chosen in
     $shutdown)
         exec shutdown
