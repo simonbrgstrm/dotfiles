@@ -16,6 +16,8 @@
     bootstrap_after = 'myspacevim#after'
     statusline_separator = "arrow"
     statusline_iseparator = "arrow"
+    default_indent = 4
+    expand_tab = true
     buffer_index_type = 4
     enable_tabline_filetype_icon = true
     enable_statusline_mode = true
@@ -68,7 +70,8 @@
   name = 'colorscheme'
 
 [[layers]]
-  name = 'tools'
+  name = 'core'
+  filetree_show_hidden = true
 
 # Enable autocomplete layer
 [[layers]]
