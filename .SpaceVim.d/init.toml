@@ -29,6 +29,9 @@
 [[custom_plugins]]
   repo = "sjl/badwolf"
   merged = 0
+[[custom_plugins]]
+  repo = "norcalli/nvim-colorizer.lua"
+  merged = 0
 
 [[custom_plugins]]
   name = 'vim-scripts/dbext.vim'
@@ -93,6 +96,7 @@
 
 [[layers]]
   name = 'git'
+  git_plugin = 'fugitive'
 
 [[layers]]
   name = 'fzf'
