@@ -10,6 +10,7 @@ nmap <leader>ww :e ~/zettelkasten/index.md<CR>
 nmap <leader>u :MundoShow<CR>
 nmap <leader>sf :Files<CR>
 nmap <leader>m :marks<CR>
+nmap <leader>c :ColorizerToggle<CR>
 
 "===========================================
 " fzf 
