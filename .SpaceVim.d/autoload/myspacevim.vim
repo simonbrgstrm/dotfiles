@@ -5,15 +5,27 @@ function! myspacevim#after() abort
 endfunction
 
 function! myspacevim#before() abort
+
+
+
+"=================== keys ====================
+
 let g:mapleader = ','
 nmap <leader>ww :e ~/zettelkasten/index.md<CR>
 nmap <leader>u :MundoShow<CR>
-nmap <leader>sf :Files<CR>
+nmap <leader>sf :Telescope find_files<CR>
 nmap <leader>m :marks<CR>
 nmap <leader>c :ColorizerToggle<CR>
+"=============================================
 
-"===========================================
-" fzf 
+"=================== menu ====================
+
+call SpaceVim#custom#SPC('nnoremap', ['f', 'f'], ':Telescope find_files', 'find files in current buffer', 1)
+
+
+"=============================================
+
+"==================== fzf ====================
 " examples
 " See :h fzf_colors
 
@@ -35,6 +47,6 @@ let g:fzf_colors =
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
-"===========================================
+"=============================================
 
 endfunction
