@@ -29,12 +29,9 @@
 [[custom_plugins]]
   repo = "sjl/badwolf"
   merged = 0
-[[custom_plugins]]
-  repo = "norcalli/nvim-colorizer.lua"
-  merged = 0
 
 [[custom_plugins]]
-  name = 'vim-scripts/dbext.vim'
+  repo = "norcalli/nvim-colorizer.lua"
   merged = 0
 
 [[custom_plugins]]
@@ -79,6 +76,10 @@
 
 [[custom_plugins]]
   name = 'nvim-telescope/telescope.nvim'
+  merged = 0
+
+[[custom_plugins]]
+  name = 'simnalamburt/vim-mundo'
   merged = 0
 
 [[layers]]
