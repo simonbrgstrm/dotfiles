@@ -69,6 +69,18 @@
   name = 'wakatime/vim-wakatime'
   merged = 0
 
+[[custom_plugins]]
+  name = 'nvim-lua/popup.nvim'
+  merged = 0
+
+[[custom_plugins]]
+  name ='nvim-lua/plenary.nvim'
+  merged = 0
+
+[[custom_plugins]]
+  name = 'nvim-telescope/telescope.nvim'
+  merged = 0
+
 [[layers]]
   name = 'colorscheme'
 
