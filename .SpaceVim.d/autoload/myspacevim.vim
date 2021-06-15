@@ -1,6 +1,12 @@
 function! myspacevim#after() abort
   set nohlsearch
+  set incsearch
   set guicursor=
+  set scrolloff=10
+
+  map f <Plug>Sneak_s
+  map F <Plug>Sneak_S
+  
 
 endfunction
 
@@ -16,6 +22,7 @@ nmap <leader>u :MundoShow<CR>
 nmap <leader>sf :Telescope find_files<CR>
 nmap <leader>m :marks<CR>
 nmap <leader>c :ColorizerToggle<CR>
+
 "=============================================
 
 "=================== menu ====================
@@ -25,9 +32,13 @@ call SpaceVim#custom#SPC('nnoremap', ['f', 'f'], ':Telescope find_files', 'find 
 
 "=============================================
 
+"=================== sneak ===================
+let g:sneak#label = 1
+"=============================================
+
 "==================== fzf ====================
 " examples
-" See :h fzf_colors
+  " See :h fzf_colors
 
 let $FZF_DEFAULT_OPTS = '--info=inline'
 let $FZF_DEFAULT_COMMAND="rg --files --hidden"
