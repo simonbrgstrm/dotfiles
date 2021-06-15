@@ -7,6 +7,8 @@
 #=============================================================================
 
 # All SpaceVim option below [option] section
+
+# ========= Options =========== #
 [options]
     colorscheme = "badwolf"
     #colorscheme_bg = "dark"
@@ -25,8 +27,127 @@
     filemanager = "nerdtree"
     autocomplete_method = "coc"
 
-# Custom Colorscheme
+# ================================= #
+
+# =========== Layers ============== #
+[[layers]]
+  name = 'colorscheme'
+
+[[layers]]
+  name = 'core'
+  filetree_show_hidden = true
+
+# Enable autocomplete layer
+[[layers]]
+  name = 'autocomplete'
+  auto_completion_return_key_behavior = "complete"
+  auto_completion_tab_key_behavior = "smart"
+
+[[layers]]
+  name = 'checkers'
+  show_cursor_error = false
+
+[[layers]]
+  name = 'shell'
+  default_position = 'bottom'
+  default_height = 30
+
+[[layers]]
+  name = 'VersionControl'
+
+[[layers]]
+  name = 'git'
+  git_plugin = 'fugitive'
+
+[[layers]]
+  name = 'fzf'
+
+[[layers]]
+  name = 'debug'
+
+[[layers]]
+  name = 'lsp'
+    filetypes = [
+    "sh",
+    "go",
+    "javascript",
+    "java",
+    "python",
+    "dockerfile",
+    # "jenkinsfile",
+    # "groovy",
+    "typescript"
+  ]
+  [layers.override_cmd]
+    java = [
+    "java",
+    "-Declipse.application=org.eclipse.jdt.ls.core.id1",
+    "-Dosgi.bundles.defaultStartLevel=4",
+    "-Declipse.product=org.eclipse.jdt.ls.core.product",
+    "-Dlog.protocol=true",
+    "-Dlog.level=NONE",
+    "-noverify",
+    "-Xmx1G",
+    "-jar",
+    "/home/sbm/lsp/eclipse.jdt.ls/plugins/org.eclipse.equinox.launcher_1.5.600.v20191014-2022.jar"
+    "-configuration",
+    "/home/sbm/lsp/newlsp/repository/config_linux"
+    "-data",
+    "/home/sbm/.cache/javalsp"
+    ]
+    python = [
+      "pyls"
+    ]
+#     groovy = [
+    #   "java",
+    #   "-jar",
+    #   "/home/sbm/lsp/groovy-language-server/build/libs/groovy-language-server-all.jar"
+    # ]
+    # Jenkinsfile = [
+    #   "java",
+    #   "-jar",
+    #   "/home/sbm/lsp/groovy-language-server/build/libs/groovy-language-server-all.jar"
+   #  ]
+
+# ================================= #
+
+# ========= Lang layers =========== #
+    
+[[layers]]
+  name = 'lang#go'
+[[layers]]
+  name = 'lang#javascript'
+[[layers]]
+  name = 'lang#json'
+[[layers]]
+  name = 'lang#typescript'
+[[layers]]
+  name = 'lang#dockerfile'
+[[layers]]
+  name = 'lang#html'
+[[layers]]
+  name = "lang#groovy"
+[[layers]]
+  name = "lang#java"
+[[layers]]
+  name = "lang#toml"
+[[layers]]
+  name = "lang#vim"
+[[layers]]
+  name = "lang#powershell"
+[[layers]]
+  name = "lang#sh"
+[[layers]]
+  name = 'lang#python'
+  enable_typeinfo = true
+  enabled_linters = ['python', 'pylint']
+
+# ================================= #
+
+# ======== Custom plugins ========= #
+
 [[custom_plugins]]
+# Custom Colorscheme
   repo = "sjl/badwolf"
   merged = 0
 
@@ -79,98 +200,19 @@
   merged = 0
 
 [[custom_plugins]]
+  name = 'nvim-treesitter/nvim-treesitter'
+  merged = 0
+
+[[custom_plugins]]
   name = 'simnalamburt/vim-mundo'
   merged = 0
 
-[[layers]]
-  name = 'colorscheme'
+[[custom_plugins]]
+  name = 'martinda/Jenkinsfile-vim-syntax'
+  merged = 0
 
-[[layers]]
-  name = 'core'
-  filetree_show_hidden = true
+[[custom_plugins]]
+  name = 'justinmk/vim-sneak'
+  merged = 0
 
-# Enable autocomplete layer
-[[layers]]
-  name = 'autocomplete'
-  auto_completion_return_key_behavior = "complete"
-  auto_completion_tab_key_behavior = "smart"
-
-[[layers]]
-  name = 'checkers'
-  show_cursor_error = false
-
-[[layers]]
-  name = 'shell'
-  default_position = 'bottom'
-  default_height = 30
-
-[[layers]]
-  name = 'VersionControl'
-
-[[layers]]
-  name = 'git'
-  git_plugin = 'fugitive'
-
-[[layers]]
-  name = 'fzf'
-
-[[layers]]
-  name = 'debug'
-
-[[layers]]
-  name = 'lsp'
-    filetypes = [
-    "sh",
-    "go",
-    "javascript",
-    "java",
-    "python",
-    "typescript"
-  ]
-  [layers.override_cmd]
-    java = [
-    "java",
-    "-Declipse.application=org.eclipse.jdt.ls.core.id1",
-    "-Dosgi.bundles.defaultStartLevel=4",
-    "-Declipse.product=org.eclipse.jdt.ls.core.product",
-    "-Dlog.protocol=true",
-    "-Dlog.level=NONE",
-    "-noverify",
-    "-Xmx1G",
-    "-jar",
-    "/home/sbm/lsp/eclipse.jdt.ls/plugins/org.eclipse.equinox.launcher_1.5.600.v20191014-2022.jar"
-    "-configuration",
-    "/home/sbm/lsp/newlsp/repository/config_linux"
-    "-data",
-    "/home/sbm/.cache/javalsp"
-    ]
-    python = [
-      "pyls"
-    ]
-
-[[layers]]
-  name = 'lang#go'
-[[layers]]
-  name = 'lang#javascript'
-[[layers]]
-  name = 'lang#json'
-[[layers]]
-  name = 'lang#typescript'
-[[layers]]
-  name = 'lang#dockerfile'
-[[layers]]
-  name = 'lang#html'
-
-[[layers]]
-  name = 'lang#python'
-  enable_typeinfo = true
-  enabled_linters = ['python', 'pylint']
-
-[[layers]]
-  name = "lang#groovy"
-[[layers]]
-  name = "lang#java"
-[[layers]]
-  name = "lang#toml"
-[[layers]]
-  name = "lang#sh"
+# ================================= #
