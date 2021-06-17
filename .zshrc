@@ -66,6 +66,11 @@ alias zshconfig="vi ~/.zshrc"
 alias mv="mv -i"
 alias rm="rm -i"
 alias cp="cp -i"
+alias ls="lsd"
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
 alias s="sudo systemctl"
 alias j="journalctl -xe"
 alias update="sudo apt update && sudo apt upgrade -y"
@@ -81,6 +86,8 @@ alias theme1="$dot/scripts/theme.sh nord"
 alias theme2="$dot/scripts/theme.sh gruvbox-dark"
 alias theme3="$dot/scripts/theme.sh sbm"
 alias a2dp="pactl set-card-profile bluez_card.28_11_A5_DE_81_A4 a2dp_sink"
+
+alias bb="butler-burton"
 
 alias blaapiprod="~/bjornlunden/scripts/testarblaapi.sh"
 
