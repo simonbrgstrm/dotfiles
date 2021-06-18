@@ -73,7 +73,6 @@
     "javascript",
     "java",
     "python",
-    "dockerfile",
     # "jenkinsfile",
     # "groovy",
     "typescript"
@@ -215,4 +214,6 @@
   name = 'justinmk/vim-sneak'
   merged = 0
 
-# ================================= #
+[[custom_plugins]]
+  name = 'ryanoasis/vim-devicons'
+  merged = 0
