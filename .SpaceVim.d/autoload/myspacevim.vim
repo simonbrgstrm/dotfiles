@@ -3,10 +3,7 @@ function! myspacevim#after() abort
   set incsearch
   set guicursor=
   set scrolloff=10
-
-  map f <Plug>Sneak_s
-  map F <Plug>Sneak_S
-  
+  set guifont=Hack\ Nerd\ Font\ 11
 
 endfunction
 
@@ -19,22 +16,21 @@ function! myspacevim#before() abort
 let g:mapleader = ','
 nmap <leader>ww :e ~/zettelkasten/index.md<CR>
 nmap <leader>u :MundoShow<CR>
-nmap <leader>sf :Telescope find_files<CR>
-nmap <leader>m :marks<CR>
 nmap <leader>c :ColorizerToggle<CR>
 
 "=============================================
 
-"=================== menu ====================
 
-call SpaceVim#custom#SPC('nnoremap', ['f', 'f'], ':Telescope find_files', 'find files in current buffer', 1)
+"================= Telescope =================
+call SpaceVim#custom#SPC('nnoremap', ['f', 'f'], ':Telescope find_files theme=get_ivy', 'find files in current buffer', 1)
+
+call SpaceVim#custom#SPC('nnoremap', ['f', 'm'], ':Telescope marks theme=get_ivy', 'list marks and value', 1)
+
+call SpaceVim#custom#SPC('nnoremap', ['f', 'j'], ':Telescope grep_string theme=get_ivy', 'search string in current dir', 1)
 
 
 "=============================================
 
-"=================== sneak ===================
-let g:sneak#label = 1
-"=============================================
 
 "==================== fzf ====================
 " examples
