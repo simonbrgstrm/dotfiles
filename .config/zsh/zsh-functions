@@ -1,0 +1,23 @@
+## Creates dir and cd into it
+cdm() {mkdir $1 && cd $1}
+
+## fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [ -e /home/sbm/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sbm/.nix-profile/etc/profile.d/nix.sh; fi
+
+# Function to source files if they exist
+function zsh_add_file() {
+    [ -f "$ZDOTDIR/$1" ] && source "$ZDOTDIR/$1"
+}
+
+## Plugins
+function zsh_add_plugin() {
+    PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
+    if [ -d "$zshdots/plugins/$PLUGIN_NAME" ]; then 
+        # For plugins
+        zsh_add_file "plugins/$PLUGIN_NAME/$PLUGIN_NAME.plugin.zsh" || \
+        zsh_add_file "plugins/$PLUGIN_NAME/$PLUGIN_NAME.zsh"
+    else
+        git clone "https://github.com/$1.git" "$zshdots/plugins/$PLUGIN_NAME"
+    fi
+}

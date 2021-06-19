@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=1000000
+SAVEHIST=1000000
+
+## Starship
+eval "$(starship init zsh)"
+
+## Navi
+eval "$(navi widget zsh)"
+
+## Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='vi'
+fi
+
+export PATH="${PATH}:${HOME}/.local/bin/"
+
+## Golang path
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+## nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
