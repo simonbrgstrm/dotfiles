@@ -66,6 +66,7 @@ alias zshconfig="vi ~/.zshrc"
 alias mv="mv -i"
 alias rm="rm -i"
 alias cp="cp -i"
+alias cat="bat"
 #alias ls="lsd"
 #alias l='ls -l'
 #alias la='ls -a'
