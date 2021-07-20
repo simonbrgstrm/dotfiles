@@ -4,6 +4,7 @@
 #          |_|
 #___________________________________
 backend: Inject
+toggle_key: OFF
 matches:
   # Simple text replacement
   - trigger: ":espanso"
