@@ -66,7 +66,6 @@ alias zshconfig="vi ~/.zshrc"
 alias mv="mv -i"
 alias rm="rm -i"
 alias cp="cp -i"
-alias cat="bat"
 #alias ls="lsd"
 #alias l='ls -l'
 #alias la='ls -a'
@@ -81,12 +80,13 @@ alias psg="ps aux | grep "
 alias 3screens="$dot/.screenlayout/3screens.sh"
 alias mirrorscreen="$dot/.screenlayout/mirrorscreen.sh"
 alias 2screens="$dot/.screenlayout/2screens1hor1ver.sh"
-alias 4screens="$dot/.screenlayout/4screensNvidia.sh"
+alias 4screens="$dot/.screenlayout/4screensNvidiav2.sh"
 alias theme="$dot/scripts/theme.sh -i"
 alias theme1="$dot/scripts/theme.sh nord"
 alias theme2="$dot/scripts/theme.sh gruvbox-dark"
 alias theme3="$dot/scripts/theme.sh sbm"
-alias a2dp="pactl set-card-profile bluez_card.28_11_A5_DE_81_A4 a2dp_sink"
+alias a2dp="pactl set-card-profile bluez_card.28_11_A5_DE_81_A4 a2dp-sink"
+alias hsp="pactl set-card-profile bluez_card.28_11_A5_DE_81_A4 headset-head-unit-msbc"
 
 alias bb="butler-burton"
 
