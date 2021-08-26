@@ -67,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______,   LGUI(KC_1),   LGUI(KC_2),   LGUI(KC_3),   LGUI(KC_4),   LGUI(KC_5),                       LGUI(KC_6),   LGUI(KC_7),   LGUI(KC_8),   LGUI(KC_9),  KC_RBRC,  KC_DEL,\
   KC_GRV,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                       SE_LCBR,    SE_RCBR,    SE_LBRC,    SE_RBRC,    KC_MINS,  KC_BSLS, \
   _______, KC_EXLM,   SE_AT, KC_HASH,  SE_DLR, KC_PERC,                       KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT, KC_HOME, KC_END, \
-  _______,  KC_EQL, KC_MINS, KC_PLUS, KC_LCBR, KC_RCBR, _______,       _______, KC_LBRC, KC_RBRC, SE_LABK, SE_RABK, SE_PIPE, _______, \
+  _______,  KC_EQL, KC_MINS, KC_PLUS, KC_LCBR, KC_RCBR, _______,       _______, KC_BSLS, KC_RBRC, SE_LABK, SE_RABK, SE_PIPE, _______, \
                        _______, _______, _______, _______, _______,       _______, _______, _______, _______, _______\
 ),
 /* RAISE
@@ -605,9 +605,9 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
         }
     } else if (index == 1) {
         if (clockwise) {
-            tap_code(KC_PGDOWN);
+            tap_code(KC_VOLU);
         } else {
-            tap_code(KC_PGUP);
+            tap_code(KC_VOLD);
         }
     }
     return true;
