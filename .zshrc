@@ -71,6 +71,7 @@ alias cp="cp -i"
 #alias la='ls -a'
 #alias lla='ls -la'
 #alias lt='ls --tree'
+alias bat="bat --paging=never"
 alias s="sudo systemctl"
 alias j="journalctl -xe"
 alias update="sudo apt update && sudo apt upgrade -y"
