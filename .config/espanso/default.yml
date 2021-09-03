@@ -54,4 +54,17 @@ matches:
         type: shell
         params:
           cmd: "uptime -p"
-
+  - trigger: ":email"
+    replace: "{{email}}"
+    vars:
+      - name: email
+        type: shell
+        params:
+          cmd: curl -s https://api.fejk.company/v1/people\?amount\=1 | sed -n 's|.*"email":"\([^"]*\)".*|\1|p'
+  - trigger: ":phone"
+    replace: "{{phone}}"
+    vars:
+      - name: phone
+        type: shell
+        params:
+          cmd: curl -s https://api.fejk.company/v1/people\?amount\=1 | sed -n 's|.*"phone":"\([^"]*\)".*|\1|p'
