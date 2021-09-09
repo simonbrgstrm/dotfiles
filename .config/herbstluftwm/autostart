@@ -44,6 +44,8 @@ hc keybind $Mod-Shift-f spawn firefox
 hc keybind $Mod-F1 spawn amixer -q -D pulse sset Master toggle
 hc keybind $Mod-F2 spawn amixer -q -D pulse sset Master 2%-
 hc keybind $Mod-F3 spawn amixer -q -D pulse sset Master 2%+
+hc keybind XF86AudioLowerVolume spawn amixer -q -D pulse sset Master 2%-
+hc keybind XF86AudioRaiseVolume spawn amixer -q -D pulse sset Master 2%+
 hc keybind $Mod-F4 spawn brightnessctl s 5%-
 hc keybind $Mod-F5 spawn brightnessctl s 5%+
 
