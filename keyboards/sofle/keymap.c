@@ -59,12 +59,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|  MUTE |    |       |------+------+------+------+------+------|
  * | Shift|  =   |  -   |  +   |   {  |   }  |-------|    |-------|   [  |   ]  |   <  |   >  |   |  | Shift|
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *            | LGUI | LAlt | LCTR |LOWER | /Enter  /       \Space \  |RAISE | RCTR | RAlt | RGUI |
+ *            | LGUI | LAlt | LCTR |LOWER | /Space  /       \Enter \  |RAISE | RCTR | RAlt | RGUI |
  *            |      |      |      |      |/       /         \      \ |      |      |      |      |
  *            `----------------------------------'           '------''---------------------------'
  */
 [_LOWER] = LAYOUT( \
-  _______,   LGUI(KC_1),   LGUI(KC_2),   LGUI(KC_3),   LGUI(KC_4),   LGUI(KC_5),                       LGUI(KC_6),   LGUI(KC_7),   LGUI(KC_8),   LGUI(KC_9),  KC_RBRC,  KC_DEL,\
+  _______,   LGUI(KC_1),   LGUI(KC_2),   LGUI(KC_3),   LGUI(KC_4),   LGUI(KC_5),                       LGUI(KC_6),   LGUI(KC_7),   LGUI(KC_8),   KC_BSLASH,  KC_RBRC,  KC_DEL,\
   KC_GRV,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                       SE_LCBR,    SE_RCBR,    SE_LBRC,    SE_RBRC,    KC_MINS,  KC_BSLS, \
   _______, KC_EXLM,   SE_AT, KC_HASH,  SE_DLR, KC_PERC,                       KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT, KC_HOME, KC_END, \
   _______,  KC_EQL, KC_MINS, KC_PLUS, KC_LCBR, KC_RCBR, _______,       _______, KC_BSLS, KC_RBRC, SE_LABK, SE_RABK, SE_PIPE, _______, \
@@ -80,7 +80,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|  MUTE  |    |       |------+------+------+------+------+------|
  * |Shift | Undo |  Cut | Copy | Paste|      |-------|    |-------|      | LStr |      | LEnd |      | Shift|
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *            | LGUI | LAlt | LCTR |LOWER | /Enter  /       \Space \  |RAISE | RCTR | RAlt | RGUI |
+ *            | LGUI | LAlt | LCTR |LOWER | /Space  /       \Enter \  |RAISE | RCTR | RAlt | RGUI |
  *            |      |      |      |      |/       /         \      \ |      |      |      |      |
  *            `----------------------------------'           '------''---------------------------'
  */
@@ -117,12 +117,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #ifdef OLED_DRIVER_ENABLE
 
 static void render_logo(void) {
-    static const char PROGMEM qmk_logo[] = {
-        153,154,10,
-        185,186,0
+    static const char PROGMEM raw_logo[] = {
+        0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,254,255,255,255,143,175,175,175,175,175,175, 86,137,  6,  0,  0,  0,  0,  7,  7,255,255,255,255,  7,247,  8,  7,  0,  0,  0,  0,255,255,255, 63,126,253,252,126,191,255,255,255,  0,255,  0,  0,254,255,255,  7,247, 23, 23, 23,  7,255,255,254,  1,254,  0,  0,255,255,255,124,251,244,224,192,128,255,255,255,  0,255,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
+        0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,225,235,235,235,235,235,235,235,227,255,255,127,128,127,  0,  0,  0,  0,224,224,255,255,255,255,224,239, 16,224,  0,  0,  0,  0,255,255,255,  0,255,  2,  2,  1,  0,255,255,255,  0,255,  0,  0,127,255,255,224,239,224,224,224,224,255,255,127,128,127,  0,  0,255,255,255,  0,254,  5, 11, 23, 15,255,255,255,  0,255,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
+        0,  0,252,254,254,134,182,150,150,134,142,254,126,128,126,  0,  0,  0,254,254,254,134,246,150,150,150, 22,150, 22, 22,  8,  6,  0,  0,252,254,254,194,218,202,202,202,202,194,126,188, 66, 60,  0,  0,252,254,254,  6,246, 22,214,214,214,214,150, 72,134,  0,  0,  0,252,254,254,142,174,174,174,174,174,174,174, 86,136,  6,  0,  0, 14, 14, 14, 14,254,254,254,254, 14,238, 46, 46, 16, 14,  0,  0,252,254,254,194,218,202,202,202,202,194,126,188, 66, 60,  0,  0,254,254,254, 62,124,250,248,124,190,254,254,254,  0,254,
+        0,  0,127,255,255,195,219,203,203,195,227,255,127,190, 65, 62,  0,  0,255,255,255,225,253,229,229,229,226,225,224,224,  0,224,  0,  0,255,255,255,  3,231, 15, 30, 60,122,244,233,208, 32,192,  0,  0, 63,127,255,224,239,224,235,235,227,255,127,191, 64, 63,  0,  0, 97,235,235,235,235,235,235,235,227,255,255,127,128,127,  0,  0,  0,  0,  0,  0,255,255,255,255,  0,255,  0,  0,  0,  0,  0,  0,255,255,255,  3,231, 15, 30, 60,122,244,233,208, 32,192,  0,  0,255,255,255,  0,255,  2,  2,  1,  0,255,255,255,  0,255,
     };
-
-    oled_write_P(qmk_logo, false);
+    oled_write_raw_P(raw_logo, sizeof(raw_logo));
 }
 
 /* KEYBOARD PET START */
@@ -334,30 +335,15 @@ static void render_luna(int LUNA_X, int LUNA_Y) {
 /* KEYBOARD PET END */
 
 static void print_logo_narrow(void) {
-    oled_write_P(PSTR("\n\n"), false);
-    // Print current layer
-    oled_write_ln_P(PSTR("SOFLE"), false);
 
-    render_logo();
+     render_logo();
 
-    /* wpm counter */
-    uint8_t n = get_current_wpm();
-    char wpm_str[4];
-    oled_set_cursor(0,14);
-    wpm_str[3] = '\0';
-    wpm_str[2] = '0' + n % 10;
-    wpm_str[1] = '0' + ( n /= 10) % 10;
-    wpm_str[0] = '0' + n / 10;
-    oled_write(wpm_str, false);
-
-    oled_set_cursor(0,15);
-    oled_write("wpm", false);
 }
 
 static void print_status_narrow(void) {
     oled_write_P(PSTR("\n\n"), false);
     // Print current layer
-    oled_write_ln_P(PSTR("LAYER"), false);
+    oled_write_ln_P(PSTR("SOFLE"), false);
     switch (get_highest_layer(layer_state)) {
         case _COLEMAK:
         case _QWERTY:
@@ -375,6 +361,19 @@ static void print_status_narrow(void) {
         default:
             oled_write_ln_P(PSTR("Undef"), false);
     }
+
+    uint8_t n = get_current_wpm();
+    char wpm_str[4];
+    oled_set_cursor(1,8);
+    wpm_str[3] = '\0';
+    wpm_str[2] = '0' + n % 10;
+    wpm_str[1] = '0' + ( n /= 10) % 10;
+    wpm_str[0] = '0' + n / 10;
+    oled_write(wpm_str, false);
+
+    oled_set_cursor(1,9);
+    oled_write("wpm", false);
+
     // oled_write_P(PSTR("\n"), false);
     // led_t led_usb_state = host_keyboard_led_state();
     // oled_write_ln_P(PSTR("CAPS"), led_usb_state.caps_lock);
@@ -386,15 +385,15 @@ static void print_status_narrow(void) {
     /* KEYBOARD PET RENDER END */
 }
 
-// oled_rotation_t oled_init_user(oled_rotation_t rotation) {
-//     if (is_keyboard_master()) {
-//         return OLED_ROTATION_270;
-//     }
-//     return rotation;
-// }
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
-    return OLED_ROTATION_270;
+    if (is_keyboard_master()) {
+        return OLED_ROTATION_270;
+    }
+    return rotation;
 }
+// oled_rotation_t oled_init_user(oled_rotation_t rotation) {
+    // return OLED_ROTATION_270;
+// }
 
 void oled_task_user(void) {
    /* KEYBOARD PET VARIABLES START */
