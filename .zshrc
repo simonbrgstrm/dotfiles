@@ -18,6 +18,7 @@ plugins=(
     git
     docker
     vagrant
+    nmap
     sudo
     z
     #zsh-autosuggestions
@@ -91,7 +92,8 @@ alias hsp="pactl set-card-profile bluez_card.28_11_A5_DE_81_A4 headset-head-unit
 
 alias bb="butler-burton"
 
-alias blaapiprod="~/bjornlunden/scripts/testarblaapi.sh"
+alias blaapiprod="~/bjornlunden/scripts/blaapiprod.sh"
+alias blaapitest="~/bjornlunden/scripts/blaapitest.sh"
 
 # Preset theme
 ZSHCOL="sbm"
