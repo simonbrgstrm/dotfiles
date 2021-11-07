@@ -102,10 +102,6 @@ $dot/scripts/theme.sh "$ZSHCOL"
 #source ~/dotfiles/scripts/.env
 #$dot/scripts/theme.sh $ZSHCOL
 
-# Theme changer
-alias blue="$dot/scripts/blue.sh"
-alias orange="$dot/scripts/orange.sh"
-
 # Creates dir and cd into it
 cdm() {mkdir $1 && cd $1}
 
