@@ -127,6 +127,10 @@ alias java11="source $dot/scripts/java/java11.sh"
 alias java13="source $dot/scripts/java/java13.sh"
 alias java14="source $dot/scripts/java/java14.sh"
 
+function zshaddhistory() {
+	echo "${1%%$'\n'}|${PWD}   " >> ~/.zsh_history_ext
+}
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 if [ -e /home/sbm/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sbm/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
