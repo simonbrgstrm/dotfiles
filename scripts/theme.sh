@@ -2943,7 +2943,7 @@ sbm
 13: #ba604e
 14: #4d807c
 15: #ffffff
-background: #151515
+background: #202020
 foreground: #ffffff
 cursorColor: #ffb200
 
