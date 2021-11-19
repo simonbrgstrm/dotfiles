@@ -52,6 +52,12 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
+# "bat" as manpapger
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+# "nvim" as manpapger
+# export MANPAGER="nvim -c 'set ft=man' -"
+
 #ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
