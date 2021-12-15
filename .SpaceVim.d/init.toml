@@ -66,6 +66,9 @@
   name = 'debug'
 
 [[layers]]
+  name = "treesitter"
+
+[[layers]]
   name = 'lsp'
     filetypes = [
     "sh",
