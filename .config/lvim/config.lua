@@ -41,13 +41,14 @@ lvim.builtin.which_key.mappings["v"] = { "<cmd>:e ~/zettelkasten/index.md<CR>", 
 
 lvim.builtin.which_key.mappings["t"] = {
   name = "+Telescope",
-  p = { "<cmd>Telescope projects<CR>", "Projects" },
-  j = { "<cmd>Telescope jumplist<CR>", "Jump" },
-  d = { "<cmd>Telescope lsp_definitions<CR>", "Defenition" },
-  r = { "<cmd>Telescope lsp_reference<CR>", "Reference" },
-  m = { "<cmd>Telescope man_pages<CR>", "Man Pages" },
   b = { "<cmd>Telescope file_browser<CR>", "File Browser" },
+  d = { "<cmd>Telescope lsp_definitions<CR>", "Defenition" },
+  j = { "<cmd>Telescope jumplist<CR>", "Jump" },
+  m = { "<cmd>Telescope man_pages<CR>", "Man Pages" },
+  p = { "<cmd>Telescope projects<CR>", "Projects" },
+  r = { "<cmd>Telescope lsp_reference<CR>", "Reference" },
   t = { "<cmd>Telescope buffers<CR>", "Buffers" },
+  w = { "<cmd>Telescope live_grep<CR>", "Find word" },
 }
 
 -- TODO: User Config for predefined plugins
@@ -61,6 +62,11 @@ lvim.builtin.nvimtree.show_icons.git = 0
 lvim.builtin.treesitter.ensure_installed = "maintained"
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
+
+-- lualine conf
+lvim.builtin.lualine.style = "default" -- or "none"
+lvim.builtin.lualine.options.theme = "onedarker"
+
 
 -- generic LSP settings
 -- you can set a custom on_attach function that will be used for all the language servers
@@ -106,6 +112,7 @@ lvim.plugins = {
     { "wakatime/wakatime" },
     { "vimwiki/vimwiki" },
     { "sjl/badwolf" },
+    { "tpope/vim-surround" },
     {"folke/tokyonight.nvim"},
     {
       "folke/trouble.nvim",
