@@ -67,6 +67,7 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 #
 dot=~/dotfiles
 
+alias v="lvim"
 alias vi="nvim"
 alias vim="nvim"
 alias zshconfig="vi ~/.zshrc"
@@ -88,7 +89,7 @@ alias psg="ps aux | grep "
 alias 3screens="$dot/.screenlayout/3screens.sh"
 alias mirrorscreen="$dot/.screenlayout/mirrorscreen.sh"
 alias 2screens="$dot/.screenlayout/2screens1hor1ver.sh"
-alias 4screens="$dot/.screenlayout/4screensNvidiav2.sh"
+alias 4screens="$dot/.screenlayout/4screens.sh"
 alias theme="$dot/scripts/theme.sh -i"
 alias theme1="$dot/scripts/theme.sh nord"
 alias theme2="$dot/scripts/theme.sh gruvbox-dark"
@@ -143,3 +144,6 @@ if [ -e /home/sbm/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sbm/.nix-pro
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform
