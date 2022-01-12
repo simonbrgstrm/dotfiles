@@ -11,16 +11,13 @@ getvol () {
     fi
 }
 if [ "$1" = 'volup' ]; then
-    pactl set-sink-volume 0 +2%
     MSG='Volume up'
     getvol
 elif [ "$1" = 'voldown' ]; then
-    pactl set-sink-volume 0 -2%
     MSG='Volume down'
     getvol
 elif [ "$1" = 'volmute' ]; then
     echo "Mute"
-    pactl set-sink-mute 0 toggle
     if [ "$(pactl list sinks  | grep Mute | awk '{print $2}')" = 'yes' ]; then
         MSG='Mute'
     else
