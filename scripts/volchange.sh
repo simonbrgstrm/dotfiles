@@ -28,6 +28,6 @@ elif [ "$1" = 'volmute' ]; then
     fi
     getvol
 fi
-notify-send "$MSG ($CURVOL%)"
+notify-send -t 2000 "$MSG ($CURVOL%)" -h string:x-canonical-private-synchronous:anything
 # Om man vill ha nå gött sound till 
 #paplay /usr/share/sounds/freedesktop/stereo/trash-empty.oga
