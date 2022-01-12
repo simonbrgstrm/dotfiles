@@ -44,8 +44,8 @@ hc keybind $Mod-Shift-i spawn deepin-screenshot
 hc keybind $Mod-F1 spawn amixer -q -D pulse sset Master toggle
 hc keybind $Mod-F2 spawn amixer -q -D pulse sset Master 2%-
 hc keybind $Mod-F3 spawn amixer -q -D pulse sset Master 2%+
-hc keybind XF86AudioLowerVolume chain , spawn amixer -q -D pulse sset Master 2%- , spawn "$HOME"/dotfiles/scripts/volchange.sh voldown 
-hc keybind XF86AudioRaiseVolume chain , spawn amixer -q -D pulse sset Master 2%+ , spawn "$HOME"/dotfiles/scripts/volchange.sh volup 
+hc keybind XF86AudioLowerVolume chain , spawn amixer -q -D pulse sset Master 2%- , spawn "$HOME"/dotfiles/scripts/volnotify.sh voldown 
+hc keybind XF86AudioRaiseVolume chain , spawn amixer -q -D pulse sset Master 2%+ , spawn "$HOME"/dotfiles/scripts/volnotify.sh volup 
 hc keybind $Mod-F4 spawn brightnessctl s 5%-
 hc keybind $Mod-F5 spawn brightnessctl s 5%+
 
