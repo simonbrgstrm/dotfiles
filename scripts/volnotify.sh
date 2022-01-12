@@ -25,6 +25,6 @@ elif [ "$1" = 'volmute' ]; then
     fi
     getvol
 fi
-notify-send "$MSG ($CURVOL%)"
+notify-send -t 1000 "$MSG ($CURVOL%)"
 # Om man vill ha nå gött sound till 
 #paplay /usr/share/sounds/freedesktop/stereo/trash-empty.oga
