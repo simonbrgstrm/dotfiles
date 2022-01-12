@@ -44,8 +44,8 @@ hc keybind $Mod-Shift-i spawn deepin-screenshot
 hc keybind $Mod-F1 spawn amixer -q -D pulse sset Master toggle
 hc keybind $Mod-F2 spawn amixer -q -D pulse sset Master 2%-
 hc keybind $Mod-F3 spawn amixer -q -D pulse sset Master 2%+
-hc keybind XF86AudioLowerVolume spawn amixer -q -D pulse sset Master 2%-
-hc keybind XF86AudioRaiseVolume spawn amixer -q -D pulse sset Master 2%+
+hc keybind XF86AudioLowerVolume chain , spawn amixer -q -D pulse sset Master 2%- , spawn "$HOME"/dotfiles/scripts/volchange.sh voldown 
+hc keybind XF86AudioRaiseVolume chain , spawn amixer -q -D pulse sset Master 2%+ , spawn "$HOME"/dotfiles/scripts/volchange.sh volup 
 hc keybind $Mod-F4 spawn brightnessctl s 5%-
 hc keybind $Mod-F5 spawn brightnessctl s 5%+
 
@@ -157,8 +157,8 @@ hc attr theme.border_width 1
 hc attr theme.floating.border_width 2
 hc attr theme.floating.outer_width 1
 
-hc set window_gap 6
-hc set frame_padding 2
+hc set window_gap 2
+hc set frame_padding 0
 hc set smart_window_surroundings 0
 hc set smart_frame_surroundings 1
 hc set mouse_recenter_gap 0
@@ -223,22 +223,22 @@ hc detect_monitors
 #herbstclient set auto_detect_monitors 1
 
 # find the panel
-panel=~/.config/herbstluftwm/panel.sh
-[ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
-for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
-    # start it on each monitor
-    "$panel" $monitor &
-done
+# panel=~/.config/herbstluftwm/panel.sh
+# [ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
+# for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
+   # start it on each monitor
+    # "$panel" $monitor &
+# done
 
 #Autostart
 
 # Polybar panel
-killall -q polybar
-while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
-
-for m in $(polybar --list-monitors | cut -d":" -f1); do
-    MONITOR=$m polybar --reload main -c ~/.config/polybar/config.ini &
-done
+# killall -q polybar
+# while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+#
+# for m in $(polybar --list-monitors | cut -d":" -f1); do
+    # MONITOR=$m polybar --reload main -c ~/.config/polybar/config.ini &
+# done
 
 #for b in $(polybar --list-monitors | cut -d":" -f1); do
 #    MONITOR=$b polybar --reload bottom -c ~/.config/polybar/config-bottom.ini &
