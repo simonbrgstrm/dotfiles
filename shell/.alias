@@ -1,0 +1,58 @@
+dot=$HOME/dotfiles
+
+alias v="lvim"
+alias vi="nvim"
+alias vim="nvim"
+alias zshconfig="vi ~/.zshrc"
+alias mv="mv -i"
+alias rm="rm -i"
+alias cp="cp -i"
+#alias ls="lsd"
+#alias l='ls -l'
+#alias la='ls -a'
+#alias lla='ls -la'
+#alias lt='ls --tree'
+alias bat="bat --paging=never"
+alias s="sudo systemctl"
+alias j="journalctl -xe"
+alias update="sudo apt update && sudo apt upgrade -y"
+alias matrix="cmatrix -C yellow"
+alias cheat="cht.sh"
+alias psg="ps aux | grep " 
+alias 3screens="$dot/.screenlayout/3screens.sh"
+alias mirrorscreen="$dot/.screenlayout/mirrorscreen.sh"
+alias 2screens="$dot/.screenlayout/2screens1hor1ver.sh"
+alias 4screens="$dot/.screenlayout/4screens.sh"
+alias theme="$dot/scripts/theme.sh -i"
+alias theme1="$dot/scripts/theme.sh nord"
+alias theme2="$dot/scripts/theme.sh gruvbox-dark"
+alias theme3="$dot/scripts/theme.sh sbm"
+alias a2dp="pactl set-card-profile bluez_card.28_11_A5_DE_81_A4 a2dp-sink"
+alias hsp="pactl set-card-profile bluez_card.28_11_A5_DE_81_A4 headset-head-unit-msbc"
+
+alias bb="butler-burton"
+
+alias blaapiprod="~/bjornlunden/scripts/blaapiprod.sh"
+alias blaapitest="~/bjornlunden/scripts/blaapitest.sh"
+
+# ugrep
+alias uq='ug -Q'
+alias ux='ug -UX'
+alias uz='ug -z'
+alias grep='ugrep -G'
+alias egrep='ugrep -E'
+alias fgrep='ugrep -F'
+alias pgrep='ugrep -P'
+alias xgrep='ugrep -UX'
+alias zgrep='ugrep -zG'
+alias zegrep='ugrep -zE'
+alias zfgrep='ugrep -zF'
+alias zpgrep='ugrep -zP'
+alias zxgrep='ugrep -zUX'
+alias xdump='ugrep -X ""'
+
+## Java
+alias java8="source $dot/scripts/java/java8.sh"
+alias java11="source $dot/scripts/java/java11.sh"
+alias java13="source $dot/scripts/java/java13.sh"
+alias java14="source $dot/scripts/java/java14.sh"
