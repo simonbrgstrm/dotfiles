@@ -29,12 +29,13 @@ xnoremap <silent> K :<C-U>exec "'<,'>move '<-" . (1+v:count1)<CR>gv=gv
 
 
 "================= Telescope =================
-call SpaceVim#custom#SPC('nnoremap', ['f', 'f'], ':Telescope find_files theme=get_ivy', 'find files in current buffer', 1)
+call SpaceVim#custom#SPC('nnoremap', ['f', 'f'], ':Telescope find_files', 'find files in current buffer', 1)
 
-call SpaceVim#custom#SPC('nnoremap', ['f', 'm'], ':Telescope marks theme=get_ivy', 'list marks and value', 1)
+call SpaceVim#custom#SPC('nnoremap', ['f', 'm'], ':Telescope marks', 'list marks and value', 1)
 
-call SpaceVim#custom#SPC('nnoremap', ['f', 'j'], ':Telescope grep_string theme=get_ivy', 'search string in current dir', 1)
+call SpaceVim#custom#SPC('nnoremap', ['f', 'j'], ':Telescope grep_string', 'search string in current dir', 1)
 
+call SpaceVim#custom#SPC('nnoremap', ['f', 'l'], ':Telescope live_grep', 'Live_grep in current dir', 1)
 
 "=============================================
 
