@@ -31,7 +31,7 @@ mainbox { children: [ inputbar, listview ]; }
 window {
   transparency:		"real";
   width:		    650px;
-  border:		    5px 5px 5px 5px;
+  border:		    2px 2px 2px 2px;
   border-radius:	2px;
   border-color:     @bordercolor;
   height:		    500px;
