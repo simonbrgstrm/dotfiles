@@ -33,7 +33,7 @@ hc keybind $Mod-Return spawn "${TERMINAL:-alacritty}" # use your $TERMINAL with 
 
 #hc keybind $Mod-l spawn betterlockscreen -l dim
 #hc keybind $Mod-e spawn i3lock-fancy
-hc keybind $Mod-e spawn betterlockscreen -l dim
+# hc keybind $Mod-e spawn betterlockscreen -l dim
 #hc keybind $Mod-Shift-p spawn dmenu_run_hlwm
 hc keybind $Mod-Shift-p spawn rofi -show run
 hc keybind $Mod-Shift-o spawn "$HOME"/dotfiles/scripts/rofi/pass.sh
