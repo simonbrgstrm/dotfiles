@@ -66,14 +66,6 @@ alias gdt='git diff-tree --no-commit-id --name-only -r'
 alias gdup='git diff @{upstream}'
 alias gdw='git diff --word-diff'
 
-function gdnolock() {
-  git diff "$@" ":(exclude)package-lock.json" ":(exclude)*.lock"
-}
-compdef _git gdnolock=git-diff
-
-function gdv() { git diff -w "$@" | view - }
-compdef _git gdv=git-diff
-
 alias gf='git fetch'
 
 alias ghh='git help'
