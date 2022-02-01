@@ -27,7 +27,6 @@ dot=$HOME/dotfiles
 source "$dot/shell/.alias"
 source "$dot/shell/.git_alias"
 
-eval "$(starship init zsh)"
 
 # Preset theme
 ZSHCOL="sbm"
@@ -170,3 +169,4 @@ bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 # }}} End configuration added by Zim install
 
+eval "$(starship init zsh)"
