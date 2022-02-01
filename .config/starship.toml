@@ -52,7 +52,6 @@ disabled = false
 style = "bold fg:3"
 format = "[${symbol} ${version}]($style) "
 symbol = "🤖 "
-text = "fg:236"
 not_capable_style = "bold fg:1"
 disabled = false
 
