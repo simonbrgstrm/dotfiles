@@ -1,6 +1,6 @@
 format = """
  [](bold fg:214) $python $golang $nodejs $java $openstack $git_branch $git_status
- [└───>](bold green) $character$directory """
+ [└───>](bold green) $hostname $character$directory """
 
 add_newline = false
 
@@ -11,10 +11,9 @@ show_always = true
 disabled = true
 
 [hostname]
-ssh_only = false
-format =  "[$hostname](dimmed yellow) "
-trim_at = ".companyname.com"
-disabled = true
+ssh_only = true
+format =  "[$hostname](bold green) "
+disabled = false
 
 [directory]
 style = "bold fg:202"
