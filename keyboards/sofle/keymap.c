@@ -51,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* LOWER
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * |      |  W1  |  W2  |  W3  |  W4  |  W5  |                    |  W6  |  W7  |  W8  |  W9  |   ^  | DEL  |
+ * |      |  F1  |  F2  |  F3  |  F4  |  F5  |                    |  F6  |  F7  |  F8  |  W9  |   ^  | DEL  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |  `   |   1  |   2  |   3  |   4  |   5  |                    |   {  |   }  |   [  |   ]  |   +  |  '   |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
@@ -64,7 +64,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *            `----------------------------------'           '------''---------------------------'
  */
 [_LOWER] = LAYOUT( \
-  _______,   LGUI(KC_1),   LGUI(KC_2),   LGUI(KC_3),   LGUI(KC_4),   LGUI(KC_5),                       LGUI(KC_6),   LGUI(KC_7),   LGUI(KC_8),   KC_BSLASH,  KC_RBRC,  KC_DEL,\
+  _______,   KC_F1,   KC_F2),   KC_F3,   KC_F4,   KC_F5,                       KC_F6,   KC_F7,   KC_F8,   KC_BSLASH,  KC_RBRC,  KC_DEL,\
   KC_GRV,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                       SE_LCBR,    SE_RCBR,    SE_LBRC,    SE_RBRC,    KC_MINS,  KC_BSLS, \
   _______, KC_EXLM,   SE_AT, KC_HASH,  SE_DLR, KC_PERC,                       KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT, KC_HOME, KC_END, \
   _______,  KC_EQL, KC_MINS, KC_PLUS, KC_LCBR, KC_RCBR, _______,       _______, KC_BSLS, KC_RBRC, SE_LABK, SE_RABK, SE_PIPE, _______, \
