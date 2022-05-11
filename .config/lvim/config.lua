@@ -65,7 +65,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 
 -- lualine conf
 lvim.builtin.lualine.style = "default" -- or "none"
-lvim.builtin.lualine.options.theme = "onedarker"
+lvim.builtin.lualine.options.theme = "gruvbox_dark"
 
 
 -- generic LSP settings
@@ -113,7 +113,8 @@ lvim.plugins = {
     { "vimwiki/vimwiki" },
     { "sjl/badwolf" },
     { "tpope/vim-surround" },
-    {"folke/tokyonight.nvim"},
+    { "folke/tokyonight.nvim"},
+    { "github/copilot.vim"},
     {
       "folke/trouble.nvim",
       cmd = "TroubleToggle",
