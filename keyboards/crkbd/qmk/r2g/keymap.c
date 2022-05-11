@@ -22,7 +22,7 @@
 #define MG__WHITE {255,255,255}
 #define MG____RED {255,0,0}
 #define MG__GREEN {32,159,33}
-#define MG___BLUE {0,181,213}
+#define MG___BLUE {80,200,220}
 #define MG_YELLOW {255,208,0}
 #define MG_ORANGE {255,85,0}
 #define MG___PINK {180, 50, 160}
@@ -33,74 +33,68 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       KC_TAB,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,  KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      MT(MOD_LSFT, KC_ESC),    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                         KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, KC_QUOT,
+      MT(MOD_LSFT, KC_ESC),    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,          KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, KC_QUOT,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LCTL,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_LBRC,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LGUI,   MO(1),  KC_SPC,     KC_ENT,   MO(2), KC_RALT
+                                          KC_LGUI,   MO(1),  KC_SPC,     KC_ENT,   MO(2), KC_RGUI
                                       //`--------------------------'  `--------------------------'
 
   ),
 
   [_LOWER] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       KC_TAB, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                      KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_DEL,
+      KC_TAB,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                         KC_6,    KC_7,    KC_8,    KC_9,    KC_0, KC_DEL,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT, KC_HOME, KC_END,
+      KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_LEFT, KC_DOWN, KC_UP,  KC_RIGHT, KC_HOME, KC_END,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LCTL, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_PLUS, XXXXXXX, SE_LABK, SE_RABK, SE_PIPE, KC_RCBR,
+      KC_LCTL, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_PLUS, SE_ACUT, SE_LABK, SE_RABK, SE_PIPE, KC_RCBR,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LGUI, _______,  KC_SPC,     KC_ENT,   MO(3), KC_RALT
+                                          KC_LGUI, _______,  KC_SPC,     KC_ENT,   MO(3), KC_RGUI
                                       //`--------------------------'  `--------------------------'
   ),
 
   [_RAISE] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       KC_TAB,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                         KC_6,    KC_7,    KC_8,    KC_9,    KC_0, KC_MINS,
+      KC_TAB, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                      KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_MINS,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      SE_LCBR,  SE_RCBR, SE_LBRC, SE_RBRC, SE_BSLS,  KC_BSLS,
+      KC_LSFT, SE_LCBR, SE_RCBR, SE_LBRC, SE_RBRC, SE_TILD,                      SE_LCBR,  SE_RCBR, SE_LBRC, SE_RBRC, SE_BSLS,  KC_BSLS,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LCTL, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_UNDS, KC_PLUS, KC_LCBR, KC_DOT, KC_PIPE, KC_TILD,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LGUI,   MO(3),  KC_SPC,     KC_ENT, _______, KC_RALT
+                                          KC_LGUI,   MO(3),  KC_SPC,     KC_ENT, _______, KC_RGUI
                                       //`--------------------------'  `--------------------------'
   ),
 
   [_ADJUST] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      RESET, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_F5,                      XXXXXXX, LGUI(KC_F7), LGUI(KC_F8), LGUI(KC_F9), XXXXXXX, KC_DEL,
+      RESET,  XXXXXXX,  SE_AT,  XXXXXXX,  SE_DLR,  KC_F5,                       XXXXXXX, LGUI(KC_F7), LGUI(KC_F8), LGUI(KC_F9), XXXXXXX, KC_DEL,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX, XXXXXXX,                      XXXXXXX, KC_MUTE, KC_VOLD, KC_VOLU, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LGUI, _______,  KC_SPC,     KC_ENT, _______, KC_RALT
+                                          KC_LGUI, _______,  KC_SPC,     KC_ENT, _______, KC_RGUI
                                       //`--------------------------'  `--------------------------'
   )
 };
 
 const uint8_t PROGMEM ledmap[][42][4] = {
-[_QWERTY] = {
-___off___, ___off___, ___off___, ___off___, ___off___, MG__WHITE,         ___off___, MG_ORANGE, MG_ORANGE, MG_ORANGE, ___off___, ___off___,
-___off___, ___off___, ___off___, ___off___, ___off___, ___off___,         ___off___, MG__WHITE, MG__WHITE, MG__WHITE, ___off___, ___off___,
-___off___, ___off___, ___off___, ___off___, ___off___, ___off___,         ___off___, ___off___, ___off___, ___off___, ___off___, ___off___,
-                                 ___off___, ___off___, ___off___,         ___off___, ___off___, ___off___
-      },
 [_ADJUST] = {
-___off___, ___off___, ___off___, ___off___, ___off___, MG__WHITE,         ___off___, MG_ORANGE, MG_ORANGE, MG_ORANGE, ___off___, ___off___,
+___off___, MG___PINK, MG___PINK, MG___PINK, MG___PINK, MG___PINK,         ___off___, MG___PINK, MG___PINK, MG___PINK, ___off___, ___off___,
 ___off___, ___off___, ___off___, ___off___, ___off___, ___off___,         ___off___, MG__WHITE, MG__WHITE, MG__WHITE, ___off___, ___off___,
 ___off___, ___off___, ___off___, ___off___, ___off___, ___off___,         ___off___, ___off___, ___off___, ___off___, ___off___, ___off___,
                                  ___off___, ___off___, ___off___,         ___off___, ___off___, ___off___
       },
 [_LOWER] = {
-___off___, MG_ORANGE, MG_ORANGE, MG_ORANGE, MG_ORANGE, MG_ORANGE,         MG_ORANGE, MG_ORANGE, MG_ORANGE, MG_ORANGE, MG_ORANGE, MG____RED,
-___off___, ___off___, ___off___, ___off___, ___off___, ___off___,         MG___PINK, MG___PINK, MG___PINK, MG___PINK, MG___PINK, MG___PINK,
-___off___, ___off___, ___off___, ___off___, ___off___, ___off___,         MG__WHITE, MG__WHITE, MG__WHITE, MG__WHITE, MG__WHITE, ___off___,
+___off___, MG___BLUE, MG___BLUE, MG___BLUE, MG___BLUE, MG___BLUE,         MG___BLUE, MG___BLUE, MG___BLUE, MG___BLUE, MG___BLUE, MG____RED,
+___off___, MG___BLUE, MG___BLUE, MG___BLUE, MG___BLUE, MG___BLUE,         MG___BLUE, MG___BLUE, MG___BLUE, MG___BLUE, MG___BLUE, MG___BLUE,
+___off___, ___off___, ___off___, ___off___, ___off___, ___off___,         ___off___, ___off___, ___off___, ___off___, ___off___, ___off___,
                                  ___off___, ___off___, ___off___,         ___off___, ___off___, ___off___
       },
 [_RAISE] = {
-___off___, MG___PINK, MG___PINK, MG___PINK, MG___PINK, MG___PINK,         MG___PINK, MG___PINK, MG___PINK, MG___PINK, MG___PINK, MG__WHITE,
-___off___, ___off___, ___off___, ___off___, ___off___, ___off___,         MG_ORANGE, MG_ORANGE, MG_ORANGE, MG_ORANGE, MG__WHITE, MG__WHITE,
+___off___, MG_ORANGE, MG_ORANGE, MG_ORANGE, MG_ORANGE, MG_ORANGE,         MG_ORANGE, MG_ORANGE, MG_ORANGE, MG_ORANGE, MG_ORANGE, MG_ORANGE,
+___off___, MG_ORANGE, MG_ORANGE, MG_ORANGE, MG_ORANGE, MG_ORANGE,         MG_ORANGE, MG_ORANGE, MG_ORANGE, MG_ORANGE, MG_ORANGE, MG_ORANGE,
 ___off___, ___off___, ___off___, ___off___, ___off___, ___off___,         ___off___, ___off___, ___off___, ___off___, ___off___, ___off___,
                                  ___off___, ___off___, ___off___,         ___off___, ___off___, ___off___
       }
