@@ -41,6 +41,7 @@ hc keybind $Mod-Shift-y spawn "$HOME"/dotfiles/themeSwitcher.sh
 hc keybind $Mod-y spawn rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 hc keybind $Mod-Shift-u spawn rofi -show ssh
 hc keybind $Mod-Shift-i spawn deepin-screenshot
+hc keybind $Mod-Shift-v spawn "$HOME/.vim-anywhere/bin/run"
 hc keybind $Mod-F1 spawn amixer -q -D pulse sset Master toggle
 hc keybind $Mod-F2 spawn amixer -q -D pulse sset Master 2%-
 hc keybind $Mod-F3 spawn amixer -q -D pulse sset Master 2%+
