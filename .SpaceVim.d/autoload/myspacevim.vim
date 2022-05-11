@@ -1,7 +1,8 @@
 function! myspacevim#after() abort
   set nohlsearch
   set incsearch
-  " set guicursor=
+  set guicursor=
+  highlight Normal guibg=#202020
   set scrolloff=10
   set guifont=Hack\ Nerd\ Font\ 11
 
