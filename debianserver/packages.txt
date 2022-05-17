@@ -1,8 +1,12 @@
+cmake
 curl
 certbot
 fzf
+gcc
 git
+make
 nginx
+npm
 python3-certbot-nginx
 vim
 zsh
