@@ -1,0 +1,8 @@
+curl
+certbot
+fzf
+git
+nginx
+python3-certbot-nginx
+vim
+zsh
