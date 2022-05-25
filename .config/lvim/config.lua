@@ -121,18 +121,26 @@ lvim.builtin.lualine.options.theme = "gruvbox_dark"
 --   }
 -- }
 
+-- jenkinsfile_linter settings
+-- vim.g.JENKINS_USER_ID = "simonbrgstrm"
+-- vim.g.JENKINS_API_TOKEN = "115d0bdd11d1aeb13f580fcda5546f0925"
+-- vim.g.JENKINS_URL = "https://jenkins2.blinfo.se"
+-- require("jenkinsfile_linter").validate()
+-- { "ckipp01/nvim-jenkinsfile-linter" },
+
 -- Additional Plugins
 lvim.plugins = {
-    { "wakatime/wakatime" },
-    { "vimwiki/vimwiki" },
-    { "sjl/badwolf" },
-    { "tpope/vim-surround" },
-    { "folke/tokyonight.nvim"},
-    { "github/copilot.vim"},
-    {
-      "folke/trouble.nvim",
-      cmd = "TroubleToggle",
-    },
+  { "wakatime/wakatime" },
+  { "sjl/badwolf" },
+  { "tpope/vim-surround" },
+  { "folke/tokyonight.nvim" },
+  { "github/copilot.vim" },
+  { "nvim-lua/plenary.nvim" },
+  { "martinda/jenkinsfile-vim-syntax" },
+  {
+    "folke/trouble.nvim",
+    cmd = "TroubleToggle",
+  },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
