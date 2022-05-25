@@ -123,6 +123,8 @@
 [[layers]]
   name = 'lang#dockerfile'
 [[layers]]
+  name = 'lang#dart'
+[[layers]]
   name = 'lang#html'
 [[layers]]
   name = "lang#groovy"
