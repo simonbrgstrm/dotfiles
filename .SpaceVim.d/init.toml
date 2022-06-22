@@ -142,6 +142,10 @@
   name = 'lang#python'
   enable_typeinfo = true
   enabled_linters = ['python', 'pylint']
+[[layers]]
+  name = "lang#csharp"
+  highlight_types = 0
+
 
 # ================================= #
 
@@ -214,7 +218,4 @@
 
 [[custom_plugins]]
   name = 'ryanoasis/vim-devicons'
-  merged = 0
-[[custom_plugins]]
-  name = 'github/copilot.vim'
   merged = 0

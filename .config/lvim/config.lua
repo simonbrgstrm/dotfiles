@@ -14,7 +14,7 @@ lvim.format_on_save = true
 -- lvim.colorscheme = "onedarker"
 lvim.colorscheme = "badwolf"
 
--- keymappings [view all the defaults by pressing <leader>Lk]
+-- keymappings [view all the defaults by pressing <leader>]
 lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
@@ -39,15 +39,24 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- Use which-key to add extra bindings with the leader-key prefix
 lvim.builtin.which_key.mappings["v"] = { "<cmd>:e ~/zettelkasten/index.md<CR>", "VimWiki" }
 
-lvim.builtin.which_key.mappings["t"] = {
+-- lvim.builtin.which_key.mappings["_"] = { "<cmd>:sp<CR>", "Horsplit" }
+-- lvim.builtin.which_key.mappings["|"] = { "<cmd>:vs<CR>", "Versplit" }
+
+lvim.builtin.which_key.mappings["w"] = {
+  name = "+Window",
+  h = { "<cmd>sp<CR>", "Horizontal Split" },
+  v = { "<cmd>vs<CR>", "Vertical Split" },
+}
+
+lvim.builtin.which_key.mappings["f"] = {
   name = "+Telescope",
-  b = { "<cmd>Telescope file_browser<CR>", "File Browser" },
+  b = { "<cmd>Telescope buffers<CR>", "Buffers" },
+  f = { "<cmd>Telescope find_files<CR>", "File Browser" },
   d = { "<cmd>Telescope lsp_definitions<CR>", "Defenition" },
   j = { "<cmd>Telescope jumplist<CR>", "Jump" },
   m = { "<cmd>Telescope man_pages<CR>", "Man Pages" },
   p = { "<cmd>Telescope projects<CR>", "Projects" },
   r = { "<cmd>Telescope lsp_reference<CR>", "Reference" },
-  t = { "<cmd>Telescope buffers<CR>", "Buffers" },
   w = { "<cmd>Telescope live_grep<CR>", "Find word" },
 }
 
@@ -63,15 +72,17 @@ lvim.builtin.nvimtree.show_icons.git = 0
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
   "c",
+  "c_sharp",
+  "css",
+  "hcl",
+  "java",
   "javascript",
   "json",
   "lua",
   "python",
-  "typescript",
-  "tsx",
-  "css",
   "rust",
-  "java",
+  "tsx",
+  "typescript",
   "yaml",
 }
 lvim.builtin.treesitter.ignore_install = { "haskell" }
@@ -80,7 +91,6 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- lualine conf
 lvim.builtin.lualine.style = "default" -- or "none"
 lvim.builtin.lualine.options.theme = "gruvbox_dark"
-
 
 -- generic LSP settings
 -- you can set a custom on_attach function that will be used for all the language servers
@@ -131,16 +141,24 @@ lvim.builtin.lualine.options.theme = "gruvbox_dark"
 -- Additional Plugins
 lvim.plugins = {
   { "wakatime/wakatime" },
+  { "vimwiki/vimwiki" },
   { "sjl/badwolf" },
   { "tpope/vim-surround" },
-  { "folke/tokyonight.nvim" },
-  { "github/copilot.vim" },
   { "nvim-lua/plenary.nvim" },
+  { "farmergreg/vim-lastplace" },
   { "martinda/jenkinsfile-vim-syntax" },
   {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
   },
+  {
+    "ggandor/lightspeed.nvim",
+    event = "BufRead",
+  },
+
+
+
+
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
