@@ -1,9 +1,24 @@
-# dotfiles
-![GitHub commit activity](https://img.shields.io/github/commit-activity/w/simonbrgstrm/dotfiles?style=for-the-badge)
-![GitHub last commit](https://img.shields.io/github/last-commit/simonbrgstrm/dotfiles?style=for-the-badge)
-![GitHub top language](https://img.shields.io/github/languages/top/simonbrgstrm/dotfiles?style=for-the-badge)
+<h2 align="center"> dotfiles </h2>
 
-Personal config files.
+<!-- BADGES -->
+<div align="center">
+   <p></p>
+   <a href="">
+      <img src="https://img.shields.io/github/last-commit/simonbrgstrm/dotfiles?color=f5ab8c&labelColor=1C2325&style=for-the-badge">
+   </a>
+   <a href="https://github.com/simonbrgstrm/dotfiles/stargazers">
+      <img src="https://img.shields.io/github/languages/top/simonbrgstrm/dotfiles?color=f0a65d&labelColor=1C2325&style=for-the-badge">
+   </a>
+   <a href="https://github.com/janleigh/dotfiles/">
+      <img src="https://img.shields.io/github/repo-size/simonbrgstrm/dotfiles?color=ffa0a0&labelColor=1C2325&style=for-the-badge">
+   </a>
+   <br>
+</div>
+
+<h2></h2>
+
+<!-- INFORMATION -->
+
 
 
 ## Install
