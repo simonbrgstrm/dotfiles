@@ -18,7 +18,7 @@
 
 ## ▶️ <samp>INFORMATION</samp>
 
-   <img src="./screenshots/rice.png" alt="rice" align="right" width="600px">
+   <img src="./screenshots/rice.png" alt="rice" align="right" width="500px">
 
    Personal configs.
 
