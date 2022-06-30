@@ -1,10 +1,9 @@
 <h2 align="center"> dotfiles </h2>
 
-<!-- BADGES -->
 <div align="center">
    <p></p>
    <a href="">
-      <img src="https://img.shields.io/github/last-commit/simonbrgstrm/dotfiles?color=f5ab8c&labelColor=1C2325&style=for-the-badge">
+      <img src="https://img.shields.io/github/last-commit/simonbrgstrm/dotfiles?color=f5ea8c&labelColor=1C2325&style=for-the-badge">
    </a>
    <a href="https://github.com/simonbrgstrm/dotfiles/stargazers">
       <img src="https://img.shields.io/github/languages/top/simonbrgstrm/dotfiles?color=f0a65d&labelColor=1C2325&style=for-the-badge">
@@ -17,7 +16,36 @@
 
 <h2></h2>
 
-<!-- INFORMATION -->
+## ▶️ <samp>INFORMATION</samp>
+
+   <img src="./screenshots/rice.png" alt="rice" align="right" width="600px">
+
+   Personal configs.
+
+
+   :small_orange_diamond: **Window Manager:** [herbstluftwm](https://herbstluftwm.org/) :herb:
+   
+   :small_orange_diamond: **Terminal:** [alacritty](https://github.com/alacritty/alacritty)
+   
+   :small_orange_diamond: **Sessions:** [tmux](https://github.com/tmux/tmux/wiki)
+   
+   :small_orange_diamond: **Shell:** [zsh](https://www.zsh.org/)
+   
+   :small_orange_diamond: **Shell Prompt:** [starship](https://starship.rs/)
+   
+   :small_orange_diamond: **Panel:** [polybar](https://github.com/polybar/polybar)
+   
+   :small_orange_diamond: **Compositor:** [compton](https://github.com/chjj/compton)
+   
+   :small_orange_diamond: **Editor:** [neovim](https://github.com/neovim/neovim)
+   
+   :small_orange_diamond: **Browser:** [firefox](https://www.mozilla.org/en-US/firefox)
+   
+   :small_orange_diamond: **Notification Manager:** [dunst](https://github.com/dunst-project/dunst)
+   
+   :small_orange_diamond: **File Manager:** [ranger](https://github.com/ranger/ranger)
+   
+   :small_orange_diamond: **Application Launcher:** [rofi](https://github.com/davatorium/rofi)
 
 
 
