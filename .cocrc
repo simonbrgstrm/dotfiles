@@ -8,5 +8,5 @@ inoremap <silent><expr> <TAB>
 inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 inoremap <silent><expr> <c-space> coc#refresh()
 
-hi CocSearch ctermfg=12 guifg=#F8Aaaa
-hi CocMenuSel ctermbg=109 guibg=#000000
+hi CocSearch ctermfg=12 guifg=#ffb200
+hi CocMenuSel ctermbg=109 guibg=#202020
