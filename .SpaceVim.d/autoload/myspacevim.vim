@@ -5,6 +5,7 @@ function! myspacevim#after() abort
   highlight Normal guibg=#202020
   set scrolloff=10
   set guifont=Hack\ Nerd\ Font\ 11
+  source ~/.cocrc
 
 endfunction
 
