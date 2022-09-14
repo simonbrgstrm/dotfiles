@@ -23,6 +23,7 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- edit a default keymappin
 -- lvim.keys.normal_mode["C-q>"] = ":q<cr>"
 
+vim.opt.relativenumber = true
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- lvim.builtin.telescope.on_config_done = function()
