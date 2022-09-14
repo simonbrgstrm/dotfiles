@@ -1,7 +1,7 @@
 dot=$HOME/dotfiles
 
 # alias vi="lvim"
-alias vi="nvim"
+alias vi="lvim"
 alias v="nvim"
 alias vim="nvim"
 alias zshconfig="vi ~/.zshrc"
