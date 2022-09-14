@@ -35,7 +35,11 @@ call SpaceVim#custom#SPC('nnoremap', ['f', 'f'], ':Telescope find_files', 'find 
 
 call SpaceVim#custom#SPC('nnoremap', ['f', 'm'], ':Telescope marks', 'list marks and value', 1)
 
-call SpaceVim#custom#SPC('nnoremap', ['f', 'j'], ':Telescope grep_string', 'search string in current dir', 1)
+call SpaceVim#custom#SPC('nnoremap', ['f', 'j'], ':Telescope jumplist', 'jumplist', 1)
+
+call SpaceVim#custom#SPC('nnoremap', ['f', 'p'], ':Telescope projects', 'list projects', 1)
+
+call SpaceVim#custom#SPC('nnoremap', ['f', 'w'], ':Telescope grep_string', 'search string in current dir', 1)
 
 call SpaceVim#custom#SPC('nnoremap', ['f', 'l'], ':Telescope live_grep', 'Live_grep in current dir', 1)
 
