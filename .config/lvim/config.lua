@@ -9,7 +9,7 @@ an executable
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
 -- general
-lvim.log.level = "warn"
+-- lvim.log.level = "warn"
 lvim.format_on_save = true
 -- lvim.colorscheme = "onedarker"
 lvim.colorscheme = "badwolf"
@@ -23,8 +23,6 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- edit a default keymappin
 -- lvim.keys.normal_mode["C-q>"] = ":q<cr>"
 
--- Configure builtin plugins
-lvim.builtin.notify.active = true
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- lvim.builtin.telescope.on_config_done = function()
@@ -54,9 +52,10 @@ lvim.builtin.which_key.mappings["w"] = {
 lvim.builtin.which_key.mappings["f"] = {
   name = "+Telescope",
   b = { "<cmd>Telescope buffers<CR>", "Buffers" },
-  f = { "<cmd>Telescope find_files<CR>", "File Browser" },
   d = { "<cmd>Telescope lsp_definitions<CR>", "Defenition" },
-  j = { "<cmd>Telescope jumplist<CR>", "Jump" },
+  f = { "<cmd>Telescope find_files<CR>", "File Browser" },
+  g = { "<cmd>Telescope git_commits<CR>", "Git commits" },
+  j = { "<cmd>Telescope jumplist<CR>", "Jumplist" },
   m = { "<cmd>Telescope marks<CR>", "Marks" },
   p = { "<cmd>Telescope projects<CR>", "Projects" },
   r = { "<cmd>Telescope lsp_reference<CR>", "Reference" },
@@ -66,6 +65,7 @@ lvim.builtin.which_key.mappings["f"] = {
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.alpha.active = true
+lvim.builtin.notify.active = true
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.side = "left"
@@ -143,6 +143,7 @@ lvim.plugins = {
   { "farmergreg/vim-lastplace" },
   { "martinda/jenkinsfile-vim-syntax" },
   { "justinmk/vim-sneak" },
+  { "lukas-reineke/indent-blankline.nvim" },
   {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
