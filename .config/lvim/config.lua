@@ -143,6 +143,7 @@ lvim.plugins = {
   { "farmergreg/vim-lastplace" },
   { "martinda/jenkinsfile-vim-syntax" },
   { "justinmk/vim-sneak" },
+  { "norcalli/nvim-colorizer.lua" },
   { "lukas-reineke/indent-blankline.nvim" },
   {
     "folke/trouble.nvim",
