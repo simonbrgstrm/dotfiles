@@ -139,7 +139,6 @@ lvim.plugins = {
   { "wakatime/wakatime" },
   { "vimwiki/vimwiki" },
   { "sjl/badwolf" },
-  { "tpope/vim-surround" },
   { "nvim-lua/plenary.nvim" },
   { "farmergreg/vim-lastplace" },
   { "martinda/jenkinsfile-vim-syntax" },
