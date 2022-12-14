@@ -66,7 +66,6 @@ lvim.builtin.which_key.mappings["f"] = {
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.alpha.active = true
-lvim.builtin.notify.active = true
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.side = "left"
@@ -92,8 +91,9 @@ lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
 -- lualine conf
-lvim.builtin.lualine.style = "default" -- or "none"
+lvim.builtin.lualine.style = "lvim" -- or "none"
 lvim.builtin.lualine.options.theme = "gruvbox_dark"
+
 
 -- generic LSP settings
 -- you can set a custom on_attach function that will be used for all the language servers
@@ -136,7 +136,7 @@ lvim.builtin.lualine.options.theme = "gruvbox_dark"
 
 -- Additional Plugins
 lvim.plugins = {
-  { "wakatime/wakatime" },
+  { "wakatime/vim-wakatime" },
   { "vimwiki/vimwiki" },
   { "sjl/badwolf" },
   { "nvim-lua/plenary.nvim" },
