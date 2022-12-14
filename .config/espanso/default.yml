@@ -60,11 +60,11 @@ matches:
       - name: email
         type: shell
         params:
-          cmd: curl -s https://api.fejk.company/v1/people\?amount\=1 | sed -n 's|.*"email":"\([^"]*\)".*|\1|p'
+          cmd: curl -s https://api.fejk.it/v1/people\?amount\=1 | sed -n 's|.*"email":"\([^"]*\)".*|\1|p'
   - trigger: ":phone"
     replace: "{{phone}}"
     vars:
       - name: phone
         type: shell
         params:
-          cmd: curl -s https://api.fejk.company/v1/people\?amount\=1 | sed -n 's|.*"phone":"\([^"]*\)".*|\1|p'
+          cmd: curl -s https://api.fejk.it/v1/people\?amount\=1 | sed -n 's|.*"phone":"\([^"]*\)".*|\1|p'
