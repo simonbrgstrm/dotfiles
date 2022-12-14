@@ -13,6 +13,7 @@ alias cp="cp -i"
 #alias la='ls -a'
 #alias lla='ls -la'
 #alias lt='ls --tree'
+alias k="kubectl"
 alias bat="bat --paging=never"
 alias s="sudo systemctl"
 alias j="journalctl -xe"
