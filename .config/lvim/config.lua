@@ -145,6 +145,7 @@ lvim.plugins = {
   { "justinmk/vim-sneak" },
   { "norcalli/nvim-colorizer.lua" },
   { "lukas-reineke/indent-blankline.nvim" },
+  { "alexghergh/nvim-tmux-navigation" },
   {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
