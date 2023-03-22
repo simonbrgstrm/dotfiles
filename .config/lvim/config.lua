@@ -63,6 +63,52 @@ lvim.builtin.which_key.mappings["f"] = {
   w = { "<cmd>Telescope live_grep<CR>", "Find word" },
 }
 
+--- TELESCOPE SETTINGS
+-- .local/share/lunarvim/lvim/lua/lvim/core/telescope.lua
+--
+-- local function get_pickers(actions)
+--   return {
+--     find_files = {
+--       hidden = true,
+--       layout_strategy = "horizontal",
+--       layout_config = {
+--         width = 0.75,
+--         height = 0.90,
+--         horizontal = {
+--           preview_width = function(_, cols, _)
+--             if cols < 120 then
+--               return math.floor(cols * 0.5)
+--             end
+--             return math.floor(cols * 0.6)
+--           end,
+--           mirror = false,
+--         },
+--       },
+--     },
+--     live_grep = {
+--       -- --@usage don't include the filename in the search results
+--       -- only_sort_text = true,
+--       -- theme = "dropdown",
+--       hidden = true,
+--       layout_strategy = "horizontal",
+--       layout_config = {
+--         width = 0.75,
+--         height = 0.90,
+--         horizontal = {
+--           preview_width = function(_, cols, _)
+--             if cols < 120 then
+--               return math.floor(cols * 0.5)
+--             end
+--             return math.floor(cols * 0.6)
+--           end,
+--           mirror = false,
+--         },
+--       },
+--     },
+--   }
+-- end
+
+
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.alpha.active = true
@@ -146,6 +192,7 @@ lvim.plugins = {
   { "norcalli/nvim-colorizer.lua" },
   { "lukas-reineke/indent-blankline.nvim" },
   { "alexghergh/nvim-tmux-navigation" },
+  { "ckipp01/nvim-jenkinsfile-linter", requires = { "nvim-lua/plenary.nvim" } },
   {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
