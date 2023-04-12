@@ -12,7 +12,10 @@ an executable
 -- lvim.log.level = "warn"
 lvim.format_on_save = true
 -- lvim.colorscheme = "onedarker"
+-- lvim.colorscheme = "gruvbox"
 lvim.colorscheme = "badwolf"
+
+lvim.transparent_window = true
 
 -- keymappings [view all the defaults by pressing <leader>]
 lvim.leader = "space"
@@ -185,6 +188,7 @@ lvim.plugins = {
   { "wakatime/vim-wakatime" },
   { "vimwiki/vimwiki" },
   { "sjl/badwolf" },
+  { "morhetz/gruvbox" },
   { "nvim-lua/plenary.nvim" },
   { "farmergreg/vim-lastplace" },
   { "martinda/jenkinsfile-vim-syntax" },
