@@ -37,7 +37,7 @@ hc keybind $Mod-Return spawn "${TERMINAL:-alacritty}" # use your $TERMINAL with 
 #hc keybind $Mod-Shift-p spawn dmenu_run_hlwm
 hc keybind $Mod-Shift-p spawn rofi -show run
 hc keybind $Mod-Shift-o spawn "$HOME"/dotfiles/scripts/rofi/pass.sh
-hc keybind $Mod-Shift-y spawn "$HOME"/dotfiles/themeSwitcher.sh
+hc keybind $Mod-Shift-y spawn "$HOME"/dotfiles/scripts/rofi/configmenu.sh
 hc keybind $Mod-y spawn rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 hc keybind $Mod-Shift-u spawn rofi -show ssh
 hc keybind $Mod-Shift-i spawn deepin-screenshot
@@ -236,9 +236,9 @@ hc detect_monitors
 # Polybar panel
 # killall -q polybar
 # while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
-#
+
 # for m in $(polybar --list-monitors | cut -d":" -f1); do
-    # MONITOR=$m polybar --reload main -c ~/.config/polybar/config.ini &
+#     MONITOR=$m polybar --reload main -c ~/.config/polybar/config.ini &
 # done
 
 #for b in $(polybar --list-monitors | cut -d":" -f1); do
