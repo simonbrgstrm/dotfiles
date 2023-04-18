@@ -41,6 +41,8 @@ vim.opt.relativenumber = true
 --   lvim.builtin.telescope.defaults.mappings.n["<C-k>"] = actions.move_selection_previous
 -- end
 
+lvim.builtin.bufferline.active = false
+
 -- Use which-key to add extra bindings with the leader-key prefix
 lvim.builtin.which_key.mappings["v"] = { "<cmd>:e ~/zettelkasten/index.md<CR>", "VimWiki" }
 
@@ -51,6 +53,16 @@ lvim.builtin.which_key.mappings["w"] = {
   name = "+Window",
   h = { "<cmd>sp<CR>", "Horizontal Split" },
   v = { "<cmd>vs<CR>", "Vertical Split" },
+}
+
+-- Barbar buffers
+lvim.builtin.which_key.mappings["b"] = {
+  name = "+Buffers",
+  b = { "<cmd>Telescope buffers<CR>", "Buffers" },
+  h = { "<cmd>BufferPrevious<CR>", "Prev buffer" },
+  l = { "<cmd>BufferNext<CR>", "Next buffer" },
+  c = { "<cmd>BufferClose<CR>", "Close buffer" },
+  s = { "<cmd>BufferPick<CR>", "Buffer pick" },
 }
 
 lvim.builtin.which_key.mappings["f"] = {
@@ -196,6 +208,7 @@ lvim.plugins = {
   { "norcalli/nvim-colorizer.lua" },
   { "lukas-reineke/indent-blankline.nvim" },
   { "alexghergh/nvim-tmux-navigation" },
+  { "romgrk/barbar.nvim", requires = "nvim-web-devicons" },
   { "ckipp01/nvim-jenkinsfile-linter", requires = { "nvim-lua/plenary.nvim" } },
   {
     "folke/trouble.nvim",
