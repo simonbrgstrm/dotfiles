@@ -76,13 +76,4 @@ Answer `No` on the first two (Clang and i3) and all others `Yes`.
 
 And `Yes` on `sudo make install`
 
-## Screenshots
 
-### sbm
-![sbm](./screenshots/sbm.png)
-
-### nord
-![nord](./screenshots/nord.png)
-
-### gruvbox
-![gruvbox](./screenshots/gruvbox.png)
