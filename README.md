@@ -5,10 +5,10 @@
    <a href="">
       <img src="https://img.shields.io/github/last-commit/simonbrgstrm/dotfiles?color=f5ea8c&labelColor=1C2325&style=for-the-badge">
    </a>
-   <a href="https://github.com/simonbrgstrm/dotfiles/stargazers">
+   <a href="https://github.com/simonbrgstrm/dotfiles/">
       <img src="https://img.shields.io/github/languages/top/simonbrgstrm/dotfiles?color=f0a65d&labelColor=1C2325&style=for-the-badge">
    </a>
-   <a href="https://github.com/janleigh/dotfiles/">
+   <a href="https://github.com/simonbrgstrm/dotfiles/">
       <img src="https://img.shields.io/github/repo-size/simonbrgstrm/dotfiles?color=ffa0a0&labelColor=1C2325&style=for-the-badge">
    </a>
    <br>
@@ -76,13 +76,4 @@ Answer `No` on the first two (Clang and i3) and all others `Yes`.
 
 And `Yes` on `sudo make install`
 
-## Screenshots
 
-### sbm
-![sbm](./screenshots/sbm.png)
-
-### nord
-![nord](./screenshots/nord.png)
-
-### gruvbox
-![gruvbox](./screenshots/gruvbox.png)
