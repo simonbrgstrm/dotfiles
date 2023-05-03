@@ -31,7 +31,7 @@ mv -v ~/spicetify-cli ~/.config/spicetify
 PATH="$HOME/.local/bin/:$PATH"
 
 # Make zsh the default shell
-chsh -s "$(which zsh)"
+chsh -s "$(command -v zsh)"
 
 # Symlink configuration files
 declare -A files=(
