@@ -5,6 +5,7 @@
 #|_||_|_||___||_|  |__,||_||_|
 # ____________________________
 
+set -euo pipefail
 
 log_file=${PWD}/installResults.txt
 
@@ -12,12 +13,10 @@ log_file=${PWD}/installResults.txt
 readarray -t apt < apt.txt 
 
 ## Add apt repos
-sudo add-apt-repository universe
-sudo add-apt-repository multiverse
+sudo add-apt-repository universe multiverse
 
-## Update
-sudo apt update
-sudo apt upgrade -y
+## Update and upgrade
+sudo apt update && sudo apt upgrade -y
 
 ## Install curl
 sudo apt install -y curl
@@ -56,7 +55,10 @@ curl -sLf https://spacevim.org/install.sh | bash
 curl -fsSL https://raw.githubusercontent.com/khanhas/spicetify-cli/master/install.sh | sh
 
 ## Docker permission 
-sudo usermod -aG docker "$USER"
+## Add current user to docker group
+if getent group docker >/dev/null; then
+  sudo usermod -aG docker "$USER"
+fi
 
 ## Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
