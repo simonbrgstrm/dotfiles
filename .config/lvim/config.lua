@@ -155,7 +155,6 @@ lvim.builtin.treesitter.highlight.enabled = true
 lvim.builtin.lualine.style = "lvim" -- or "none"
 lvim.builtin.lualine.options.theme = "gruvbox_dark"
 
-
 -- generic LSP settings
 -- you can set a custom on_attach function that will be used for all the language servers
 -- See <https://github.com/neovim/nvim-lspconfig#keybindings-and-completion>
@@ -283,8 +282,8 @@ lvim.plugins = {
   { "norcalli/nvim-colorizer.lua" },
   { "lukas-reineke/indent-blankline.nvim" },
   { "alexghergh/nvim-tmux-navigation" },
-  { "romgrk/barbar.nvim", requires = "nvim-web-devicons" },
-  { "ckipp01/nvim-jenkinsfile-linter", requires = { "nvim-lua/plenary.nvim" } },
+  { "romgrk/barbar.nvim",                 dependencies = "nvim-web-devicons" },
+  { "ckipp01/nvim-jenkinsfile-linter",    dependencies = { "nvim-lua/plenary.nvim" } },
   {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
