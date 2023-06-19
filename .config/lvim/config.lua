@@ -78,51 +78,16 @@ lvim.builtin.which_key.mappings["f"] = {
   w = { "<cmd>Telescope live_grep<CR>", "Find word" },
 }
 
---- TELESCOPE SETTINGS
--- .local/share/lunarvim/lvim/lua/lvim/core/telescope.lua
---
--- local function get_pickers(actions)
---   return {
---     find_files = {
---       hidden = true,
---       layout_strategy = "horizontal",
---       layout_config = {
---         width = 0.75,
---         height = 0.90,
---         horizontal = {
---           preview_width = function(_, cols, _)
---             if cols < 120 then
---               return math.floor(cols * 0.5)
---             end
---             return math.floor(cols * 0.6)
---           end,
---           mirror = false,
---         },
---       },
---     },
---     live_grep = {
---       -- --@usage don't include the filename in the search results
---       -- only_sort_text = true,
---       -- theme = "dropdown",
---       hidden = true,
---       layout_strategy = "horizontal",
---       layout_config = {
---         width = 0.75,
---         height = 0.90,
---         horizontal = {
---           preview_width = function(_, cols, _)
---             if cols < 120 then
---               return math.floor(cols * 0.5)
---             end
---             return math.floor(cols * 0.6)
---           end,
---           mirror = false,
---         },
---       },
---     },
---   }
--- end
-
+-- Telescope settings
+lvim.builtin.telescope.defaults.initial_mode = "insert"
+lvim.builtin.telescope.defaults.layout_config.preview_cutoff = 120
+lvim.builtin.telescope.defaults.layout_config.prompt_position = "bottom"
+lvim.builtin.telescope.defaults.layout_config.width = 0.75
+lvim.builtin.telescope.defaults.layout_config.height = 0.90
+lvim.builtin.telescope.defaults.layout_strategy = "horizontal"
+lvim.builtin.telescope.pickers.find_files.layout_strategy = "horizontal"
+lvim.builtin.telescope.pickers.live_grep.layout_strategy = "horizontal"
+lvim.builtin.telescope.pickers.git_files.layout_strategy = "horizontal"
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
