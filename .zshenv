@@ -5,3 +5,4 @@ TRAPUSR1() {
      exec "${SHELL}"
   fi
 }
+. "$HOME/.cargo/env"
