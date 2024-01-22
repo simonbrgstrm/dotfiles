@@ -1,13 +1,3 @@
---[[
-lvim is the global options object
-
-Linters should be
-filled in as strings with either
-a global executable or a path to
-an executable
-]]
--- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
-
 -- general
 -- lvim.log.level = "warn"
 lvim.format_on_save = true
@@ -28,20 +18,9 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 
 vim.opt.relativenumber = true
 
--- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
--- lvim.builtin.telescope.on_config_done = function()
---   local actions = require "telescope.actions"
---   -- for input mode
---   lvim.builtin.telescope.defaults.mappings.i["<C-j>"] = actions.move_selection_next
---   lvim.builtin.telescope.defaults.mappings.i["<C-k>"] = actions.move_selection_previous
---   lvim.builtin.telescope.defaults.mappings.i["<C-n>"] = actions.cycle_history_next
---   lvim.builtin.telescope.defaults.mappings.i["<C-p>"] = actions.cycle_history_prev
---   -- for normal mode
---   lvim.builtin.telescope.defaults.mappings.n["<C-j>"] = actions.move_selection_next
---   lvim.builtin.telescope.defaults.mappings.n["<C-k>"] = actions.move_selection_previous
--- end
-
 lvim.builtin.bufferline.active = false
+lvim.builtin.terminal.active = true
+lvim.builtin.nvimtree.side = "left"
 
 -- Use which-key to add extra bindings with the leader-key prefix
 lvim.builtin.which_key.mappings["v"] = { "<cmd>:e ~/zettelkasten/index.md<CR>", "VimWiki" }
@@ -65,6 +44,7 @@ lvim.builtin.which_key.mappings["b"] = {
   s = { "<cmd>BufferPick<CR>", "Buffer pick" },
 }
 
+-- Telescope which-key
 lvim.builtin.which_key.mappings["f"] = {
   name = "+Telescope",
   b = { "<cmd>Telescope buffers<CR>", "Buffers" },
@@ -78,6 +58,7 @@ lvim.builtin.which_key.mappings["f"] = {
   w = { "<cmd>Telescope live_grep<CR>", "Find word" },
 }
 
+
 -- Telescope settings
 lvim.builtin.telescope.defaults.initial_mode = "insert"
 lvim.builtin.telescope.defaults.layout_config.preview_cutoff = 120
@@ -89,12 +70,14 @@ lvim.builtin.telescope.pickers.find_files.layout_strategy = "horizontal"
 lvim.builtin.telescope.pickers.live_grep.layout_strategy = "horizontal"
 lvim.builtin.telescope.pickers.git_files.layout_strategy = "horizontal"
 
--- TODO: User Config for predefined plugins
--- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
-lvim.builtin.alpha.active = true
+-- Alpha dashboard
+lvim.builtin.alpha.active = false
 lvim.builtin.alpha.mode = "dashboard"
-lvim.builtin.terminal.active = true
-lvim.builtin.nvimtree.side = "left"
+
+-- Dashboard.nvim
+local home = os.getenv("HOME")
+package.path = string.format("%s/.config/lvim/?.lua;%s", home, package.path)
+require('mydashboard')
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
@@ -201,37 +184,6 @@ lvim.lsp.on_attach_callback = function(client, _)
     }
   end
 end
---   --Enable completion triggered by <c-x><c-o>
---   buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
--- end
--- you can overwrite the null_ls setup table (useful for setting the root_dir function)
--- lvim.lsp.null_ls.setup = {
---   root_dir = require("lspconfig").util.root_pattern("Makefile", ".git", "node_modules"),
--- }
--- or if you need something more advanced
--- lvim.lsp.null_ls.setup.root_dir = function(fname)
---   if vim.bo.filetype == "javascript" then
---     return require("lspconfig/util").root_pattern("Makefile", ".git", "node_modules")(fname)
---       or require("lspconfig/util").path.dirname(fname)
---   elseif vim.bo.filetype == "php" then
---     return require("lspconfig/util").root_pattern("Makefile", ".git", "composer.json")(fname) or vim.fn.getcwd()
---   else
---     return require("lspconfig/util").root_pattern("Makefile", ".git")(fname) or require("lspconfig/util").path.dirname(fname)
---   end
--- end
-
--- set a formatter if you want to override the default lsp one (if it exists)
--- lvim.lang.python.formatters = {
---   {
---     exe = "black",
---   }
--- }
--- set an additional linter
--- lvim.lang.python.linters = {
---   {
---     exe = "flake8",
---   }
--- }
 
 -- Additional Plugins
 lvim.plugins = {
@@ -249,6 +201,7 @@ lvim.plugins = {
   { "alexghergh/nvim-tmux-navigation" },
   { "romgrk/barbar.nvim",                 dependencies = "nvim-web-devicons" },
   { "ckipp01/nvim-jenkinsfile-linter",    dependencies = { "nvim-lua/plenary.nvim" } },
+  { "github/copilot.vim" },
   {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
@@ -256,11 +209,29 @@ lvim.plugins = {
   {
     "ggandor/lightspeed.nvim",
   },
-
-
-
-
+  {
+    'glepnir/dashboard-nvim',
+    event = 'VimEnter',
+    config = function()
+      --config
+    end,
+    dependencies = { { 'nvim-tree/nvim-web-devicons' } }
+  }
 }
+
+
+-- Copilot cmp
+table.insert(lvim.plugins, {
+  "zbirenbaum/copilot-cmp",
+  event = "InsertEnter",
+  dependencies = { "zbirenbaum/copilot.lua" },
+  config = function()
+    vim.defer_fn(function()
+      require("copilot").setup()     -- https://github.com/zbirenbaum/copilot.lua/blob/master/README.md#setup-and-configuration
+      require("copilot_cmp").setup() -- https://github.com/zbirenbaum/copilot-cmp/blob/master/README.md#configuration
+    end, 100)
+  end,
+})
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- lvim.autocommands.custom_groups = {
