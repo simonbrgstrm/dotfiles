@@ -50,7 +50,7 @@ lvim.builtin.which_key.mappings["f"] = {
   b = { "<cmd>Telescope buffers<CR>", "Buffers" },
   d = { "<cmd>Telescope lsp_definitions<CR>", "Defenition" },
   f = { "<cmd>Telescope find_files<CR>", "File Browser" },
-  g = { "<cmd>Telescope git_commits<CR>", "Git commits" },
+  g = { "<cmd>Telescope git_files<CR>", "Git File Find" },
   j = { "<cmd>Telescope jumplist<CR>", "Jumplist" },
   m = { "<cmd>Telescope marks<CR>", "Marks" },
   p = { "<cmd>Telescope projects<CR>", "Projects" },
@@ -75,9 +75,9 @@ lvim.builtin.alpha.active = false
 lvim.builtin.alpha.mode = "dashboard"
 
 -- Dashboard.nvim
-local home = os.getenv("HOME")
-package.path = string.format("%s/.config/lvim/?.lua;%s", home, package.path)
-require('mydashboard')
+-- local home = os.getenv("HOME")
+-- package.path = string.format("%s/.config/lvim/?.lua;%s", home, package.path)
+-- require('mydashboard')
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
@@ -94,9 +94,8 @@ lvim.builtin.treesitter.ensure_installed = {
   "rust",
   "tsx",
   "typescript",
-  "yaml",
 }
-lvim.builtin.treesitter.ignore_install = { "haskell" }
+lvim.builtin.treesitter.ignore_install = { "haskell", "yaml" }
 lvim.builtin.treesitter.highlight.enabled = true
 
 -- lualine conf
@@ -202,6 +201,10 @@ lvim.plugins = {
   { "romgrk/barbar.nvim",                 dependencies = "nvim-web-devicons" },
   { "ckipp01/nvim-jenkinsfile-linter",    dependencies = { "nvim-lua/plenary.nvim" } },
   { "github/copilot.vim" },
+  { "zbirenbaum/copilot-cmp" },
+  { "nvim-lua/plenary.nvim" },
+  { "NoahTheDuke/vim-just" },
+  { "CopilotC-Nvim/CopilotChat.nvim",     branch = "canary" },
   {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
@@ -216,6 +219,20 @@ lvim.plugins = {
       --config
     end,
     dependencies = { { 'nvim-tree/nvim-web-devicons' } }
+  },
+  {
+    "iamcco/markdown-preview.nvim",
+    build = "cd app && npm install",
+    init = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+    config = function()
+      lvim.builtin.which_key.mappings["m"] = {
+        name = "+Markdown",
+        p = { "<Plug>MarkdownPreview", "Preview" },
+      }
+      -- vim.keymap.set("n", "<Leader>mp", "<Plug>MarkdownPreview", { desc = "Markdown Preview" })
+    end,
   }
 }
 
@@ -231,6 +248,10 @@ table.insert(lvim.plugins, {
       require("copilot_cmp").setup() -- https://github.com/zbirenbaum/copilot-cmp/blob/master/README.md#configuration
     end, 100)
   end,
+})
+require("copilot").setup({
+  suggestion = { enabled = false },
+  panel = { enabled = false },
 })
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
