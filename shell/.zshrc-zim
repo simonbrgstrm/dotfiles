@@ -194,6 +194,10 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+#
+if [ $commands[helm] ]; then
+  source <(helm completion zsh)
+fi
 
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 ###-begin-npm-completion-###
