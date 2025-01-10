@@ -105,6 +105,18 @@ lvim.builtin.lualine.options.theme = "gruvbox_dark"
 -- generic LSP settings
 -- you can set a custom on_attach function that will be used for all the language servers
 -- See <https://github.com/neovim/nvim-lspconfig#keybindings-and-completion>
+--
+local lspconfig = require("lspconfig")
+lspconfig.helm_ls.setup {
+  settings = {
+    ['helm-ls'] = {
+      yamlls = {
+        path = "yaml-language-server",
+      }
+    }
+  }
+}
+--
 lvim.lsp.on_attach_callback = function(client, _)
   if client.name == "omnisharp" then
     client.server_capabilities.semanticTokensProvider = {
@@ -194,6 +206,7 @@ lvim.plugins = {
   { "farmergreg/vim-lastplace" },
   { "martinda/jenkinsfile-vim-syntax" },
   { "pearofducks/ansible-vim" },
+  { "towolf/vim-helm" },
   { "justinmk/vim-sneak" },
   { "norcalli/nvim-colorizer.lua" },
   { "lukas-reineke/indent-blankline.nvim" },
