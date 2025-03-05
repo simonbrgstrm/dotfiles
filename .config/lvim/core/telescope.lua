@@ -1,0 +1,10 @@
+-- Telescope settings
+lvim.builtin.telescope.defaults.initial_mode = "insert"
+lvim.builtin.telescope.defaults.layout_config.preview_cutoff = 120
+lvim.builtin.telescope.defaults.layout_config.prompt_position = "bottom"
+lvim.builtin.telescope.defaults.layout_config.width = 0.75
+lvim.builtin.telescope.defaults.layout_config.height = 0.90
+lvim.builtin.telescope.defaults.layout_strategy = "horizontal"
+lvim.builtin.telescope.pickers.find_files.layout_strategy = "horizontal"
+lvim.builtin.telescope.pickers.live_grep.layout_strategy = "horizontal"
+lvim.builtin.telescope.pickers.git_files.layout_strategy = "horizontal"
