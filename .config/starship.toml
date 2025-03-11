@@ -1,8 +1,20 @@
+#format = """
+# [](bold fg:214) $python $golang $nodejs $java $openstack $git_branch $git_status
+# [└───>](bold green) $hostname $character$directory """
 format = """
- [](bold fg:214) $python $golang $nodejs $java $openstack $git_branch $git_status
- [└───>](bold green) $hostname $character$directory """
+ [](bold fg:#f6c177) $python $golang $nodejs $java $openstack $git_branch $git_status
+ [└───>](bold #eb6f92) $hostname $character$directory """
 
 add_newline = false
+
+[palettes.rose-pine]
+overlay = '#26233a'
+love = '#eb6f92'
+gold = '#f6c177'
+rose = '#ebbcba'
+pine = '#31748f'
+foam = '#9ccfd8'
+iris = '#c4a7e7'
 
 [username]
 style_user = "dimmed yellow"
@@ -16,7 +28,8 @@ format =  "[$hostname](bold green) "
 disabled = false
 
 [directory]
-style = "bold fg:202"
+style = "bold #c4a7e7"
+# style = "bg:overlay fg:pine"
 truncate_to_repo = true
 format = "[$path]($style)"
 disabled = false
@@ -27,7 +40,7 @@ success_symbol = ""
 disabled = false
 
 [git_branch]
-style = "bold fg:81 #cd853f"
+style = "bold fg:81 #eb6f92"
 format = "[$symbol$branch]($style) "
 symbol = " "
 truncation_length = 10
