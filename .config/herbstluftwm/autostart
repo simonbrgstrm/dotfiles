@@ -170,19 +170,33 @@ hc set focus_follows_mouse 0
 
 update_dragged_clients 1
 
-# Colors
-frameActive="#ffb200"
-frameActiveBg="#ffb200"
+# Orange Colors
+#frameActive="#ffb200"
+#frameActiveBg="#ffb200"
+#frameNormal="#222222"
+#frameNormalBg="#916500"
+#activeColor="#ffb200"
+#normalColor="#704b0b"
+#urgentColor="#ff0000"
+#innerColor="#000000"
+#floatingOuterColor="#000000"
+#activeInnerColor="#996b00"
+#activeOuterColor="#996b00"
+#backgroundColor="#996b00"
+
+# RosePine
+frameActive="#eb6f92"
+frameActiveBg="#eb6f92"
 frameNormal="#222222"
-frameNormalBg="#916500"
-activeColor="#ffb200"
-normalColor="#704b0b"
+frameNormalBg="#403d52"
+activeColor="#eb6f92"
+normalColor="#191724"
 urgentColor="#ff0000"
 innerColor="#000000"
 floatingOuterColor="#000000"
-activeInnerColor="#996b00"
-activeOuterColor="#996b00"
-backgroundColor="#996b00"
+activeInnerColor="#ebbcba"
+activeOuterColor="#ebbcba"
+backgroundColor="#ebbcba"
 
 
 hc set frame_border_active_color "${frameActive}"
