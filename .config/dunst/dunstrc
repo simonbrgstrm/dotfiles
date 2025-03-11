@@ -23,7 +23,8 @@
     outer_frame_width = 1
     corner_radius = 0
 
-    outer_frame_color = "#ffb200"
+    # outer_frame_color = "#ffb200"
+    outer_frame_color = "#eb6f92"
     separator_color = auto
     sort = yes
     idle_threshold = 120
@@ -80,21 +81,24 @@
     history = ctrl+grave
 
 [urgency_low]
-    background = "#282928"
-    foreground = "#b56d1b"
-    frame_color = "#ffb200"
+    # background = "#282928"
+    # foreground = "#b56d1b"
+    # frame_color = "#ffb200"
+    background = "#393552"
+    foreground = "#e0def4"
+    frame_color = "#eb6f92"
     timeout = 3
 
 [urgency_normal]
-    background = "#282928"
-    foreground = "#b56d1b"
-    frame_color = "#ffb200"
+    background = "#393552"
+    foreground = "#e0def4"
+    frame_color = "#eb6f92"
     timeout = 5
 
 [urgency_critical]
-    background = "#282928"
-    foreground = "#b56d1b"
-    frame_color = "#ffb200"
+    background = "#393552"
+    foreground = "#e0def4"
+    frame_color = "#eb6f92"
     timeout = 0
 
 # vim: ft=conf
