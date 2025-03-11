@@ -31,8 +31,8 @@ source "$dot/shell/.git_alias"
 export EDITOR="lvim"
 
 # Preset theme
-ZSHCOL="sbm"
-$dot/scripts/theme.sh "$ZSHCOL" 
+# ZSHCOL="sbm"
+# $dot/scripts/theme.sh "$ZSHCOL" 
 
 # .local path
 export PATH="${PATH}:${HOME}/.local/bin/"
