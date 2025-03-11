@@ -8,5 +8,5 @@ elif [[ "$battery" -gt 15 && "$battery" -le 35 ]]
 then
      echo "#[fg=$color_yellow] 🔋${battery}%"
 else
-    echo "#[fg=$color_pink] 🔋${battery}%"
+    echo "#[fg=$color_info_text] 🔋${battery}%"
 fi
