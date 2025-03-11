@@ -4,6 +4,7 @@ lvim.builtin.nvimtree.side = "left"
 
 -- lualine conf
 lvim.builtin.lualine.style = "lvim" -- or "none"
+-- lvim.builtin.lualine.options.theme = "rose-pine"
 -- lvim.builtin.lualine.options.theme = "gruvbox_dark"
 --
 -- Alpha dashboard

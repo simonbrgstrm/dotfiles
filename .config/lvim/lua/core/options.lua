@@ -1,5 +1,7 @@
 -- General options
 lvim.format_on_save = true
+lvim.colorscheme = "rose-pine-moon"
+-- lvim.colorscheme = "rose-pine-moon"
 -- lvim.colorscheme = "badwolf"
 -- lvim.colorscheme = "onedarker"
 -- lvim.colorscheme = "gruvbox"

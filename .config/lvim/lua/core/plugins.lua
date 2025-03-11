@@ -4,6 +4,7 @@ lvim.plugins = {
   { "vimwiki/vimwiki" },
   { "sjl/badwolf" },
   { "morhetz/gruvbox" },
+  { "rose-pine/neovim" },
   { "nvim-lua/plenary.nvim" },
   { "farmergreg/vim-lastplace" },
   { "martinda/jenkinsfile-vim-syntax" },

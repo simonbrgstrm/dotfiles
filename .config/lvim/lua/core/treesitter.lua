@@ -13,6 +13,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "rust",
   "tsx",
   "typescript",
+  "yaml",
 }
-lvim.builtin.treesitter.ignore_install = { "haskell", "yaml" }
+lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
