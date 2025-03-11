@@ -265,5 +265,5 @@ hc detect_monitors
 #polybar main -c ~/.config/polybar/config.ini &
 #exec $HOME/.config/polybar/launch.sh
 
-wall="$HOME/dotfiles/wall/sbm.png"
+wall="$HOME/dotfiles/wall/rose-pine.png"
 feh --bg-fill "${wall}"
