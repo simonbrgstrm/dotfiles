@@ -1,0 +1,106 @@
+* {
+  black:      #000000;
+  red:        #eb6f92;
+  green:      #95ee8f;
+  yellow:     #f6c177;
+  lorange:    #c4a7e7;
+  dorange:    #e0def4;
+  ddorange:   #6e6a86;
+  blue:       #9ccfd8;
+  mangenta:   #d886f3;
+  cyan:       #6cdcf7;
+  emphasis:   #50536b;
+  text:       #dfdfdf;
+  text-alt:   #b2b2b2;
+  fg:         #e0def4;
+	bg:         #232136;
+
+  bordercolor: #eb6f92;
+
+  matching:		"fuzzy";
+
+  spacing: 0;
+  background-color: @bg;
+
+  font: "Knack Nerd Font 14";
+  text-color: @text;
+}
+
+mainbox { children: [ inputbar, listview ]; }
+
+window {
+  transparency:		"real";
+  width:		    650px;
+  border:		    2px 2px 2px 2px;
+  border-radius:	2px;
+  border-color:     @bordercolor;
+  height:		    500px;
+  
+}
+
+inputbar {
+  children: [prompt, entry, case-indicator];
+  expand:		false;
+  padding:		10px 10px 10px 10px;
+}
+
+prompt {
+  text-color: @dorange;
+  enabled: true; 
+  padding:		15px;
+  border-radius:	15px;
+}
+
+textbox-prompt-colon {
+  expand: false;
+  margin: 15px 0px;
+  str: ":";
+  text-color: @text-alt;
+}
+
+entry {
+  margin: 15px 0px;
+}
+
+listview {
+  columns: 1;
+  spacing: 5px;
+  cycle:  true;
+  dynamic: true;
+  layout: vertical;
+  scrollbar: false;
+}
+
+element {
+  padding: 5px;
+  text-color: @text-alt;
+  highlight: bold #c4a7e7; /* lorange */
+  border-radius: 3px;
+}
+
+element selected {
+  background-color: @ddorange;
+  text-color: @text;
+}
+
+element urgent, element selected urgent {
+  text-color: @red;
+}
+
+element active, element selected active {
+  text-color: @purple;
+}
+
+message {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: @emphasis;
+  border: 1px;
+  border-color: @cyan;
+}
+
+button selected {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: @emphasis;
+}
