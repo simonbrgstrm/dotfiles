@@ -28,7 +28,7 @@ source "$dot/shell/.alias"
 source "$dot/shell/.git_alias"
 # source "$HOME/.jenkins"
 
-export EDITOR="lvim"
+export EDITOR="nvim"
 
 # Preset theme
 # ZSHCOL="sbm"
@@ -177,6 +177,7 @@ bindkey -M vicmd 'j' history-substring-search-down
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+nvm use default --silent
 
 eval "$(starship init zsh)"
 
