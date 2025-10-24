@@ -1,10 +1,9 @@
 dot=$HOME/dotfiles
 
 # alias vi="lvim"
-alias vi="lvim"
+alias vi="nvim"
 alias v="vim"
-alias vim="lvim"
-alias nvim="lvim"
+alias vim="nvim"
 alias zshconfig="vi ~/.zshrc"
 alias mv="mv -i"
 alias rm="rm -i"
