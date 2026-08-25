@@ -60,33 +60,6 @@ docker-compose-plugin
 spotify-client
 
 # Virtualization
-vagrant
 virt-manager
 virtualbox
 
-# Polybar build dependencies
-build-essential
-cmake
-git
-libasound2-dev
-libcairo2-dev
-libcurl4-openssl-dev
-libiw-dev
-libjsoncpp-dev
-libmpdclient-dev
-libpulse-dev
-libxcb-composite0-dev
-libxcb-cursor-dev
-libxcb-ewmh-dev
-libxcb-icccm4-dev
-libxcb-image0-dev
-libxcb-randr0-dev
-libxcb-render-util0-dev
-libxcb-shape0-dev
-libxcb-util0-dev
-libxcb-xinerama0-dev
-libxcb-xkb-dev
-libxcb-xrm-dev
-pkg-config
-python3-xcbgen
-xcb-proto
