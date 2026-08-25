@@ -10,6 +10,8 @@ hc() {
     herbstclient "$@"
 }
 
+DOTFILES_DIR="$(cd -- "$(dirname -- "$(readlink -f -- "${BASH_SOURCE[0]}")")/../.." && pwd)"
+
 hc emit_hook reload
 
 #xsetroot -solid '#081d3f'
@@ -25,7 +27,7 @@ hc keyunbind --all
 #Mod=Mod1    # Use alt as the main modifier
 Mod=Mod4   # Use the super key as the main modifier
 
-hc keybind $Mod-Shift-q spawn powermenu 
+hc keybind $Mod-Shift-q spawn "$DOTFILES_DIR/scripts/rofi/powermenu.sh"
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-c close
 #hc keybind $Mod-Return spawn ${TERMINAL:-gnome-terminal} # use your $TERMINAL with xterm as fallback
@@ -36,8 +38,8 @@ hc keybind $Mod-Return spawn "${TERMINAL:-alacritty}" # use your $TERMINAL with 
 # hc keybind $Mod-e spawn betterlockscreen -l dim
 #hc keybind $Mod-Shift-p spawn dmenu_run_hlwm
 hc keybind $Mod-Shift-p spawn rofi -show run
-hc keybind $Mod-Shift-o spawn "$HOME"/dotfiles/scripts/rofi/pass.sh
-hc keybind $Mod-Shift-y spawn "$HOME"/dotfiles/scripts/rofi/configmenu.sh
+hc keybind $Mod-Shift-o spawn "$DOTFILES_DIR/scripts/rofi/pass.sh"
+hc keybind $Mod-Shift-y spawn "$DOTFILES_DIR/scripts/rofi/configmenu.sh"
 hc keybind $Mod-y spawn rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 hc keybind $Mod-Shift-u spawn rofi -show ssh
 hc keybind $Mod-Shift-i spawn deepin-screenshot
@@ -45,8 +47,8 @@ hc keybind $Mod-Shift-v spawn "$HOME/.vim-anywhere/bin/run"
 hc keybind $Mod-F1 spawn amixer -q -D pulse sset Master toggle
 hc keybind $Mod-F2 spawn amixer -q -D pulse sset Master 2%-
 hc keybind $Mod-F3 spawn amixer -q -D pulse sset Master 2%+
-hc keybind XF86AudioLowerVolume chain , spawn amixer -q -D pulse sset Master 2%- , spawn "$HOME"/dotfiles/scripts/volnotify.sh voldown 
-hc keybind XF86AudioRaiseVolume chain , spawn amixer -q -D pulse sset Master 2%+ , spawn "$HOME"/dotfiles/scripts/volnotify.sh volup 
+hc keybind XF86AudioLowerVolume chain , spawn amixer -q -D pulse sset Master 2%- , spawn "$DOTFILES_DIR/scripts/volnotify.sh" voldown
+hc keybind XF86AudioRaiseVolume chain , spawn amixer -q -D pulse sset Master 2%+ , spawn "$DOTFILES_DIR/scripts/volnotify.sh" volup
 hc keybind $Mod-F4 spawn brightnessctl s 5%-
 hc keybind $Mod-F5 spawn brightnessctl s 5%+
 
@@ -101,10 +103,10 @@ tag_names=("1" "2" "3" "4" "5" "6" "7" "8" "9" )
 tag_keys=( {1..9} 0 )
 
 hc rename default "${tag_names[0]}" || true
-for i in ${!tag_names[@]} ; do
+for i in "${!tag_names[@]}" ; do
     hc add "${tag_names[$i]}"
     key="${tag_keys[$i]}"
-    if ! [ -z "$key" ] ; then
+    if [ -n "$key" ] ; then
         hc keybind "$Mod-$key" use_index "$i"
         hc keybind "$Mod-Shift-$key" move_index "$i"
     fi
@@ -168,7 +170,7 @@ hc set swap_monitors_to_get_tag 1
 hc set raise_on_focus 1
 hc set focus_follows_mouse 0
 
-update_dragged_clients 1
+hc set update_dragged_clients 1
 
 # Orange Colors
 #frameActive="#ffb200"
@@ -265,5 +267,5 @@ hc detect_monitors
 #polybar main -c ~/.config/polybar/config.ini &
 #exec $HOME/.config/polybar/launch.sh
 
-wall="$HOME/dotfiles/wall/rose-pine.png"
+wall="$DOTFILES_DIR/wall/rose-pine.png"
 feh --bg-fill "${wall}"

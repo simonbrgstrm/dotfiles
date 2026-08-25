@@ -3,7 +3,7 @@ cdm() {mkdir $1 && cd $1}
 
 ## fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-if [ -e /home/sbm/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sbm/.nix-profile/etc/profile.d/nix.sh; fi
+if [ -e "$HOME/.nix-profile/etc/profile.d/nix.sh" ]; then . "$HOME/.nix-profile/etc/profile.d/nix.sh"; fi
 
 # Function to source files if they exist
 function zsh_add_file() {

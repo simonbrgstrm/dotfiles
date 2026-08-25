@@ -25,9 +25,13 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-eval "$(starship init zsh)"
+if command -v starship >/dev/null 2>&1; then
+  eval "$(starship init zsh)"
+fi
 
-eval "$(navi widget zsh)"
+if command -v navi >/dev/null 2>&1; then
+  eval "$(navi widget zsh)"
+fi
 
 # User configuration
 
@@ -79,7 +83,7 @@ alias cp="cp -i"
 #alias la='ls -a'
 #alias lla='ls -la'
 #alias lt='ls --tree'
-alias bat="bat --paging=never"
+alias bat="batcat --paging=never"
 alias s="sudo systemctl"
 alias j="journalctl -xe"
 alias update="sudo apt update && sudo apt upgrade -y"
@@ -139,11 +143,13 @@ function zshaddhistory() {
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-if [ -e /home/sbm/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sbm/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+if [ -e "$HOME/.nix-profile/etc/profile.d/nix.sh" ]; then . "$HOME/.nix-profile/etc/profile.d/nix.sh"; fi # added by Nix installer
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/bin/terraform terraform
+if command -v terraform >/dev/null 2>&1; then
+  complete -o nospace -C /usr/bin/terraform terraform
+fi

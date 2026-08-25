@@ -5,7 +5,6 @@ herbstwm_config="${dot}/.config/herbstluftwm/autostart"
 polybar_config="${dot}/.config/polybar/colors.ini"
 starship_config="${dot}/.config/starship.toml"
 dunst_config="${dot}/.config/dunst/dunstrc"
-spacevim_config="${dot}/.SpaceVim.d/init.toml"
 zsh_config="${dot}/.zshrc"
 
 themeSwitch() {
@@ -64,7 +63,6 @@ themeSwitch() {
             's/^\s\{4,\}foreground.*/    foreground = "#b1b4ba"/'
             's/^\s\{4,\}frame_color.*/    frame_color = "#689d6a"/'
         )
-        vim_colorscheme="gruvbox"
         zsh_colorscheme="gruvbox-dark"
         rofi_theme="${dot}/.config/rofi/gruvbox.rasi"
         ;;
@@ -103,7 +101,6 @@ themeSwitch() {
             's/^\s\{4,\}foreground.*/    foreground = "#b1b4ba"/'
             's/^\s\{4,\}frame_color.*/    frame_color = "#6e9cf0"/'
         )
-        vim_colorscheme="nord"
         zsh_colorscheme="nord"
         rofi_theme="${dot}/.config/rofi/nord.rasi"
         ;;
@@ -131,7 +128,6 @@ themeSwitch() {
         sed -i "$cmd" "$dunst_config"
     done
 
-    sed -i "s/^\s\{4,\}colorscheme.*/    colorscheme = \"$vim_colorscheme\"/" "$spacevim_config"
     sed -i "s/^ZSHCOL=.*/ZSHCOL=\"$zsh_colorscheme\"/" "$zsh_config"
 
     # Link rofi theme

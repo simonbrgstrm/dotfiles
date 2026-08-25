@@ -8,7 +8,7 @@
 set -Eeuo pipefail
 IFS=$'\n\t'
 
-readonly SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+readonly SCRIPT_DIR="$(cd -- "$(dirname -- "$(readlink -f -- "${BASH_SOURCE[0]}")")" && pwd)"
 readonly APT_LIST="$SCRIPT_DIR/apt.txt"
 readonly TEMP_DIR="$(mktemp -d "${TMPDIR:-/tmp}/dotfiles-install.XXXXXX")"
 readonly RESULTS_FILE="$TEMP_DIR/results.txt"
@@ -26,6 +26,14 @@ trap cleanup EXIT
 
 record_result() {
   printf '%-10s %s\n' "$1" "$2" >> "$RESULTS_FILE"
+}
+
+fallback_package_for() {
+  case "$1" in
+    dmenu) echo "suckless-tools" ;;
+    picom) echo "compton" ;;
+    *) return 1 ;;
+  esac
 }
 
 install_remote_script() {
@@ -104,6 +112,14 @@ while IFS= read -r package; do
 
   if sudo apt-get install --yes "$package"; then
     record_result "installed" "$package"
+    continue
+  fi
+
+  fallback_package=""
+  if fallback_package="$(fallback_package_for "$package" 2>/dev/null || true)" &&
+    [[ -n "$fallback_package" ]] &&
+    sudo apt-get install --yes "$fallback_package"; then
+    record_result "installed" "$package (via $fallback_package)"
   else
     record_result "failed" "$package"
     ((failed_packages += 1))
@@ -118,9 +134,7 @@ fi
 mkdir -p "$HOME/.config/herbstluftwm"
 
 install_remote_script \
-  spacevim bash https://spacevim.org/install.sh
-install_remote_script \
-  spicetify sh https://raw.githubusercontent.com/khanhas/spicetify-cli/master/install.sh
+  spicetify sh https://raw.githubusercontent.com/spicetify/cli/main/install.sh
 install_remote_script \
   oh-my-zsh sh https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh --unattended
 install_remote_script \
@@ -136,4 +150,9 @@ record_result "downloaded" "polybar $POLYBAR_VERSION source to $HOME/polybar-$PO
 if getent group docker >/dev/null; then
   sudo usermod -aG docker "$USER"
   record_result "configured" "added $USER to the docker group"
+fi
+
+if [[ ${SKIP_SYMLINK:-0} != "1" && -x "$SCRIPT_DIR/symlink.sh" ]]; then
+  "$SCRIPT_DIR/symlink.sh"
+  record_result "configured" "symlinked dotfiles"
 fi

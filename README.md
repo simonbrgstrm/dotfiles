@@ -53,16 +53,17 @@
 1. Clone repo
 ```
 git clone https://github.com/simonbrgstrm/dotfiles.git
+cd dotfiles
 ```
 
-2. Install all the packages
+2. Install dependencies and bootstrap tools (Ubuntu only)
 ```
 ./install.sh
 ```
 
-3. Install [Polybar](#polybar)
+`install.sh` installs apt dependencies, Docker + Spotify repos, Spicetify, Oh My Zsh, Starship, downloads Polybar source, and runs `./symlink.sh` by default.
 
-4. Symlink all the configs
+3. Re-run symlinks if needed
 ```
 ./symlink.sh
 ```
@@ -75,4 +76,3 @@ cd ~/polybar-3.7.2 && ./build.sh
 Answer `No` on the first two (Clang and i3) and all others `Yes`.
 
 And `Yes` on `sudo make install`
-

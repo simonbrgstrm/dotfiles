@@ -1,9 +1,11 @@
 # Desktop applications
 alacritty
 arandr
+bat
 blueman
 bluez
 brightnessctl
+cmatrix
 deepin-screenshot
 dmenu
 dunst
@@ -13,21 +15,39 @@ font-manager
 fzf
 gnome-tweaks
 herbstluftwm
+i3lock-fancy
+kitty
+lsd
+neovim
+network-manager
 pavucontrol
 picom
+playerctl
 ranger
+nitrogen
 rofi
+tmux
 vim
 zsh
 
 # Command-line tools and runtimes
 httpie
 jq
+libnotify-bin
 nodejs
 npm
+pass
+pulseaudio-utils
 python3
+python3-dbus
 python3-pip
+python3-pylsp
+ripgrep
 speedtest-cli
+ugrep
+xdotool
+xclip
+alsa-utils
 
 # Docker's official repository
 containerd.io

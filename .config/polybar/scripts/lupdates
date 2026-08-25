@@ -1,3 +1,13 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-gnome-terminal -e "sudo apt update"
+set -Eeuo pipefail
+
+command='sudo apt update && apt list --upgradable; echo; read -r -p "Press Enter to close..."'
+
+if command -v "${TERMINAL:-alacritty}" >/dev/null 2>&1; then
+  "${TERMINAL:-alacritty}" -e bash -lc "$command"
+elif command -v gnome-terminal >/dev/null 2>&1; then
+  gnome-terminal -- bash -lc "$command"
+else
+  bash -lc "$command"
+fi
