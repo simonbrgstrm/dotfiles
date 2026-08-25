@@ -17,7 +17,7 @@ declare -a LINKS=(
   ".zshrc:.zshrc"
   "vim:.vim"
   "vim/.vimrc:.vimrc"
-  ".config/alacritty:.config/alacritty"
+  ".config/alacritty/alacritty.toml:.config/alacritty/alacritty.toml"
   ".config/betterlockscreen:.config/betterlockscreen"
   ".config/compton.conf:.config/compton.conf"
   ".config/compton.conf:.config/picom.conf"
