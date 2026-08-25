@@ -35,7 +35,7 @@
    
    :small_orange_diamond: **Panel:** [polybar](https://github.com/polybar/polybar)
    
-   :small_orange_diamond: **Compositor:** [compton](https://github.com/chjj/compton)
+   :small_orange_diamond: **Compositor:** [picom](https://github.com/yshui/picom)
    
    :small_orange_diamond: **Editor:** [neovim](https://github.com/neovim/neovim)
    
@@ -69,11 +69,10 @@ git clone https://github.com/simonbrgstrm/dotfiles.git
 
 ### Polybar
 ```
-cd ~/polybar-3.5.5 && ./build.sh
+cd ~/polybar-3.7.2 && ./build.sh
 ```
 
 Answer `No` on the first two (Clang and i3) and all others `Yes`.
 
 And `Yes` on `sudo make install`
-
 

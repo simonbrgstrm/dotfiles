@@ -1,82 +1,139 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # _            _         _  _
 #|_| ___  ___ | |_  ___ | || |
 #| ||   ||_ -||  _|| .'|| || |
 #|_||_|_||___||_|  |__,||_||_|
 # ____________________________
 
-set -euo pipefail
+set -Eeuo pipefail
+IFS=$'\n\t'
 
-log_file=${PWD}/installResults.txt
+readonly SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+readonly APT_LIST="$SCRIPT_DIR/apt.txt"
+readonly TEMP_DIR="$(mktemp -d "${TMPDIR:-/tmp}/dotfiles-install.XXXXXX")"
+readonly RESULTS_FILE="$TEMP_DIR/results.txt"
+readonly POLYBAR_VERSION="${POLYBAR_VERSION:-3.7.2}"
 
-# Pop apt array with apt.txt file
-readarray -t apt < apt.txt 
-
-## Add apt repos
-sudo add-apt-repository universe multiverse
-
-## Update and upgrade
-sudo apt update && sudo apt upgrade -y
-
-## Install curl
-sudo apt install -y curl
-
-## Docker key/repo
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-
-
-## Spotify key/repo
-curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
-echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-
-## Update
-sudo apt update
-
-## Installs from apt array
-for install in "${apt[@]};"
-do
-  sudo apt install -y "$install"
-  if [[ $? -ne 0 ]];
-  then
-    echo "$install FAILED" >> "$log_file"
-  else
-    echo "$install installed" >> "$log_file"
+cleanup() {
+  if [[ -s "$RESULTS_FILE" ]]; then
+    printf '\n------ Install results ------\n\n'
+    cat "$RESULTS_FILE"
+    printf '\n-----------------------------\n'
   fi
-done
+  rm -rf -- "$TEMP_DIR"
+}
+trap cleanup EXIT
 
-## Create herbstluftwm dir
-mkdir -p ~/.config/herbstluftwm
+record_result() {
+  printf '%-10s %s\n' "$1" "$2" >> "$RESULTS_FILE"
+}
 
-## Install SpaceVim
-curl -sLf https://spacevim.org/install.sh | bash
+install_remote_script() {
+  local name="$1"
+  local interpreter="$2"
+  local url="$3"
+  local installer="$TEMP_DIR/$name.sh"
+  shift 3
 
-## Spicetify-cli
-curl -fsSL https://raw.githubusercontent.com/khanhas/spicetify-cli/master/install.sh | sh
+  curl --fail --silent --show-error --location "$url" --output "$installer"
+  "$interpreter" "$installer" "$@"
+  record_result "installed" "$name"
+}
 
-## Docker permission 
-## Add current user to docker group
-if getent group docker >/dev/null; then
-  sudo usermod -aG docker "$USER"
+if [[ $EUID -eq 0 ]]; then
+  printf 'Run this script as your regular user, not root.\n' >&2
+  exit 1
 fi
 
-## Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+if [[ ! -r "$APT_LIST" ]]; then
+  printf 'Package list not found: %s\n' "$APT_LIST" >&2
+  exit 1
+fi
 
-## Install Starship
-wget -O starshipinstall.sh https://starship.rs/install.sh
-chmod +x starshipinstall.sh && ./starshipinstall.sh -f 
-rm starshipinstall.sh
+if ! command -v apt-get >/dev/null || [[ ! -r /etc/os-release ]]; then
+  printf 'This installer requires an Ubuntu system with apt-get.\n' >&2
+  exit 1
+fi
 
-## Downloads polybar
-wget https://github.com/polybar/polybar/releases/download/3.5.5/polybar-3.5.5.tar.gz
-tar -C ~/ -zxvf polybar-3.5.5.tar.gz
+# shellcheck disable=SC1091
+. /etc/os-release
+if [[ ${ID:-} != "ubuntu" || -z ${VERSION_CODENAME:-} ]]; then
+  printf 'This installer currently supports Ubuntu releases only.\n' >&2
+  exit 1
+fi
 
-## Print logfile
-echo -e "\n------ *** ------\n"
-echo
-grep -E 'FAILED|$' "$log_file"
-#cat $log_file
-echo
-echo -e "\n------ *** ------\n"
-rm "$log_file"
+sudo -v
+sudo apt-get update
+sudo apt-get install --yes ca-certificates curl gnupg software-properties-common
+sudo add-apt-repository --yes universe
+sudo add-apt-repository --yes multiverse
+
+sudo install -d -m 0755 /etc/apt/keyrings
+
+curl --fail --silent --show-error --location \
+  https://download.docker.com/linux/ubuntu/gpg \
+  --output "$TEMP_DIR/docker.asc"
+sudo install -m 0644 "$TEMP_DIR/docker.asc" /etc/apt/keyrings/docker.asc
+printf 'deb [arch=%s signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu %s stable\n' \
+  "$(dpkg --print-architecture)" "$VERSION_CODENAME" |
+  sudo tee /etc/apt/sources.list.d/docker.list >/dev/null
+
+curl --fail --silent --show-error --location \
+  https://download.spotify.com/debian/pubkey_C85668DF69375001.gpg \
+  --output "$TEMP_DIR/spotify.gpg"
+sudo gpg --dearmor --yes --output /etc/apt/keyrings/spotify.gpg "$TEMP_DIR/spotify.gpg"
+printf '%s\n' \
+  'deb [signed-by=/etc/apt/keyrings/spotify.gpg] https://repository.spotify.com stable non-free' |
+  sudo tee /etc/apt/sources.list.d/spotify.list >/dev/null
+
+sudo apt-get update
+
+declare -A seen_packages=()
+failed_packages=0
+while IFS= read -r package; do
+  package="${package%%#*}"
+  package="${package//[[:space:]]/}"
+  [[ -z "$package" ]] && continue
+
+  if [[ ! "$package" =~ ^[a-z0-9][a-z0-9+.-]*$ ]]; then
+    printf 'Invalid package name in %s: %s\n' "$APT_LIST" "$package" >&2
+    exit 1
+  fi
+  [[ ${seen_packages[$package]+_} ]] && continue
+  seen_packages["$package"]=1
+
+  if sudo apt-get install --yes "$package"; then
+    record_result "installed" "$package"
+  else
+    record_result "failed" "$package"
+    ((failed_packages += 1))
+  fi
+done < "$APT_LIST"
+
+if ((failed_packages > 0)); then
+  printf '%d package(s) failed to install; see results above.\n' "$failed_packages" >&2
+  exit 1
+fi
+
+mkdir -p "$HOME/.config/herbstluftwm"
+
+install_remote_script \
+  spacevim bash https://spacevim.org/install.sh
+install_remote_script \
+  spicetify sh https://raw.githubusercontent.com/khanhas/spicetify-cli/master/install.sh
+install_remote_script \
+  oh-my-zsh sh https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh --unattended
+install_remote_script \
+  starship sh https://starship.rs/install.sh --yes
+
+polybar_archive="$TEMP_DIR/polybar-$POLYBAR_VERSION.tar.gz"
+curl --fail --silent --show-error --location \
+  "https://github.com/polybar/polybar/archive/refs/tags/$POLYBAR_VERSION.tar.gz" \
+  --output "$polybar_archive"
+tar -xzf "$polybar_archive" -C "$HOME"
+record_result "downloaded" "polybar $POLYBAR_VERSION source to $HOME/polybar-$POLYBAR_VERSION"
+
+if getent group docker >/dev/null; then
+  sudo usermod -aG docker "$USER"
+  record_result "configured" "added $USER to the docker group"
+fi

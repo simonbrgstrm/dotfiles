@@ -1,14 +1,11 @@
+# Desktop applications
 alacritty
 arandr
 blueman
 bluez
 brightnessctl
-cmake
-compton
 deepin-screenshot
 dmenu
-docker-compose
-docker.io
 dunst
 feh
 filezilla
@@ -16,12 +13,46 @@ font-manager
 fzf
 gnome-tweaks
 herbstluftwm
+pavucontrol
+picom
+ranger
+rofi
+vim
+zsh
+
+# Command-line tools and runtimes
 httpie
 jq
+nodejs
+npm
+python3
+python3-pip
+speedtest-cli
+
+# Docker's official repository
+containerd.io
+docker-buildx-plugin
+docker-ce
+docker-ce-cli
+docker-compose-plugin
+
+# Spotify's official repository
+spotify-client
+
+# Virtualization
+vagrant
+virt-manager
+virtualbox
+
+# Polybar build dependencies
+build-essential
+cmake
+git
 libasound2-dev
 libcairo2-dev
 libcurl4-openssl-dev
 libiw-dev
+libjsoncpp-dev
 libmpdclient-dev
 libpulse-dev
 libxcb-composite0-dev
@@ -30,26 +61,12 @@ libxcb-ewmh-dev
 libxcb-icccm4-dev
 libxcb-image0-dev
 libxcb-randr0-dev
+libxcb-render-util0-dev
+libxcb-shape0-dev
 libxcb-util0-dev
+libxcb-xinerama0-dev
 libxcb-xkb-dev
 libxcb-xrm-dev
-mlocate
-nodejs
-npm
-pavucontrol
-python
-python3
-python3-pip
+pkg-config
 python3-xcbgen
-ranger
-rofi
-speedtest-cli
-spotify-client
-vagrant
-vim
-virt-manager
-virtualbox
-xcb
 xcb-proto
-zsh
-placeholder
