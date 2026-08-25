@@ -50,9 +50,6 @@ cdm() {mkdir $1 && cd $1}
 
 #########
 
-source ${HOME}/.config/logcli/config
-
-#########
 
 # Prompt for spelling correction of commands.
 #setopt CORRECT
@@ -263,3 +260,5 @@ fi
 ###-end-npm-completion-###
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PATH=$PATH:/home/sbm/.spicetify
