@@ -71,12 +71,20 @@ if [[ ${ID:-} != "ubuntu" || -z ${VERSION_CODENAME:-} ]]; then
 fi
 
 sudo -v
+sudo install -d -m 0755 /etc/apt/keyrings
+
+curl --fail --silent --show-error --location \
+  https://download.spotify.com/debian/pubkey_5384CE82BA52C83A.gpg \
+  --output "$TEMP_DIR/spotify.gpg"
+sudo gpg --dearmor --yes --output /etc/apt/keyrings/spotify.gpg "$TEMP_DIR/spotify.gpg"
+printf '%s\n' \
+  'deb [signed-by=/etc/apt/keyrings/spotify.gpg] https://repository.spotify.com stable non-free' |
+  sudo tee /etc/apt/sources.list.d/spotify.list >/dev/null
+
 sudo apt-get update
 sudo apt-get install --yes ca-certificates curl gnupg software-properties-common
 sudo add-apt-repository --yes universe
 sudo add-apt-repository --yes multiverse
-
-sudo install -d -m 0755 /etc/apt/keyrings
 
 curl --fail --silent --show-error --location \
   https://download.docker.com/linux/ubuntu/gpg \
@@ -85,14 +93,6 @@ sudo install -m 0644 "$TEMP_DIR/docker.asc" /etc/apt/keyrings/docker.asc
 printf 'deb [arch=%s signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu %s stable\n' \
   "$(dpkg --print-architecture)" "$VERSION_CODENAME" |
   sudo tee /etc/apt/sources.list.d/docker.list >/dev/null
-
-curl --fail --silent --show-error --location \
-  https://download.spotify.com/debian/pubkey_C85668DF69375001.gpg \
-  --output "$TEMP_DIR/spotify.gpg"
-sudo gpg --dearmor --yes --output /etc/apt/keyrings/spotify.gpg "$TEMP_DIR/spotify.gpg"
-printf '%s\n' \
-  'deb [signed-by=/etc/apt/keyrings/spotify.gpg] https://repository.spotify.com stable non-free' |
-  sudo tee /etc/apt/sources.list.d/spotify.list >/dev/null
 
 sudo apt-get update
 
