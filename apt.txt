@@ -36,6 +36,7 @@ httpie
 jq
 yq
 libnotify-bin
+ansible
 nodejs
 npm
 cargo
