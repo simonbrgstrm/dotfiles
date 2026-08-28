@@ -262,3 +262,6 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export PATH=$PATH:/home/sbm/.spicetify
+
+# kubeconfig-updater
+export PATH="/home/sbm/bjornlunden/kubeconfig-updater/.venv/bin:$PATH"
