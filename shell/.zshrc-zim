@@ -265,3 +265,6 @@ export PATH=$PATH:/home/sbm/.spicetify
 
 # kubeconfig-updater
 export PATH="/home/sbm/bjornlunden/kubeconfig-updater/.venv/bin:$PATH"
+
+# Pi
+export PATH="$HOME/.local/bin:$PATH"
