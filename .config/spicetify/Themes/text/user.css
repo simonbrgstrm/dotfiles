@@ -903,3 +903,16 @@ button[data-testid="control-button-repeat"][aria-checked="mixed"]::after {
 .main-connectBar-connectBar svg {
     fill: var(--spice-accent-active);
 }
+
+/* Hide the right sidebar and reclaim its layout space. */
+.Root__right-sidebar {
+    display: none !important;
+}
+.Root__top-container {
+    grid-template-areas:
+        "top-banner top-banner"
+        "global-nav global-nav"
+        "left-sidebar main-view"
+        "now-playing-bar now-playing-bar" !important;
+    grid-template-columns: auto 1fr !important;
+}
