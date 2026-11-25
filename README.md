@@ -49,6 +49,10 @@
 
 
 
+## Keyboards
+
+[Key layouts and layers](keyboards/README.md) for Corne (r2g, low-profile and VIA), DZ60 (v1 and v2), and Sofle.
+
 ## Install
 1. Clone repo
 ```
